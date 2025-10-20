@@ -1,0 +1,10 @@
+chromadb
+gradio
+sentence-transformers
+python-docx
+PyPDF2
+langchain-text-splitters
+torch
+torchvision
+ollama
+langchain
