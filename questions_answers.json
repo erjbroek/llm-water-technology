@@ -1,0 +1,144 @@
+{
+  "questions": [
+    {
+      "project": "AquaConnect",
+      "filename": "",
+      "question": "",
+      "answer": "",
+      "specificity": 0
+    },
+    {
+      "project": "AquaSPICE",
+      "filename": "Report AquaSPICE_DowTnzCT_Draft 2_10082022.docx",
+      "question": "What was the purpose of the trials conducted at Dow Terneuzen for the AquaSPICE project",
+      "answer": "The purpose of the trials at Dow Terneuzen within the AquaSPICE project, is to research the potential of new technologies for reuse of cooling tower blowdown, to reduce freshwater intake at the I-Parc Dow Terneuzen site. ",
+      "specificity": 6
+    },
+    {
+      "project": "Aquatuur",
+      "filename": "",
+      "question": "",
+      "answer": "",
+      "specificity": 0
+    },
+    {
+      "project": "Condensate quality",
+      "filename": "",
+      "question": "",
+      "answer": "",
+      "specificity": 0
+    },
+    {
+      "project": "DeltaDrip",
+      "filename": "20210603_eindrapportage_2020_deltadrip.pdf",
+      "question": "What are the yearly costs for above ground drip irrigation per hectare?",
+      "answer": "Yearly, above ground drip irrigation costs between €1.061 and €1.404 per hectare.",
+      "specificity": 6
+    },
+    {
+      "project": "E4Water",
+      "filename": "Rapport E4Water.docx",
+      "question": "What pre-treatment steps were applied before NF/EDR to limit fouling?",
+      "answer": "Coagulation, flocculation, lamella seperation, followed by ultrafiltration with periodic chemical enhanced backwash (CEB)",
+      "specificity": 8
+    },
+    {
+      "project": "EffluentFit4Food",
+      "filename": "effluentfitfood_towards_safe_sustainable_irrigati-wag.pdf",
+      "question": "What is the effect of irrigation water quality on growing crops regarding plant vitality and crop yields",
+      "answer": "Overall, no real pattern between water quality and crop performance was found. Potatoes nad onions show small initial vitality difference but no large difference at harvest. Potato yields were highest with tap water, onions heaviest with raw effluent, and pears showed no yield difference",
+      "specificity": 4
+    },
+    {
+      "project": "FRESH4Cs",
+      "filename": "HZ Water Quality and Quantity - Fresh water sources for infiltration in the Braakman-Zuid area_EN.docx",
+      "question": "Which substances in the Leopoldkanaal water exceed the Nota Grondwater tresholds for infiltration?",
+      "answer": "While the water of the Leopoldkanaal showed to be fresh enough for infiltration, some metals and pesticides exceed the thresholds. This includes copper, manganese, BAM, glyphosate, AMPA, phenanthrene, and fluoranthene, with total pesticides surpassing 0.5 µg/L.",
+      "specificity": 9
+    },
+    {
+      "project": "FRESHEM",
+      "filename": "Eindrapport FRESHEM Zeeland",
+      "question": "What did FRESHEM Zeeland conclude about the distribution and reliability of fresh groundwater in Zeeland?",
+      "answer": "HEM mapping shows 20–30% of Zeeland has a freshwater lens >15 m thick, while 35–50% has little or no fresh lens. The HEM 'middle' agrees with 78% of well chloride measurements (88% within p25–p75). Uncertainty is generally <2 m or <20% in well-sampled areas; results are less reliable in brackish zones and for very local features.",
+      "specificity": 7
+    },
+    {
+      "project": "GO-Fresh",
+      "filename": "Eindrapportage_GO-FRESH;_Valorisatie_kansrijke_oplossingen_voor_robuuste_zoetwatervoorziening.pdf",
+      "question": "Which techniques were used in the GO-Fresh field trials to increase freshwater availability",
+      "answer": "Three techniques: (1) Kreekrug Infiltratie Systeem: peilgestuurde drainage combined with targeted surface-water infiltration; (2) Freshmaker: winter injection of freshwater and capture of upwelling saline water via horizontal drilled wells; (3) Drains2Buffer: deeper and denser drainage to enlarge shallow rainwater lenses and prevent root-zone salinisation.",
+      "specificity": 8
+    },
+    {
+      "project": "Hergebruik Foodport",
+      "filename": "Final Report Emma.docx",
+      "question": "Which companies were involved in the Hergebruik Foodport project",
+      "answer": "The companies involved were Kloosterboer B.V., CSM Bakery Supplies Europe, Coroos Conserven B.V., and Lamb Weston Meijer.",
+      "specificity": 5
+    },
+    {
+      "project": "IMPROVED",
+      "filename": "Report_Pilot_Yara_final.pdf",
+      "question": "What is the tradeoff when using MD compared to RO?",
+      "answer": "MD gives higher product quality with no additional post-treatment, but is very energy intensive and produces a small product flow. RO is more water-efficient and economically favorable but may require additional treatment to meet specifications.",
+      "specificity": 5
+    },
+    {
+      "project": "NEREUS",
+      "filename": "NEREUS_D2.5.3 Report on Social Acceptance.docx",
+      "question": "What is the main goal for the NEREUS project",
+      "answer": "The goal of this report is to summarize evidence and experiences gathered during the project on the topic of social acceptance, i.e. the resource may be recovered and ready for reuse, but how does the end user feel about using them, knowing where they originated? ",
+      "specificity": 6
+    },
+    {
+      "project": "OPZuid",
+      "filename": "",
+      "question": "",
+      "answer": "",
+      "specificity": 0
+    },
+    {
+      "project": "Proeftuin Zoetwater E4",
+      "filename": "Wp4-Gebruikers Atlas van Landbouw_Landschap_Natuur_Recreatie.pdf",
+      "question": "What kinds of potatoes are harvested in the Lovenpolder",
+      "answer": "There are 2 kinds of potatoes harvested: consumptionpotaties and seed potatoes. The seedpotatoes are mainly grown for export and having a higher yield per hectare",
+      "specificity": 9
+    },
+    {
+      "project": "TKI Wetlands",
+      "filename": "WetlandsHybridDesalinationDowTerneuzen.pdf",
+      "question": "What is an HSSF in the context of constructed wetlands",
+      "answer": "An Aerated Horizontal Subsurface Flow (HSSF) constructed wetland, is one where water is fed from horizontal pipe with openings at regular intervals to distribute the water equally over the inlet zone.",
+      "specificity": 3
+    },
+    {
+      "project": "Water NEXUS",
+      "filename": "water_nexus_saline_water_when_possible_fresh_wate-wageningen_university_and_research_553702.pdf",
+      "question": "For which types of wastewaters is anaerobic treatment most convenient?",
+      "answer": "anaerobic treatment is most convenient for somewhta warmer soil (between 25-30°C), and high-strength wastewater because it combines treatment with the production of energy-rich biogas.",
+      "specificity": 4
+    },
+    {
+      "project": "Waterdunen",
+      "filename": "Bijlagen_Provinciaal_inpassingsplan_Waterdunen.pdf",
+      "question": "How will the freshwater canal be designed in the Waterdunen project to support nature",
+      "answer": "The freshwater canal will have nature-friendly banks. In the future situation, the banks will have a slope of 1:1, with some locations having a gentler slope where nature-friendly banks currently exist.",
+      "specificity": 7
+    },
+    {
+      "project": "Waterhouderij",
+      "filename": "Eindrapport Waterhouderij Walcheren I.pdf",
+      "question": "What is the observed effect of raising the groundwater level to -50 cm in the Waterhouderij area",
+      "answer": "Farmers have not observed any negative effects from raising the groundwater level to -50 cm below the surface, and experts do not expect any.",
+      "specificity": 8  
+    },
+    {
+      "project": "ZDZV Desalination for agriculture",
+      "filename": "ZDZW_Ontzilting_Economische_Evaluatie_Teunike_Buijs_NL.pdf",
+      "question": "What are the costs for storing desalinated water in a bassin",
+      "answer": "The construction of a water basin for storing desalinated water costs around €5,000 per 1,000 m³",
+      "specificity": 8
+    }
+  ]
+}
