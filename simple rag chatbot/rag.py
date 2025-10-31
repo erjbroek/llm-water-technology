@@ -308,8 +308,6 @@ User question: {query}
         except Exception as e:
             return f"Error from Ollama: {e}"
             
-chatbot = RAGChatbot(vector_store, ollama_client)
-            
     def clear_history(self):
         self.conversation_history = []
         print("Conversation history cleared")
