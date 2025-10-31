@@ -278,30 +278,37 @@ User question: {query}
                 stream=False
             )
             print("DEBUG Ollama raw response:", response)
-    
-            # Ollama's client can return different shapes depending on the
-            # configuration; try to handle common ones robustly.
-            if isinstance(response, dict):
-                if "message" in response and isinstance(response["message"], dict):
-                    # response['message'] is often a dict with a 'content' field.
-                    answer = response["message"].get("content", str(response["message"]))
+                # Extract only clean message text
+            answer = ""
+            if hasattr(response, "message") and hasattr(response.message, "content"):
+                answer = response.message.content
+            elif isinstance(response, dict):
+                message = response.get("message", {})
+                if isinstance(message, dict):
+                    answer = message.get("content", "")
                 elif "content" in response:
                     answer = response["content"]
-                else:
-                    answer = str(response)
             else:
-                # Fallback to stringifying non-dict responses.
                 answer = str(response)
 
-            # Record the Q/A pair in conversation history for limited
-            # conversational state; only the last 3 turns are included in the
-            # prompt when generating a new response (see `history` above).
-            self.conversation_history.append({"question": query, "answer": answer})
+            #Strip trailing whitespace
+            answer = answer.strip()
 
-            return answer.strip()
+            #Remove <think>...</think> sections
+            if "<think>" in answer:
+                try:
+                    # Split off the visible portion after </think>
+                    answer = answer.split("</think>")[-1].strip()
+                except Exception:
+                    pass
+
+            self.conversation_history.append({"question": query, "answer": answer})
+            return answer
 
         except Exception as e:
             return f"Error from Ollama: {e}"
+            
+chatbot = RAGChatbot(vector_store, ollama_client)
             
     def clear_history(self):
         self.conversation_history = []
