@@ -11,3 +11,5 @@ pathlib
 langdetect
 deep-translator
 langchain-text-splitters
+ragas
+bert_score

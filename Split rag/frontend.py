@@ -3,6 +3,7 @@
 import logging
 import gradio as gr
 from backend import (
+    evaluate_model,
     get_db_stats,
     upload_and_process_files,
     reindex_all_documents,
@@ -12,7 +13,7 @@ from backend import (
     clear_all_data,
     clear_chat_only,
     list_documents,
-    vector_store
+    vector_store,
 )
 import config
 
@@ -68,6 +69,7 @@ def create_gradio_interface():
                 # Bulk operations
                 reindex_btn = gr.Button("Reindex All Documents")
                 clear_btn = gr.Button("Clear Vector Store & Chat")
+                evaluate_btn = gr.Button("Evaluate model")
 
             with gr.Column(scale=2):
                 # Chat interface
@@ -135,6 +137,11 @@ def create_gradio_interface():
             clear_chat_only, 
             outputs=[chatbot_ui, msg_box]
         )
+
+        evaluate_btn.click(
+            evaluate_model
+        )
+
 
     return demo
 

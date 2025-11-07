@@ -28,7 +28,7 @@ python -m venv .venv
 
 3. Install the requirements:
 
-pip install -r requirements.py
+pip install -r requirements.txt
 
 4.  Run the code:
 

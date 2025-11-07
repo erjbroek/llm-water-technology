@@ -12,6 +12,11 @@ from ollama import Client
 # from langdetect import detect
 from vectorize import VectorStore, DocumentProcessor, ingest_file, ingest_directory
 import config
+import asyncio
+import json
+from ragas.metrics import BleuScore, RougeScore, ChrfScore
+from ragas.dataset_schema import SingleTurnSample
+from bert_score import score
 
 # Configure logging
 logging.basicConfig(level=getattr(logging, config.LOG_LEVEL, 'INFO'))
@@ -220,9 +225,91 @@ Answer:
         # self.translator_cache = {}  # Clear translator cache
         logger.info("Conversation history cleared")
 
+class RAGEvaluator:
+    def __init__(self, chatbot):
+        self.chatbot = chatbot
+        evaluation_questions_and_answers = json.loads(open("questions_answers.json", "r", encoding="utf-8").read())
+        prepared_qa_nl = []
+        prepared_qa_en = []
+        for qa_pair in evaluation_questions_and_answers:
+            if qa_pair["ground_truth"]["nl"].strip():
+                prepared_qa_nl.append({
+                    "question": qa_pair["question"]["nl"],
+                    "ground_truth": qa_pair["ground_truth"]["nl"],
+                    "project": qa_pair["project"],
+                    "filename": qa_pair["filename"],
+                    "specificity": qa_pair["specificity"]
+                })
+            if qa_pair["ground_truth"]["en"].strip():
+                prepared_qa_en.append({
+                    "question": qa_pair["question"]["en"],
+                    "ground_truth": qa_pair["ground_truth"]["en"],
+                    "project": qa_pair["project"],
+                    "filename": qa_pair["filename"],
+                    "specificity": qa_pair["specificity"]
+                })
+        self.prepared_qa_nl = prepared_qa_nl[:1]
+        self.prepared_qa_en = prepared_qa_en[:1]
+        print(f"loaded json succesfully: {len(self.prepared_qa_nl)} nl, and {len(self.prepared_qa_en)} en qa pairs")
+    
+    def store_relevant_documents(self, evaluation_data=[]):
+        if evaluation_data:
+            for qa_pair in evaluation_data:
+                filename = qa_pair["filename"]
+                directory_name = qa_pair["project"]
+                try:
+                    file_path = next((Path.cwd().parent / "Water management research papers").rglob(filename), None)
+                except:
+                    print("File not found. This could be due to the json. Start by verifying if the file is actually in the directory")
+                    raise FileNotFoundError(f"File '{filename}' not found in project '{directory_name}'")
+                
+                filetype = filename.split('.')[-1]
+                chunks = doc_processor.process_document(file_path, filetype)
+                vector_store.add_documents(chunks, filename)
+            
+    def evaluate_retrieval(self, evaluation_data=[], top_k=5):
+        if evaluation_data:
+            hits = 0
+            for qa_pair in evaluation_data:
+                context = self.chatbot.get_relevant_context(qa_pair["question"])
+                gt_words = [word.lower() for word in qa_pair["ground_truth"].split()[:5]]
+                if any(word in context.lower() for word in gt_words):
+                    hits += 1
+            recall_at_k = hits / len(evaluation_data)
+            print(f"Recall@{top_k}: {recall_at_k}")
+        else:
+            print("No evaluation data found.")
+            return
+
+    async def evaluate_generation(self, evaluation_data=[]):
+        if evaluation_data:
+            print('started evaluating')
+            for qa_pair in evaluation_data:
+                ground_truth = qa_pair["ground_truth"]
+                generated_response = self.chatbot.generate_response(query=qa_pair["question"])
+
+                print('before sample')
+                sample = SingleTurnSample(
+                    response=generated_response,
+                    reference=ground_truth
+                )
+                bleu = await BleuScore().single_turn_ascore(sample)
+                rouge = await RougeScore().single_turn_ascore(sample)
+                chrf = await ChrfScore().single_turn_ascore(sample)
+
+                precision, recall, F1 = score([generated_response], [ground_truth], lang="en", verbose=True)
+
+                print(f"bleu score: {bleu}")
+                print(f"rouge score: {rouge}")
+                print(f"chrf score: {chrf}")
+                print(f"precision: {precision}, recall: {recall}, F1: {F1}")
+
+        else:
+            print("No evaluation data found")
 
 # Initialize chatbot
 chatbot = RAGChatbot(vector_store, ollama_client) if vector_store and ollama_client else None
+evaluator = RAGEvaluator(chatbot)
 
 
 def resolve_target_folder(subfolder: str) -> Path:
@@ -254,6 +341,13 @@ def resolve_document_path(relative_path: str) -> Path:
     
     return candidate
 
+def evaluate_model():
+    print('storing chunks')
+    # evaluator.store_relevant_documents(evaluator.prepared_qa_en)
+    # evaluator.evaluate_retrieval(evaluator.prepared_qa_en)
+    print('starting evaluation')
+    asyncio.run(evaluator.evaluate_generation(evaluator.prepared_qa_en))
+    # TODO: look into if the db should be cleared after evaluation? or finding a way to clear just the added info
 
 def get_db_stats():
     # Get database statistics.
