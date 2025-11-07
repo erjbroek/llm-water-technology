@@ -1,0 +1,15 @@
+chromadb
+gradio
+sentence-transformers
+PyPDF2
+python-docx
+langchain
+torch
+torchvision
+ollama
+pathlib
+langdetect
+deep-translator
+langchain-text-splitters
+ragas
+bert_score
