@@ -17,6 +17,8 @@ import json
 from ragas.metrics import BleuScore, RougeScore, ChrfScore
 from ragas.dataset_schema import SingleTurnSample
 from bert_score import score
+from sentence_transformers import CrossEncoder
+
 
 # Configure logging
 logging.basicConfig(level=getattr(logging, config.LOG_LEVEL, 'INFO'))
@@ -34,6 +36,9 @@ try:
         logger.info(f"GPU device: {torch.cuda.get_device_name(0)} ({torch.cuda.get_device_properties(0).total_memory/1024**3:.1f} GB)")
     else:
         logger.info("Running on CPU")
+
+    
+    reranker_model = CrossEncoder('cross-encoder/ms-marco-MiniLM-L-6-v2')
     
     # Initialize components
     vector_store = VectorStore()
@@ -56,9 +61,10 @@ except Exception as e:
 class RAGChatbot:
     # RAG Chatbot that combines document retrieval with LLM generation.
     
-    def __init__(self, vector_store, ollama_client):
+    def __init__(self, vector_store, ollama_client, reranker_model):
         self.vector_store = vector_store
         self.ollama_client = ollama_client
+        self.reranker_model = reranker_model
         self.conversation_history = []
         # self.user_language = None  
         # self.translator_cache = {}  
@@ -112,6 +118,48 @@ class RAGChatbot:
         except Exception as e:
             logger.error(f"Retrieval error: {e}")
             return ""
+        
+    # def get_relevant_context(self, query):
+    #     top_k = 5 
+    #     confidence_score_threshold = 0.8 
+    #     try:
+    #         results = self.vector_store.search(query, top_k=top_k)
+    #         retrieved_chunks = results["documents"][0]
+            
+    #         if not retrieved_chunks:
+    #             print("No chunks retrieved from vector store.")
+    #             return ""
+
+    #         # Reranking using Cross-Encoder
+    #         # Making pairs of (query, chunk) and scoring them with the Cross-Encoder
+    #         pairs = [(query, chunk) for chunk in retrieved_chunks]
+    #         scores = self.reranker_model.predict(pairs)
+            
+    #         # Add the score to the chunks and sort by score from high to low
+    #         scored_chunks = sorted(
+    #             zip(retrieved_chunks, scores), 
+    #             key=lambda x: x[1], 
+    #             reverse=True
+    #         )
+
+    #         # 3. Selection with confidence threshold
+    #         final_context = []
+    #         for chunk, score in scored_chunks:
+    #             if score >= confidence_score_threshold:
+    #                 final_context.append(chunk)
+
+    #         if not final_context:
+    #             # print(f"No chunks found above confidence treshold {confidence_score_threshold}, using top 5 instead")
+    #             # final_context = [chunk for chunk, score in scored_chunks[:5]]
+    #             return ""
+
+    #         print(f"DEBUG: {len(final_context)} chunks selected after reranking.")
+    #         return "\n---\n".join(final_context)
+            
+    #     except Exception as e:
+    #         print(f"Retrieval/Reranking error: {e}")
+    #         return ""
+
 
     def generate_response(self, query: str):
         # Generate a response using retrieved context and Ollama.
@@ -334,7 +382,7 @@ class RAGEvaluator:
             print("No evaluation data found")
 
 # Initialize chatbot
-chatbot = RAGChatbot(vector_store, ollama_client) if vector_store and ollama_client else None
+chatbot = RAGChatbot(vector_store, ollama_client, reranker_model) if vector_store and ollama_client else None
 evaluator = RAGEvaluator(chatbot)
 
 

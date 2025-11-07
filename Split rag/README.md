@@ -79,4 +79,8 @@ Creates:
    - Dutch questions → Dutch responses
 5. The system retrieves relevant document chunks and generates responses using Ollama
 
-
+## Current tasks left to do (can always be expanded):
+1. Write comments on evaluation code (erik)
+2. Check out all commented out code
+3. Work on detecting language & translating (currently commented out in backend.py class RAGChatbot), based on a list of common words (so same as done for very first data understanding)
+4. Make sure requirements.txt is updated

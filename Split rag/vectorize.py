@@ -30,6 +30,20 @@ class DocumentProcessor:
             chunk_size=config.CHUNK_SIZE,
             chunk_overlap=config.CHUNK_OVERLAP,
             length_function=len,
+            # chunk_size=1500,
+            # chunk_overlap=300,
+
+            # high chunk size 
+            # chunk_size=2000,
+            # chunk_overlap=400,
+
+            # high overlap
+            # chunk_size=1000,
+            # chunk_overlap=400,
+
+            
+            # chunk_size=2000,
+            # chunk_overlap=200,
         )
 
     def extract_text_from_pdf(self, file_path: Path) -> str:
