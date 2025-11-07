@@ -140,21 +140,47 @@ class RAGChatbot:
         #     lang_instruction = f"Always respond in the same language as the user's question."
 
         # Create prompt
+
+#         prompt = f"""
+# You are a helpful assistant answering based ONLY on the uploaded document context.
+# If unsure, say so.
+# Focus on providing accurate information from the context provided.
+
+# Conversation history:
+# {history}
+
+# Relevant document context:
+# {context}
+
+# User question: {query}
+
+# Answer:
+# """
+
         prompt = f"""
-You are a helpful assistant answering based ONLY on the uploaded document context.
-If unsure, say so.
-Focus on providing accurate information from the context provided.
+        You are an intelligent assistent helping users find precise information from research documents.
+        You must answer questions based ONLY using information proviced in the document context.
+        If the answer is not clearly supported in this context, respond with:
+        "Based on the available documents, i cannot find the answer"
 
-Conversation history:
-{history}
+        Conversation history: 
+        {history}
 
-Relevant document context:
-{context}
+        Relevant document context:
+        {context}
 
-User question: {query}
+        Task:
+        Answer the following question as clearly and consisely as possible using only the document context above.
+        when answering:
+        - Use evidence directly from the context.
+        - Do NOT speculate, infer missing details or use outside knowledge.
+        - Be clear and neural, focus on accuracy.
 
-Answer:
-"""
+        If you cannot find an answer, say so.
+
+        user question:
+        {query}
+        """
 
         try:
             response = self.ollama_client.chat(
@@ -464,7 +490,18 @@ def chat_response(message, history):
         return history, ""
         
     response = chatbot.generate_response(message)
-    history.append([message, response])
+    
+    results = vector_store.search(message, top_k=1)
+    filename = results['metadatas'][0][0]['relative_path'].split('\\')[-1]
+    chunk = results['documents'][0][0].replace('\n', ' ')
+
+    combined_response = (
+        f"{response}\n\n"
+        f"**File used**:\n {filename}\n"
+        f"**Information:**\n: {chunk}"
+    )
+
+    history.append([message, combined_response])
     return history, ""
 
 
