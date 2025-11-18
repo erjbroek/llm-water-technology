@@ -4,6 +4,7 @@ import logging
 import gradio as gr
 from backend import (
     evaluate_model,
+    get_current_evaluation_progress,
     get_db_stats,
     upload_and_process_files,
     reindex_all_documents,
@@ -30,6 +31,9 @@ def dropdown_update(selected=None):
     value = selected if selected in documents else None
     
     return gr.Dropdown.update(choices=documents, value=value)
+
+def toggle_send_enabled(lang):
+     return gr.update(interactive=(lang in ("dutch", "english")))
 
 
 def create_gradio_interface():
@@ -69,12 +73,23 @@ def create_gradio_interface():
                 # Bulk operations
                 reindex_btn = gr.Button("Reindex All Documents")
                 clear_btn = gr.Button("Clear Vector Store & Chat")
-                evaluate_btn = gr.Button("Evaluate model")
+                gr.HTML("<br>")
+                with gr.Row():
+                    retrieval_eval_button = gr.Button("Evaluate chunk retrieval")
+                    generation_eval_button = gr.Button("Evaluate model output")
+
+                eval_count = gr.Number(label="Num of evaluations", value=10, precision=1)
+                total_eval_button = gr.Button("Full evaluation")
 
             with gr.Column(scale=2):
                 # Chat interface
                 chatbot_ui = gr.Chatbot(label="Chatbot", height=500)
                 msg_box = gr.Textbox(label="Your Question")
+                lang_selector = gr.Radio(
+                    choices=["dutch", "english"],
+                    label="Language",
+                    value=None  # default None so nothing is selected
+                )
                 send_btn = gr.Button("Send")
                 clear_chat_btn = gr.Button("Clear Chat")
 
@@ -90,7 +105,7 @@ def create_gradio_interface():
         
         send_btn.click(
             chat_response, 
-            [msg_box, chatbot_ui], 
+            [msg_box, chatbot_ui, lang_selector], 
             [chatbot_ui, msg_box]
         )
         
@@ -138,10 +153,26 @@ def create_gradio_interface():
             outputs=[chatbot_ui, msg_box]
         )
 
-        evaluate_btn.click(
-            evaluate_model
+        retrieval_eval_button.click(
+            fn=lambda num: evaluate_model("retrieval", num),
+            inputs=eval_count
         )
 
+        generation_eval_button.click(
+            fn=lambda num: evaluate_model("generation", num),
+            inputs=eval_count
+        )
+
+        total_eval_button.click(
+            fn=lambda num: evaluate_model("full", num),
+            inputs=eval_count
+        )
+
+        lang_selector.change(
+            fn=toggle_send_enabled,
+            inputs=[lang_selector],
+            outputs=[send_btn]
+        )
 
     return demo
 

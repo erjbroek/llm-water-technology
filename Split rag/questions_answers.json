@@ -2,6 +2,7 @@
   {
     "project": "AquaConnect",
     "filename": "",
+    "original_language": "",
     "question": {
       "en": "",
       "nl": ""
@@ -15,6 +16,7 @@
   {
     "project": "AquaSPICE",
     "filename": "Report AquaSPICE_DowTnzCT_Draft 2_10082022.docx",
+    "original_language": "english",
     "question": {
       "en": "What was the purpose of the trials conducted at Dow Terneuzen for the AquaSPICE project",
       "nl": "Wat was het doel van de beproevingen gedaan bij Dow Terneuzen voor het AquaSPICE project"
@@ -28,6 +30,7 @@
   {
     "project": "Aquatuur",
     "filename": "",
+    "original_language": "",
     "question": {
       "en": "",
       "nl": ""
@@ -41,6 +44,7 @@
   {
     "project": "Condensate quality",
     "filename": "",
+    "original_language": "",
     "question": {
       "en": "",
       "nl": ""
@@ -54,6 +58,7 @@
   {
     "project": "DeltaDrip",
     "filename": "20210603_eindrapportage_2020_deltadrip.pdf",
+    "original_language": "dutch",
     "question": {
       "en": "What are the yearly costs for above ground drip irrigation per hectare?",
       "nl": "Wat zijn de jaarlijkse kosten voor bovengrondse druppelirrigatie per hectare"
@@ -67,6 +72,7 @@
   {
     "project": "E4Water",
     "filename": "Rapport E4Water.docx",
+    "original_language": "english",
     "question": {
       "en": "What pre-treatment steps were applied before NF/EDR to limit fouling?",
       "nl": "Welke voorbehandelings stappen zijn toegepast voor NF/EDR om fouling te beperken"
@@ -80,6 +86,7 @@
   {
     "project": "EffluentFit4Food",
     "filename": "effluentfitfood_towards_safe_sustainable_irrigati-wag.pdf",
+    "original_language": "english",
     "question": {
       "en": "What is the effect of irrigation water quality on growing crops regarding plant vitality and crop yields",
       "nl": "Wat is het effect de kwaliteit van irrigatie water op groeiend gewas als het gaat over plant vitaliteit en gewas oogst"
@@ -93,6 +100,7 @@
   {
     "project": "FRESH4Cs",
     "filename": "HZ Water Quality and Quantity - Fresh water sources for infiltration in the Braakman-Zuid area_EN.docx",
+    "original_language": "english",
     "question": {
       "en": "Which substances in the Leopoldkanaal water exceed the Nota Grondwater tresholds for infiltration?",
       "nl": "Welke substanties in het water van het Leopoldkanaal overschrijden de Nota Grondwater grenswaarden voor infiltratie?"
@@ -106,6 +114,7 @@
   {
     "project": "FRESHEM",
     "filename": "Eindrapport FRESHEM Zeeland",
+    "original_language": "english",
     "question": {
       "en": "What did FRESHEM Zeeland conclude about the distribution and reliability of fresh groundwater in Zeeland?",
       "nl": "Wat concludeerde FRESHEM Zeeland over de verdeling enbetrouwbaarheid van vers grondwater in Zeeland? "
@@ -119,19 +128,21 @@
   {
     "project": "GO-Fresh",
     "filename": "Eindrapportage_GO-FRESH;_Valorisatie_kansrijke_oplossingen_voor_robuuste_zoetwatervoorziening.pdf",
+    "original_language": "dutch",
     "question": {
       "en": "Which techniques were used in the GO-Fresh field trials to increase freshwater availability",
       "nl": "Welke technieken zijn er gebruikt in het GO-Fresh veldonderzoek om de zoetwater beschikbaarheid te verbeteren"
     },
     "ground_truth": {
       "en": "Three techniques: (1) Kreekrug Infiltratie Systeem: peilgestuurde drainage combined with targeted surface-water infiltration; (2) Freshmaker: winter injection of freshwater and capture of upwelling saline water via horizontal drilled wells; (3) Drains2Buffer: deeper and denser drainage to enlarge shallow rainwater lenses and prevent root-zone salinisation.",
-      "nl": ""
+      "nl": "Drie technieken: (1) Kreekbrug infiltratie systeem: peilgestuurde afwatering gecombineerd met gericht oppervlakte-water infiltatie; (2) Freshmaker: winterinjectie van zoetwater en opvang van opwellend zout water via horizontale boorputten; (3) Drans2Buffer: diepere en dichtere afwatering om ondiepe regenwaterlenzen te vergroten en verzilting van de wortelzone te voorkomen"
     },
     "specificity": 8
   },
   {
     "project": "Hergebruik Foodport",
     "filename": "Final Report Emma.docx",
+    "original_language": "english",
     "question": {
       "en": "Which companies were involved in the Hergebruik Foodport project",
       "nl": "Welke bedrijven zijn betrokken in het Hergebruik Foodport project"
@@ -145,6 +156,7 @@
   {
     "project": "IMPROVED",
     "filename": "Report_Pilot_Yara_final.pdf",
+    "original_language": "english",
     "question": {
       "en": "What is the tradeoff when using MD compared to RO?",
       "nl": "Wat is afweging bij het gebruik van MD en RO"
@@ -158,19 +170,21 @@
   {
     "project": "NEREUS",
     "filename": "NEREUS_D2.5.3 Report on Social Acceptance.docx",
+    "original_language": "english",
     "question": {
       "en": "What is the main goal for the NEREUS project",
-      "nl": ""
+      "nl": "Wat is het hoofd doel van het NEREUS project"
     },
     "ground_truth": {
-      "en": "The goal of this report is to summarize evidence and experiences gathered during the project on the topic of social acceptance, i.e. the resource may be recovered and ready for reuse, but how does the end user feel about using them, knowing where they originated? ",
-      "nl": ""
+      "en": "The NEREUS project has focused for the last four years on the recovery and reuse of several resources from urban wastewater. Aside from the actual recovery of the resource, there is also the question of reuse of the product once recovered. Each pilot case aims to recover various resources. ",
+      "nl": "Het NEREUS project is voor de afgelopen vier jaar gefocust op het herstel en hergebruik van verschillende gronstoffen uit stedelijk afvalwater. Naast de daadwerkelijke erugwinning van de grondstof, is er ook de vraag naar hergebruik van het gewonnen product. Elke pilot is gericht op de terugwinning van verschillende grondstoffen."
     },
-    "specificity": 6
+    "specificity": 7
   },
   {
     "project": "OPZuid",
     "filename": "",
+    "original_language": "",
     "question": {
       "en": "",
       "nl": ""
@@ -184,78 +198,84 @@
   {
     "project": "Proeftuin Zoetwater E4",
     "filename": "Wp4-Gebruikers Atlas van Landbouw_Landschap_Natuur_Recreatie.pdf",
+    "original_language": "dutch",
     "question": {
       "en": "What kinds of potatoes are harvested in the Lovenpolder",
-      "nl": ""
+      "nl": "Welke soorten aardappelen worden er geoogst in de Lovenpolder"
     },
     "ground_truth": {
       "en": "There are 2 kinds of potatoes harvested: consumptionpotaties and seed potatoes. The seedpotatoes are mainly grown for export and having a higher yield per hectare",
-      "nl": ""
+      "nl": "Er zijn twee soorten aardappelen die worden geoogst: consumptieaardappelen en pootaardappelen. De pootaardappelen worden voornamelijk geteeld voor de export en hebben een hogere opbrengst per hectare "
     },
     "specificity": 9
   },
   {
     "project": "TKI Wetlands",
     "filename": "WetlandsHybridDesalinationDowTerneuzen.pdf",
+    "original_language": "english",
     "question": {
       "en": "What is an HSSF in the context of constructed wetlands",
-      "nl": ""
+      "nl": "Wat is een HSSF in de context van aangelegde wetlands "
     },
     "ground_truth": {
       "en": "An Aerated Horizontal Subsurface Flow (HSSF) constructed wetland, is one where water is fed from horizontal pipe with openings at regular intervals to distribute the water equally over the inlet zone.",
-      "nl": ""
+      "nl": "Een beluchte horizontale ondergroundse stroming (HSSF) is een wetland waarbij water wordt aangevoerd vanuit een horizontale buis met openingen op regelmatige afstanden om het water gelijkmatig over de inlaatzone te verdelen"
     },
     "specificity": 3
   },
   {
     "project": "Water NEXUS",
     "filename": "water_nexus_saline_water_when_possible_fresh_wate-wageningen_university_and_research_553702.pdf",
+    "original_language": "english",
     "question": {
       "en": "For which types of wastewaters is anaerobic treatment most convenient?",
-      "nl": ""
+      "nl": "Voor welke types afvalwater is anaerobe zuivering het meest geschikt?"
     },
     "ground_truth": {
       "en": "anaerobic treatment is most convenient for somewhta warmer soil (between 25-30°C), and high-strength wastewater because it combines treatment with the production of energy-rich biogas.",
-      "nl": ""
+      "nl": "Anaerobe behandelijk is het meest geschikt voor wat warmere gronden (tussen 25-30°C) en afvalwater met en hoge concentratie, omdat het de behandeling combineert met de productie van energierijk biogas."
     },
     "specificity": 4
   },
   {
     "project": "Waterdunen",
     "filename": "Bijlagen_Provinciaal_inpassingsplan_Waterdunen.pdf",
+    "original_language": "dutch",
     "question": {
       "en": "How will the freshwater canal be designed in the Waterdunen project to support nature",
-      "nl": ""
+      "nl": "Hoe kan het zoetwaterkanaal in het project Waterdunen ontworpen ter ondersteuning van de natuur"
     },
     "ground_truth": {
       "en": "The freshwater canal will have nature-friendly banks. In the future situation, the banks will have a slope of 1:1, with some locations having a gentler slope where nature-friendly banks currently exist.",
-      "nl": ""
+      "nl": "Het zoetwaterkanaal krijgt natuurvriendelijke oevers. In de toekomstige situatie hebben de oevers een helling van 1:1 met op sommige locaties een flauwere helling waar nu natuurvriendelijke oevers aanwezig zijn."
     },
     "specificity": 7
   },
   {
     "project": "Waterhouderij",
     "filename": "Eindrapport Waterhouderij Walcheren I.pdf",
+    "original_language": "dutch",
     "question": {
       "en": "What is the observed effect of raising the groundwater level to -50 cm in the Waterhouderij area",
-      "nl": ""
+      "nl": "Wat is het waargenomen effect van het verhogen van de grondwaterstand tot -50 cm in de Waterhouderij "
     },
     "ground_truth": {
       "en": "Farmers have not observed any negative effects from raising the groundwater level to -50 cm below the surface, and experts do not expect any.",
-      "nl": ""
+      "nl": "Boeren ebben geen negatieve effecten waargenomen van het verhogen van de grondwaterstand tot -50 cm onder het oppervlak, en deskundigen verwachten ook geen negatieve effecten."
     },
     "specificity": 8
   },
   {
     "project": "ZDZV Desalination for agriculture",
     "filename": "ZDZW_Ontzilting_Economische_Evaluatie_Teunike_Buijs_NL.pdf",
+    "original_language": "dutch",
     "question": {
       "en": "What are the costs for storing desalinated water in a bassin",
-      "nl": ""
+      "nl": "Wat zijn de kosten van de opslag van ontzilt water in een bassin"
     },
     "ground_truth": {
       "en": "The construction of a water basin for storing desalinated water costs around €5,000 per 1,000 m³",
-      "nl": ""
+      "nl": "De constructie van een water basin om ontzilt water op te slaan, kost ongeveer €5,000 per 1,000 m³"
     },
     "specificity": 8
   }

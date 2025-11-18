@@ -8,7 +8,7 @@ from pathlib import Path
 from typing import List, Dict, Any, Tuple
 import torch
 from ollama import Client
-# from deep_translator import GoogleTranslator
+from deep_translator import GoogleTranslator
 # from langdetect import detect
 from vectorize import VectorStore, DocumentProcessor, ingest_file, ingest_directory
 import config
@@ -18,7 +18,10 @@ from ragas.metrics import BleuScore, RougeScore, ChrfScore
 from ragas.dataset_schema import SingleTurnSample
 from bert_score import score
 from sentence_transformers import CrossEncoder
-
+import time
+import random
+import pandas as pd
+from datetime import datetime
 
 # Configure logging
 logging.basicConfig(level=getattr(logging, config.LOG_LEVEL, 'INFO'))
@@ -109,12 +112,29 @@ class RAGChatbot:
     #         logger.error(f"Translation error: {e}")
     #         return text
 
-    def get_relevant_context(self, query):
+    def get_relevant_context(self, query, language):
         # Retrieve relevant document chunks for the query.
+
         try:
-            results = self.vector_store.search(query, top_k=5)  
-            docs = results["documents"][0]
-            return "\n\n".join(docs)
+            print('start of translation')
+            if language == "dutch": 
+                translator = GoogleTranslator(source="nl", target="en")
+                english_query = translator.translate(query)
+                alternative_results = self.vector_store.search(english_query, top_k=3)
+                print(f"succesfully translated from dutch to english")
+            elif language == "english": 
+                translator = GoogleTranslator(source="en", target="nl")
+                dutch_query = translator.translate(query)
+                alternative_results = self.vector_store.search(dutch_query, top_k=3)
+                print(f"succesfully translated from english to dutch")
+            else: 
+                raise ValueError(f"Invalid language: {language}")
+            
+            results = self.vector_store.search(query, top_k=3)
+            original_docs = results["documents"][0]
+            alternative_docs = alternative_results["documents"][0]
+            combined_docs = original_docs + alternative_docs
+            return "\n\n".join(combined_docs)
         except Exception as e:
             logger.error(f"Retrieval error: {e}")
             return ""
@@ -161,7 +181,7 @@ class RAGChatbot:
     #         return ""
 
 
-    def generate_response(self, query: str):
+    def generate_response(self, query: str, query_language: str):
         # Generate a response using retrieved context and Ollama.
         
         # # Use cached language or detect once
@@ -171,7 +191,9 @@ class RAGChatbot:
         # original_lang = self.user_language
         
         # Search using original query (documents stored in original language)
-        context = self.get_relevant_context(query)
+        start_time_chunk_retrieval = time.time()
+        context = self.get_relevant_context(query, query_language)
+        chunk_retrieval_time = time.time() - start_time_chunk_retrieval
         
         # Build conversation history
         history = "\n".join([
@@ -189,47 +211,44 @@ class RAGChatbot:
 
         # Create prompt
 
-#         prompt = f"""
-# You are a helpful assistant answering based ONLY on the uploaded document context.
-# If unsure, say so.
-# Focus on providing accurate information from the context provided.
-
-# Conversation history:
-# {history}
-
-# Relevant document context:
-# {context}
-
-# User question: {query}
-
-# Answer:
-# """
-
         prompt = f"""
-        You are an intelligent assistent helping users find precise information from research documents.
-        You must answer questions based ONLY using information proviced in the document context.
-        If the answer is not clearly supported in this context, respond with:
-        "Based on the available documents, i cannot find the answer"
+        You are a helpful assistant answering based ONLY on the uploaded document context.
+        If unsure, say so.
+        Focus on providing accurate information from the context provided.
 
-        Conversation history: 
+        Conversation history:
         {history}
 
         Relevant document context:
         {context}
 
-        Task:
-        Answer the following question as clearly and consisely as possible using only the document context above.
-        when answering:
-        - Use evidence directly from the context.
-        - Do NOT speculate, infer missing details or use outside knowledge.
-        - Be clear and neural, focus on accuracy.
+        User question: {query}
 
-        If you cannot find an answer, say so.
-
-        user question:
-        {query}
+        Answer:
         """
 
+        # prompt = f"""
+        # You are an intelligent assistent helping users find precise information from research documents.
+        # You must answer questions based ONLY using information proviced in the document context.
+        # If the answer is not clearly supported in this context, say so
+
+        # Conversation history: 
+        # {history}
+
+        # Relevant document context:
+        # {context}
+
+        # Task:
+        # Answer the following question as clearly and consisely as possible using only the document context above.
+        # when answering:
+        # - Use evidence directly from the context.
+        # - Do NOT speculate, infer missing details or use outside knowledge.
+        # - Be clear and neural, focus on accuracy.
+
+        # user question:
+        # {query}
+        # """
+        start_time_generation = time.time()
         try:
             response = self.ollama_client.chat(
                 model="qwen3:4b",
@@ -278,8 +297,8 @@ class RAGChatbot:
                 "question": query, 
                 "answer": answer  
             })
-            
-            return answer
+            generation_time = time.time() - start_time_generation
+            return answer, chunk_retrieval_time, generation_time
 
         except Exception as e:
             error_msg = f" Error from Ollama: {e}"
@@ -290,7 +309,7 @@ class RAGChatbot:
             #         error_msg = translator.translate(error_msg)
             #     except:
             #         pass
-            return error_msg
+            return error_msg, None, None
             
     def clear_history(self):
         # Clear conversation history.
@@ -305,6 +324,7 @@ class RAGEvaluator:
         evaluation_questions_and_answers = json.loads(open("questions_answers.json", "r", encoding="utf-8").read())
         prepared_qa_nl = []
         prepared_qa_en = []
+        self.current_evaluation_progress = 0
         for qa_pair in evaluation_questions_and_answers:
             if qa_pair["ground_truth"]["nl"].strip():
                 prepared_qa_nl.append({
@@ -322,69 +342,88 @@ class RAGEvaluator:
                     "filename": qa_pair["filename"],
                     "specificity": qa_pair["specificity"]
                 })
-        self.prepared_qa_nl = prepared_qa_nl[:1]
-        self.prepared_qa_en = prepared_qa_en[:1]
+        self.prepared_qa_nl = prepared_qa_nl
+        self.prepared_qa_en = prepared_qa_en
         print(f"loaded json succesfully: {len(self.prepared_qa_nl)} nl, and {len(self.prepared_qa_en)} en qa pairs")
-    
-    def store_relevant_documents(self, evaluation_data=[]):
-        if evaluation_data:
-            for qa_pair in evaluation_data:
-                filename = qa_pair["filename"]
-                directory_name = qa_pair["project"]
-                try:
-                    file_path = next((Path.cwd().parent / "Water management research papers").rglob(filename), None)
-                except:
-                    print("File not found. This could be due to the json. Start by verifying if the file is actually in the directory")
-                    raise FileNotFoundError(f"File '{filename}' not found in project '{directory_name}'")
-                
-                filetype = filename.split('.')[-1]
-                chunks = doc_processor.process_document(file_path, filetype)
-                vector_store.add_documents(chunks, filename)
             
-    def evaluate_retrieval(self, evaluation_data=[], top_k=5):
+    def evaluate_retrieval(self, language, evaluation_data=[], top_k=5):
+        start_time = time.time()
         if evaluation_data:
             hits = 0
+            precisions = []
             for qa_pair in evaluation_data:
-                context = self.chatbot.get_relevant_context(qa_pair["question"])
+                context = self.chatbot.get_relevant_context(qa_pair["question"], language)
                 gt_words = [word.lower() for word in qa_pair["ground_truth"].split()[:5]]
                 if any(word in context.lower() for word in gt_words):
                     hits += 1
+
+                words_in_context = context.lower().split()
+                matched_words = sum(1 for w in gt_words if w in words_in_context)
+                precision = matched_words / min(top_k, len(gt_words))
+                precisions.append(precision)
+
             recall_at_k = hits / len(evaluation_data)
-            print(f"Recall@{top_k}: {recall_at_k}")
+            mean_precision_at_k = sum(precisions) / len(precisions)
+            return recall_at_k, mean_precision_at_k, time.time() - start_time
         else:
             print("No evaluation data found.")
             return
 
-    async def evaluate_generation(self, evaluation_data=[]):
+    async def evaluate_generation(self, language, evaluation_data=[]):
         if evaluation_data:
-            print('started evaluating')
+            start_time = time.time()
             for qa_pair in evaluation_data:
                 ground_truth = qa_pair["ground_truth"]
-                generated_response = self.chatbot.generate_response(query=qa_pair["question"])
+                response, chunk_retrieval_time, generation_time = self.chatbot.generate_response(query=qa_pair["question"], query_language=language)
 
-                print('before sample')
                 sample = SingleTurnSample(
-                    response=generated_response,
+                    response=response,
                     reference=ground_truth
                 )
                 bleu = await BleuScore().single_turn_ascore(sample)
                 rouge = await RougeScore().single_turn_ascore(sample)
-                chrf = await ChrfScore().single_turn_ascore(sample)
 
-                precision, recall, F1 = score([generated_response], [ground_truth], lang="en", verbose=True)
-
-                print(f"bleu score: {bleu}")
-                print(f"rouge score: {rouge}")
-                print(f"chrf score: {chrf}")
-                print(f"precision: {precision}, recall: {recall}, F1: {F1}")
-
+                precision, recall, F1 = score([response], [ground_truth], lang="en", verbose=True)
+                return response, chunk_retrieval_time, generation_time, bleu, rouge, precision, recall, F1
+                
         else:
             print("No evaluation data found")
+
+    def complete_evaluation(self, language, evaluation_data, num_of_requests=2, model_name="qwen3:4b"):
+        eval_results = pd.DataFrame(columns=["question", "datetime", "model_name", "ground_truth", "model_output", "chunk_retrieval_time", "generation_time", "bleu", "rouge", "precision", "recall", "F1", "recall@k", "precision@k"])
+        self.current_evaluation_progress = 0
+        for i in range(num_of_requests):
+            print(f"Starting evaluation number {i}")
+            used_eval_data = random.sample(evaluation_data, 1)
+            print(used_eval_data)
+            recall_at_k, mean_precision_at_k, time_taken = self.evaluate_retrieval(language, used_eval_data)
+            response, chunk_retrieval_time, generation_time, bleu, rouge, precision, recall, F1 = asyncio.run(evaluator.evaluate_generation(language, used_eval_data))
+            row = pd.DataFrame([{
+                "question": used_eval_data[0]["question"],
+                "datetime": datetime.now(),
+                "model_name": model_name,
+                "ground_truth": used_eval_data[0]["ground_truth"],
+                "model_output": response,
+                "chunk_retrieval_time": chunk_retrieval_time,
+                "generation_time": generation_time,
+                "bleu": bleu,
+                "rouge": rouge,
+                "precision": precision,
+                "recall": recall,
+                "F1": F1,
+                "recall@k": recall_at_k,
+                "precision@k": mean_precision_at_k,
+            }])
+            eval_results = pd.concat([eval_results, row], ignore_index=True)
+            self.current_evaluation_progress += 1 
+            print(f'finished {i}th retrieval, time taken: {chunk_retrieval_time + generation_time}')
+
+        timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+        eval_results.to_csv(f"./evaluation_results/eval_results_{timestamp}.csv", index=False)
 
 # Initialize chatbot
 chatbot = RAGChatbot(vector_store, ollama_client, reranker_model) if vector_store and ollama_client else None
 evaluator = RAGEvaluator(chatbot)
-
 
 def resolve_target_folder(subfolder: str) -> Path:
     # Decide where to save uploaded files.
@@ -402,6 +441,9 @@ def resolve_target_folder(subfolder: str) -> Path:
     target.mkdir(parents=True, exist_ok=True)
     return target
 
+def get_current_evaluation_progress():
+    return evaluator.current_evaluation_progress
+
 
 def resolve_document_path(relative_path: str) -> Path:
     # Turn document name into full path.
@@ -415,13 +457,36 @@ def resolve_document_path(relative_path: str) -> Path:
     
     return candidate
 
-def evaluate_model():
-    print('storing chunks')
-    # evaluator.store_relevant_documents(evaluator.prepared_qa_en)
-    # evaluator.evaluate_retrieval(evaluator.prepared_qa_en)
-    print('starting evaluation')
-    asyncio.run(evaluator.evaluate_generation(evaluator.prepared_qa_en))
-    # TODO: look into if the db should be cleared after evaluation? or finding a way to clear just the added info
+def evaluate_model(evaluation='full', num_of_evaluations=5):
+    # the evaluation functions expect a dictionary containing:
+    # - original query, called "question"
+    # - the answer to the query, called "ground_truth"
+    # - the directory the file is in (like "Water NEXUS"), called "project"
+    # - name of the file (along with filetype), called "filename"
+    # - how specific the question is, called "specificity" (currently unused, but it might be interesting to see if results differ depending on specificity)
+    # (these can be used from the prepared question in the evaluator class)
+
+    # currently it evaluates based on english questions and answers, but if you want to translate on dutch ones, be sure to change the below code
+    # parts that need to be changed are evaluator.prepared_qa_en, and the string "english" passed in the functions
+    if evaluation == 'full':
+        print(f'complete evaluation of {num_of_evaluations} evaluations')
+        evaluator.complete_evaluation("english", evaluator.prepared_qa_en, num_of_requests=num_of_evaluations)
+    elif evaluation == 'generation':
+        print('evaluation of model output')
+        response, chunk_retrieval_time, generation_time, bleu, rouge, precision, recall, F1 = asyncio.run(evaluator.evaluate_generation("english", evaluator.prepared_qa_en))
+        print(f"bleu score: {bleu}")
+        print(f"rouge score: {rouge}")
+        print(f"precision: {precision}, recall: {recall}, F1: {F1}")
+        print(f"Time taken: {round(generation_time, 3)}")
+    elif evaluation == 'retrieval':
+        print('evaluation of chunk retrieval')
+        recall_at_k, mean_precision_at_k, time_taken = evaluator.evaluate_retrieval("english", evaluator.prepared_qa_en)
+        print(f"recall@k: {recall_at_k}")
+        print(f"precision@k: {mean_precision_at_k}")
+        print(f"time taken: {time_taken}")
+    
+    print("finished")
+
 
 def get_db_stats():
     # Get database statistics.
@@ -432,13 +497,13 @@ def get_db_stats():
     if "error" in stats:
         return f"DB Error: {stats['error']}"
     return f"""
-Vector DB Stats:
-- Documents: {stats['total_documents']}
-- Chunks: {stats['total_chunks']}
-- Model: {stats['embedding_model']}
-- Device: {stats['device']}
-Documents: {stats['documents']}
-"""
+        Vector DB Stats:
+        - Documents: {stats['total_documents']}
+        - Chunks: {stats['total_chunks']}
+        - Model: {stats['embedding_model']}
+        - Device: {stats['device']}
+        Documents: {stats['documents']}
+        """
 
 
 def upload_and_process_files(files, target_subfolder):
@@ -529,7 +594,7 @@ def delete_document(document_id: str, remove_file: bool):
     return status, get_db_stats()
 
 
-def chat_response(message, history):
+def chat_response(message, history, query_language):
     # Handle chat messages from the UI.
     if not chatbot:
         return history, ""
@@ -537,7 +602,7 @@ def chat_response(message, history):
     if not message.strip():
         return history, ""
         
-    response = chatbot.generate_response(message)
+    response, _, _ = chatbot.generate_response(message, query_language)
     
     results = vector_store.search(message, top_k=1)
     filename = results['metadatas'][0][0]['relative_path'].split('\\')[-1]

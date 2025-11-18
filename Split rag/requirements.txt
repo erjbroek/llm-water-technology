@@ -13,3 +13,5 @@ deep-translator
 langchain-text-splitters
 ragas
 bert_score
+sacrebleu
+rouge_score
