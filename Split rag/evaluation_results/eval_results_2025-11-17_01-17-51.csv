@@ -1,0 +1,101 @@
+question,datetime,model_name,ground_truth,model_output,chunk_retrieval_time,generation_time,bleu,rouge,precision,recall,F1,recall@k,precision@k
+What is the main goal for the NEREUS project,2025-11-17 01:07:39.372750,qwen3:4b,"The goal of this report is to summarize evidence and experiences gathered during the project on the topic of social acceptance, i.e. the resource may be recovered and ready for reuse, but how does the end user feel about using them, knowing where they originated? ","Based on the uploaded document context, the main goal for the NEREUS project is ""recovering valuable resources from domestic wastewater."" 
+
+This is explicitly stated in the document: ""The NEREUS (New Energy and Resources from Urban Sanitation) Project is an Interreg 2 Seas project with a consortium of 8 project partners across the United Kingdom, the Netherlands, Belgium, and France, working on the goal of recovering valuable resources from domestic wastewater.""
+
+The document also explains that the project was born from global pressures including freshwater and finite resources scarcity, as well as the desire to increase wastewater reuse. To achieve this, the project aimed for the adoption of technologies that recover important resources and enable the principle of a circular economy in the 2 Seas region.",0.011998891830444336,26.35664677619934,0.014164386425851326,0.16374269005847955,tensor([0.8223]),tensor([0.8563]),tensor([0.8390]),1.0,1.0
+Which substances in the Leopoldkanaal water exceed the Nota Grondwater tresholds for infiltration?,2025-11-17 01:08:29.060585,qwen3:4b,"While the water of the Leopoldkanaal showed to be fresh enough for infiltration, some metals and pesticides exceed the thresholds. This includes copper, manganese, BAM, glyphosate, AMPA, phenanthrene, and fluoranthene, with total pesticides surpassing 0.5 µg/L.","Based on the uploaded document context, the substances in the Leopoldkanaal water that exceed the Nota Grondwater thresholds for infiltration are:
+
+1. Metals:
+   - Copper (exceeds threshold of 2.4 µg/l)
+   - Manganese (exceeds threshold of 31 µg/l)
+
+2. Pesticides/herbicides:
+   - The total sum of pesticides exceeds the threshold of 0.5 µg/l
+   - Individual pesticides: BAM, glyphosate and AMPA each exceed the threshold of 0.1 µg/l
+
+3. PAHs (Polycyclic Aromatic Hydrocarbons):
+   - Phenanthrene (exceeds threshold of 0.003 µg/l)
+   - Fluoranthene (exceeds threshold of 0.003 µg/l)
+
+The document specifically states: ""The water of the Leopoldkanaal showed to be fresh enough for infiltration. However, the metals copper and manganese exceed the threshold for infiltration, 2.4 µg/l and 31 µg/l respectively, when biological agriculture would be performed. Also the total sum of pesticides exceeds the threshold of 0.5 µg/l with the individual pesticides BAM, glyphosate and AMPA exceeding the threshold of 0.1 µg/l. Finally the PACs phenanthrene and fluoranthene also exceed the threshold for infiltration of 0.003 µg/l.""",0.011998653411865234,46.255462884902954,0.05697329625492689,0.23963133640552994,tensor([0.8346]),tensor([0.9008]),tensor([0.8664]),1.0,0.8
+What is the main goal for the NEREUS project,2025-11-17 01:09:04.666043,qwen3:4b,"The goal of this report is to summarize evidence and experiences gathered during the project on the topic of social acceptance, i.e. the resource may be recovered and ready for reuse, but how does the end user feel about using them, knowing where they originated? ","Based on the uploaded document context, the main goal for the NEREUS project is ""recovering valuable resources from domestic wastewater.""
+
+This is explicitly stated in the document: ""The NEREUS (New Energy and Resources from Urban Sanitation) Project is an Interreg 2 Seas project with a consortium of 8 project partners across the United Kingdom, the Netherlands, Belgium, and France, working on the goal of recovering valuable resources from domestic wastewater.""
+
+The document also explains that the project was born from global pressures including freshwater and finite resources scarcity, as well as the desire to increase wastewater reuse. To achieve this, the project aimed for the adoption of technologies that recover important resources and enable the principle of a circular economy in the 2 Seas region.",0.015973806381225586,33.63701939582825,0.014164386425851326,0.16374269005847955,tensor([0.8229]),tensor([0.8566]),tensor([0.8394]),1.0,1.0
+Which techniques were used in the GO-Fresh field trials to increase freshwater availability,2025-11-17 01:09:56.758097,qwen3:4b,Three techniques: (1) Kreekrug Infiltratie Systeem: peilgestuurde drainage combined with targeted surface-water infiltration; (2) Freshmaker: winter injection of freshwater and capture of upwelling saline water via horizontal drilled wells; (3) Drains2Buffer: deeper and denser drainage to enlarge shallow rainwater lenses and prevent root-zone salinisation.,"Based on the uploaded document context, the specific techniques used in the GO-Fresh field trials to increase freshwater availability aren't explicitly detailed in the provided text. 
+
+The context does mention that the research project focuses on ""storing (excess) freshwater (in periods with heavy rainfall) in the soil, so that it can be used when needed, in dry periods."" This is described as the general approach for increasing local freshwater availability.
+
+The document states that ""In the research project GO-FRESH I, three pilot experiments were carried out in different locations to increase local freshwater availability."" These experiments were continued in GO-Fresh II, with the aim ""to investigate how the three experiments can be an example for broader use, so that the techniques may be interesting to other farmers as well.""
+
+The context mentions that the research includes ""fresh-making"" techniques but doesn't specify what these techniques are. It also notes that ""Things that should be incorporated are the business plans of the farmers, wishes of the farmers considering the available 'fresh-making' techniques and other opportunities of the techniques.""
+
+The document indicates that the research types included in the project are ""interviews and computer research,"" but doesn't provide specific details about the field trial techniques used.
+
+Therefore, while the document describes the general approach (storing excess freshwater during heavy rainfall for use in dry periods), it doesn't specify the exact techniques used in the GO-Fresh field trials.",0.019999980926513672,48.82432436943054,0.00601262066580736,0.041379310344827586,tensor([0.7924]),tensor([0.7957]),tensor([0.7941]),1.0,0.2
+What was the purpose of the trials conducted at Dow Terneuzen for the AquaSPICE project,2025-11-17 01:11:01.734560,qwen3:4b,"The purpose of the trials at Dow Terneuzen within the AquaSPICE project, is to research the potential of new technologies for reuse of cooling tower blowdown, to reduce freshwater intake at the I-Parc Dow Terneuzen site. ","Based on the uploaded document context, the purpose of the trials conducted at Dow Terneuzen for the AquaSPICE project was to:
+
+Test and implement treatment solutions for cooling tower blowdown (CTBD) as make-up water for reuse, specifically to reduce the I-Parc Dow Terneuzen's fresh water intake intensity.
+
+The document states: ""During the first part of the Dow Terneuzen trials of AquaSPICE, the IMPROVED containers were deployed and the cooling tower blowdown produced by the largest cooling tower on site was treated in view of reuse as make up water.""
+
+The trials specifically tested two treatment combinations:
+- GAC-UF-RO (granular activated carbon, ultrafiltration, reverse osmosis)
+- UF-RO (ultrafiltration, reverse osmosis)
+
+The purpose was to find effective ways to enhance internal water recycling by treating process water streams (particularly cooling tower blowdown) so that the facility could reduce its fresh water intake intensity in the coastal area with very limited fresh water availability. The document explains that the I-Parc Dow Terneuzen ""strives to reduce its fresh water intake intensity by (a) enhancing the internal recycle of various process water streams – these comprise (but are not limited to) cooling tower blowdown (CTBD) and dilution steam blowdown (DSBD) streams.""
+
+The trials were part of a broader effort to close the internal water loop, decrease discharges, and reclaim non-polluted rainwater as the facility faces severe water stress due to its coastal location.",0.02261948585510254,60.15725231170654,0.04227911570849671,0.1925925925925926,tensor([0.8206]),tensor([0.9170]),tensor([0.8661]),1.0,0.8
+What pre-treatment steps were applied before NF/EDR to limit fouling?,2025-11-17 01:12:22.190186,qwen3:4b,"Coagulation, flocculation, lamella seperation, followed by ultrafiltration with periodic chemical enhanced backwash (CEB)","Based on the uploaded document context, the specific pre-treatment steps applied before NF/EDR to limit fouling aren't explicitly detailed in the provided text.
+
+The document mentions that ""the current pretreatment with rapid sand filtration starts to release flocks after 2-3 days of operation, so it is possible that with a stricter control of the backflushing cycles, sand filtration can also be sufficient."" This indicates rapid sand filtration was being used as the current pretreatment.
+
+The text also mentions ""biofouling guard"" as a pretreatment step that was used in short runs to gain insights about fouling behavior: ""multiple short runs were performed with the biofouling guard in order to gain some first insights.""
+
+Additionally, the document references ""IX resins"" (ion exchange) as potentially causing issues with membrane fouling, noting that ""an unknown substance can leach out of the argex pellets in the wetland or out of the IX resins and slowly foul the RO membranes.""
+
+However, the document focuses primarily on RO (reverse osmosis) systems rather than specifically on NF/EDR (nanofiltration/energy-dispersive reclamation) systems. It doesn't provide clear information about the exact pre-treatment steps applied before NF/EDR to limit fouling.
+
+The document does mention that ""UF is likely to also have problems if indeed the problem is with Fe3+ and iron reducing bacteria,"" but this appears to be related to ultrafiltration rather than NF/EDR.",0.026834964752197266,76.2590115070343,0.002679656514896951,0.008130081300813007,tensor([0.7879]),tensor([0.8227]),tensor([0.8049]),0.0,0.0
+What was the purpose of the trials conducted at Dow Terneuzen for the AquaSPICE project,2025-11-17 01:14:32.839256,qwen3:4b,"The purpose of the trials at Dow Terneuzen within the AquaSPICE project, is to research the potential of new technologies for reuse of cooling tower blowdown, to reduce freshwater intake at the I-Parc Dow Terneuzen site. ","Based on the uploaded document context, the purpose of the trials conducted at Dow Terneuzen for the AquaSPICE project was to:
+
+Test and implement treatment solutions for cooling tower blowdown (CTBD) as make-up water for reuse, specifically to reduce the I-Parc Dow Terneuzen's fresh water intake intensity.
+
+The document states that ""The I-Parc Dow Terneuzen is under severe water stress as it is located in a coastal area with very limited availability of fresh water. With the AquaSPICE project, the I-Parc Dow Terneuzen strives to reduce its fresh water intake intensity by (a) enhancing the internal recycle of various process water streams – these comprise (but are not limited to) cooling tower blowdown (CTBD) and dilution steam blowdown (DSBD) streams...""
+
+During the trials, ""the IMPROVED containers were deployed and the cooling tower blowdown produced by the largest cooling tower on site was treated in view of reuse as make up water."" The trials specifically tested two treatment combinations: GAC-UF-RO (granular activated carbon, ultrafiltration, reverse osmosis) and UF-RO (ultrafiltration, reverse osmosis).
+
+The purpose was to find effective ways to enhance internal water recycling by treating process water streams (particularly cooling tower blowdown) so that the facility could reduce its fresh water intake intensity in the coastal area with very limited fresh water availability. The document explains that the I-Parc Dow Terneuzen ""strives to reduce its fresh water intake intensity by (a) enhancing the internal recycle of various process water streams"" and ""creating a next level of site water management by using smart monitoring, algorithms and control on raw water, discharge and recycle streams.""",0.028033971786499023,126.42439985275269,0.09070934500814555,0.17589576547231273,tensor([0.8159]),tensor([0.9104]),tensor([0.8605]),1.0,0.8
+Which techniques were used in the GO-Fresh field trials to increase freshwater availability,2025-11-17 01:15:43.570152,qwen3:4b,Three techniques: (1) Kreekrug Infiltratie Systeem: peilgestuurde drainage combined with targeted surface-water infiltration; (2) Freshmaker: winter injection of freshwater and capture of upwelling saline water via horizontal drilled wells; (3) Drains2Buffer: deeper and denser drainage to enlarge shallow rainwater lenses and prevent root-zone salinisation.,"Based on the uploaded document context provided, I cannot determine which specific techniques were used in the GO-Fresh field trials to increase freshwater availability.
+
+The document mentions that ""in the research project GO-FRESH I, three pilot experiments were carried out in different locations to increase local freshwater availability"" but does not specify what techniques were actually used in these trials. The document states that ""the aim of these measures is to store (excess) freshwater (in periods with heavy rainfall) in the soil, so that it can be used when needed, in dry periods"" - this indicates the general approach (storing water in soil during wet periods for dry periods), but doesn't detail the specific techniques or technologies implemented in the field trials.
+
+The document also mentions that GO-FRESH II aims to ""investigate how the three experiments can be an example for broader use, so that the techniques may be interesting to other farmers as well"" - suggesting the techniques are being developed for agricultural applications, but again without specifying what those techniques are.
+
+The document context provided focuses on the GO-FRESH project as part of a Water Nexus research program, but doesn't contain specific information about the techniques used in the field trials to increase freshwater availability.",0.015511035919189453,67.54238367080688,0.007875236627912929,0.054474708171206226,tensor([0.8013]),tensor([0.8029]),tensor([0.8021]),1.0,0.2
+What are the costs for storing desalinated water in a bassin,2025-11-17 01:16:52.321873,qwen3:4b,"The construction of a water basin for storing desalinated water costs around €5,000 per 1,000 m³","Based on the uploaded document context provided, I cannot determine the costs for storing desalinated water in a basin.
+
+The document discusses various aspects of water reuse and desalination (particularly for the E4W case study 1 at Dow Terneuzen), but does not contain specific information about the costs associated with storing desalinated water in basins. 
+
+The document mentions that ""the aim of these measures is to store (excess) freshwater (in periods with heavy rainfall) in the soil, so that it can be used when needed, in dry periods"" in relation to the GO-FRESH project, but this refers to soil storage during wet periods, not desalinated water storage in a basin, and does not provide cost information.
+
+The document does include economic analysis details such as:
+- DPP (payback period) of 5 years with an initial investment of 2.5 M€
+- Fresh demineralized water production cost threshold of 1.5 €/m³
+- Specific desalination energy demand of 0.003 kWh/m³
+
+However, none of these details address the costs specifically for storing desalinated water in a basin. The document context provided does not contain information about basin storage costs for desalinated water.",0.022586822509765625,65.58576250076294,0.047584037026681764,0.10576923076923078,tensor([0.8158]),tensor([0.8662]),tensor([0.8402]),1.0,0.8
+What are the costs for storing desalinated water in a bassin,2025-11-17 01:17:51.729194,qwen3:4b,"The construction of a water basin for storing desalinated water costs around €5,000 per 1,000 m³","Based on the uploaded document context provided, I cannot determine the costs for storing desalinated water in a basin.
+
+The document discusses various aspects of water reuse and desalination (particularly for the E4W case study 1 at Dow Terneuzen), but does not contain specific information about the costs associated with storing desalinated water in basins. 
+
+The document mentions that ""the aim of these measures is to store (excess) freshwater (in periods with heavy rainfall) in the soil, so that it can be used when needed, in dry periods"" in relation to the GO-FRESH project, but this refers to soil storage during wet periods, not desalinated water storage in a basin, and does not provide cost information.
+
+While the document does include economic analysis details such as:
+- DPP (payback period) of 5 years with an initial investment of 2.5 M€
+- Fresh demineralized water production cost threshold of 1.5 €/m³
+- Specific desalination energy demand of 0.003 kWh/m³
+
+None of these details address the costs specifically for storing desalinated water in a basin. The document context provided does not contain information about basin storage costs for desalinated water.",0.02573084831237793,55.816234827041626,0.047584037026681764,0.10576923076923078,tensor([0.8157]),tensor([0.8671]),tensor([0.8406]),1.0,0.8

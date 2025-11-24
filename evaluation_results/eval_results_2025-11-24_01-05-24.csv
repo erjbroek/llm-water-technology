@@ -1,0 +1,118 @@
+question,datetime,model_name,ground_truth,model_output,chunk_retrieval_time,generation_time,bleu,rouge,precision,recall,F1,recall@k,precision@k
+What is the tradeoff when using MD compared to RO?,2025-11-24 01:04:06.883411,qwen3:4b,"MD gives higher product quality with no additional post-treatment, but is very energy intensive and produces a small product flow. RO is more water-efficient and economically favorable but may require additional treatment to meet specifications.","I don't have information about the tradeoff when using MD (Membrane Distillation) compared to RO (Reverse Osmosis) in the provided document context.
+
+The document context appears to be about water management in Zeeland, Netherlands, covering topics like:
+- Water quality preservation
+- Groundwater quality
+- Wetlands development
+- Water management projects (KWA - Capaciteitstoename Klimaatbestendige Wateraanvoer Midden-Nederland)
+- Agricultural water availability
+- Buffer zones around water features
+
+However, there is no mention of membrane distillation (MD) technology, reverse osmosis (RO) technology, or any comparison between these water treatment methods in the document. The document focuses on water management practices in Zeeland rather than technical comparisons of water treatment technologies.
+
+Since the question asks about MD versus RO tradeoffs and this information isn't present in the uploaded document context, I cannot provide an accurate answer based on the provided materials.",0.3674037456512451,9.796074151992798,0.005696795894367064,0.06976744186046512,tensor([0.7800]),tensor([0.8266]),tensor([0.8026]),1.0,0.0
+What is the effect of irrigation water quality on growing crops regarding plant vitality and crop yields,2025-11-24 01:04:12.796501,qwen3:4b,"Overall, no real pattern between water quality and crop performance was found. Potatoes and onions show small initial vitality difference but no large difference at harvest. Potato yields were highest with tap water, onions heaviest with raw effluent, and pears showed no yield difference","Based on the uploaded document context, the effect of irrigation water quality on growing crops regarding plant vitality and crop yields is as follows:
+
+**Plant vitality:**
+- Potatoes: Best vitality with tap water initially, but no significant differences among water types at harvest
+- Onions: Lower initial vitality with tap water; no significant differences among water types at harvest
+- Pears: No scores were recorded, as the pear trees (perennial plant) had already grown before the experiments on pear growth started
+
+**Crop yields:**
+- Potatoes: Highest yield with tap water, followed by treated effluent with ozone and raw effluent. Lowest yield with treated effluent with ozone + UV. No clear general trend linking water quality to yield.
+- Onions: Heaviest onions with raw effluent, followed by treated effluents and lightest with tap water.
+
+This information is specifically documented in section 5.4 ""Conclusions"" of the report, which addresses the effects of irrigation water quality on plant vitality and crop yields for these specific crops.",0.36152219772338867,3.9965081214904785,0.036899803520995554,0.2376237623762376,tensor([0.8391]),tensor([0.8969]),tensor([0.8670]),1.0,0.2
+What did FRESHEM Zeeland conclude about the distribution and reliability of fresh groundwater in Zeeland?,2025-11-24 01:04:26.810755,qwen3:4b,"HEM mapping shows 20–30% of Zeeland has a freshwater lens >15 m thick, while 35–50% has little or no fresh lens. The HEM 'middle' agrees with 78% of well chloride measurements (88% within p25–p75). Uncertainty is generally <2 m or <20% in well-sampled areas; results are less reliable in brackish zones and for very local features.","Based on the uploaded document context, FRESHEM Zeeland concluded the following about the distribution and reliability of fresh groundwater in Zeeland:
+
+1. Fresh groundwater is scarce in Zeeland, with the province ""surrounded by estuaries and the North Sea"" and having ""limited fresh groundwater reserves""
+
+2. The groundwater system is ""predominantly saline due to recent marine transgressions""
+
+3. Fresh groundwater exists only in ""fresh groundwater lenses"" (localized areas) rather than as widespread resources
+
+4. The spatial variation in thickness of these fresh groundwater lenses is ""high""
+
+5. FRESHEM results show that ""fresh groundwater is present below saline groundwater at various locations in the province of Zeeland""
+
+6. This creates an unstable density distribution where ""the saline groundwater is heavier that the underlying fresh groundwater""
+
+7. Without low permeable (clay) layers, this instability results in ""the downward movement of the saline groundwater, thereby salinising the fresh groundwater"" (a process known as free convection)
+
+8. The document mentions Figure 11.14 which shows ""Areas in Zeeland with more than 15 metre fresh (<1500 mg Cl/l) groundwater for 'low', 'middle' and 'high'""
+
+These conclusions were made through the FRESHEM (FREsh Salt groundwater distribution by Helicopter ElectroMagnetic survey) research program that started in October 2014 on behalf of the Province of Zeeland. The knowledge about the availability of this scarce fresh groundwater is described as ""essential for agriculture, water managers, drinking water companies, industry, environmental other areas.""
+
+The document indicates that the reliability of fresh groundwater in Zeeland is limited due to these density-driven instability mechanisms that can cause salinization of fresh groundwater resources.",0.3806881904602051,11.712148904800415,0.023618480424853875,0.07476635514018691,tensor([0.8020]),tensor([0.8133]),tensor([0.8076]),1.0,0.2
+Which companies were involved in the Hergebruik Foodport project,2025-11-24 01:04:33.130056,qwen3:4b,"The companies involved were Kloosterboer B.V., CSM Bakery Supplies Europe, Coroos Conserven B.V., and Lamb Weston Meijer.","I don't have information about which companies were involved in the Hergebruik Foodport project in the provided document context.
+
+The document context appears to be about water management in Zeeland, Netherlands, focusing on:
+- FRESHEM (Fresh Salt groundwater distribution)
+- GO-FRESH technology
+- Agricultural water management
+- Various water quality and usage metrics
+
+The document mentions ""HZ University of Applied Sciences"" (Edisonweg 4, Vlissingen) as an organization, but there's no specific mention of the Hergebruik Foodport project or its participating companies in the provided materials.
+
+The document context doesn't contain any information about the Hergebruik Foodport project or its company participants.",0.34981489181518555,3.662780523300171,0.00567320384196156,0.05,tensor([0.7878]),tensor([0.8000]),tensor([0.7938]),1.0,0.2
+What are the yearly costs for above ground drip irrigation per hectare?,2025-11-24 01:04:42.873743,qwen3:4b,"Yearly, above ground drip irrigation costs between €1.061 and €1.404 per hectare.","Based on the uploaded document context, the specific numerical value for yearly costs of above ground drip irrigation per hectare is not provided.
+
+The document mentions: ""Het verschil in kosten tussen bovengrondse en ondergrondse drup is te verklaren door dat het bovengrondse druppelsysteem ieder jaar vervangen moet worden, terwijl het ondergrondse systeem kan blijven liggen."" (The difference in costs between above ground and underground drip is explained by the fact that the above ground drip system must be replaced every year, while the underground system can remain in place.)
+
+The document also states: ""In zijn totaliteit vallen de jaarlijkse kosten per hectare van ondergrondse druppelirrigatie het laagst uit"" (In total, the yearly costs per hectare of underground drip irrigation are the lowest).
+
+While the document mentions that ""De totale jaarlijkse kosten per hectare komen voor druppelirrigatie lager uit dan voor haspelberegening"" (The total yearly costs per hectare are lower for drip irrigation than for furrow irrigation), it doesn't specify the exact monetary value for above ground drip irrigation costs per hectare.
+
+The document refers to Figure 25 (Figuur 25. Jaarlijkse kosten per hectare per irrigatiesysteem) which shows yearly costs per hectare for different irrigation systems, but the specific values for above ground drip irrigation aren't provided in the text excerpt.
+
+Therefore, the document context doesn't give me the specific yearly cost figure for above ground drip irrigation per hectare, only that it's higher than underground drip irrigation due to the annual replacement requirement.",0.35908055305480957,7.314875364303589,0.024602360048780157,0.07662835249042145,tensor([0.7553]),tensor([0.8476]),tensor([0.7988]),1.0,0.0
+What are the yearly costs for above ground drip irrigation per hectare?,2025-11-24 01:04:50.902268,qwen3:4b,"Yearly, above ground drip irrigation costs between €1.061 and €1.404 per hectare.","Based on the uploaded document context, the specific numerical value for yearly costs of above ground drip irrigation per hectare is not provided.
+
+The document does mention that ""Het verschil in kosten tussen bovengrondse en ondergrondse drup is te verklaren door dat het bovengrondse druppelsysteem ieder jaar vervangen moet worden, terwijl het ondergrondse systeem kan blijven liggen."" (The difference in costs between above ground and underground drip is explained by the fact that the above ground drip system must be replaced every year, while the underground system can remain in place.)
+
+The document states that ""De totale jaarlijkse kosten per hectare komen voor druppelirrigatie lager uit dan voor haspelberegening"" (The total yearly costs per hectare are lower for drip irrigation than for furrow irrigation) and ""€156 tot €919 per hectare bespaard kan worden"" (€156 to €919 per hectare can be saved).
+
+While the document references Figure 25 (Figuur 25. Jaarlijkse kosten per hectare per irrigatiesysteem) which shows yearly costs per hectare for different irrigation systems, it doesn't specify the exact monetary value for above ground drip irrigation costs per hectare.
+
+The document indicates that the yearly costs for above ground drip irrigation are higher than underground drip irrigation due to the annual replacement requirement, but doesn't provide the specific cost figure.",0.38896751403808594,5.856907606124878,0.01933494917987686,0.0881057268722467,tensor([0.7670]),tensor([0.8715]),tensor([0.8159]),1.0,0.0
+What pre-treatment steps were applied before NF/EDR to limit fouling?,2025-11-24 01:05:01.122962,qwen3:4b,"Coagulation, flocculation, lamella seperation, followed by ultrafiltration with periodic chemical enhanced backwash (CEB)","Based on the uploaded document context, I can provide the following information about pre-treatment steps applied before NF/EDR to limit fouling:
+
+The document mentions that ""multiple short runs were performed with the biofouling guard in order to gain some first insights."" This indicates that the biofouling guard was used as a pretreatment step in the system.
+
+The document also states: ""For every run a new membrane was placed in the pilot. The MTC progress of all short runs was plotted over the runtime of the pilots and compared to the MTC progress of the biofouling guard in the long run.""
+
+Additionally, the document references ""Membrane Fouling Simulators (MFS units)"" which were used to ""quickly predict fouling issues in the spacer."" These tests confirmed ""stable operation until mid April"" for the system accepting IX product.
+
+However, the document context does not provide specific details about the composition of the biofouling guard, what other pretreatment steps were applied before NF/EDR, or the exact implementation of these pretreatment steps to limit fouling. The document mentions the use of biofouling guard as a pretreatment step but doesn't give comprehensive information about the specific pre-treatment steps applied before NF/EDR to limit fouling.",0.3501746654510498,7.158894300460815,0.005289179797706146,0.01851851851851852,tensor([0.7850]),tensor([0.8044]),tensor([0.7946]),0.0,0.0
+What kinds of potatoes are harvested in the Lovenpolder,2025-11-24 01:05:08.208680,qwen3:4b,There are 2 kinds of potatoes harvested: consumptionpotaties and seed potatoes. The seedpotatoes are mainly grown for export and having a higher yield per hectare,"Based on the uploaded document context, in the Lovenpolder two of the three types of potatoes are harvested:
+
+1. Consumptieaardappel (consumption potato)
+2. Pootaardappel (potato for root)
+
+The document specifically states: ""Uit figuur 4 kan men opmaken dat in de Lovenpolder twee van de drie soorten aardappelen worden geteeld, enerzijds consumptieaardappel en en anderzijds pootaardappel.""
+
+Additionally, the document mentions that ""de knollen van de pootaardappel speciaal gekweekt worden als pootgoed voor de desbetreffende consumptieaardappelras"" (the roots of the potato are specially cultivated as root product for the corresponding consumption potato field).",0.33985328674316406,4.498003244400024,0.054313608078638574,0.1206896551724138,tensor([0.7653]),tensor([0.8518]),tensor([0.8062]),1.0,0.2
+What is the effect of irrigation water quality on growing crops regarding plant vitality and crop yields,2025-11-24 01:05:13.853481,qwen3:4b,"Overall, no real pattern between water quality and crop performance was found. Potatoes and onions show small initial vitality difference but no large difference at harvest. Potato yields were highest with tap water, onions heaviest with raw effluent, and pears showed no yield difference","Based on the uploaded document context, the effect of irrigation water quality on growing crops regarding plant vitality and crop yields is specifically detailed in section 5.4 Conclusions:
+
+For plant vitality:
+- Potatoes: Best vitality with tap water initially, but no significant differences among water types at harvest
+- Onions: Lower initial vitality with tap water; no significant differences among water types at harvest
+- Pears: No scores were recorded, as the pear trees (perennial plant) had already grown before the experiments on pear growth started
+
+For crop yields:
+- Potatoes: Highest yield with tap water, followed by treated effluent with ozone and raw effluent. Lowest yield with treated effluent with ozone + UV. No clear general trend linking water quality to yield.
+- Onions: Heaviest onions with raw effluent, followed by treated effluents and lightest with tap water.
+
+This information is directly stated in the document context provided.",0.3441803455352783,3.7652440071105957,0.03752794168117861,0.24468085106382975,tensor([0.8444]),tensor([0.8980]),tensor([0.8704]),1.0,0.2
+What are the yearly costs for above ground drip irrigation per hectare?,2025-11-24 01:05:24.108085,qwen3:4b,"Yearly, above ground drip irrigation costs between €1.061 and €1.404 per hectare.","Based on the uploaded document context, the specific yearly costs for above ground drip irrigation per hectare are not directly stated with exact figures. 
+
+The document mentions that ""De totale jaarlijkse kosten per hectare komen voor druppelirrigatie lager uit dan voor haspelberegening"" (The total yearly costs per hectare for drip irrigation are lower than for haspelberegening). It also states that ""€156 tot €919 per hectare bespaard kan worden"" (€156 to €919 per hectare can be saved).
+
+The document provides information about the difference between above ground and underground drip systems: ""Het verschil in kosten tussen bovengrondse en ondergrondse druppelsysteem ieder jaar vervangen moet worden, terwijl het ondergrondse systeem kan blijven liggen."" (The difference in costs between above ground and underground drip systems is that the above ground system must be replaced every year, while the underground system can stay in place.)
+
+The document also mentions that ""In zijn totaliteit vallen de jaarlijkse kosten per hectare van ondergrondse druppelirrigatie het laagst uit"" (In total, the yearly costs per hectare of underground drip irrigation are the lowest).
+
+While the document references ""Figuur 25. Jaarlijkse kosten per hectare per irrigatiesysteem"" (Figure 25. Yearly costs per hectare per irrigation system), the actual numerical values for above ground drip irrigation costs per hectare are not provided in the text.
+
+Therefore, based on the uploaded document context, I cannot provide the exact yearly costs for above ground drip irrigation per hectare. The document only indicates that drip irrigation costs are lower than surface irrigation and that there's a potential savings range of €156 to €919 per hectare, but doesn't give specific figures for above ground drip irrigation.",0.35904669761657715,7.876286268234253,0.12049514584750938,0.06968641114982578,tensor([0.7569]),tensor([0.8707]),tensor([0.8098]),1.0,0.0
