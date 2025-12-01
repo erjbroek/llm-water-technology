@@ -116,25 +116,19 @@ class RAGChatbot:
         # Retrieve relevant document chunks for the query.
 
         try:
-            print('start of translation')
             if language == "dutch": 
                 translator = GoogleTranslator(source="nl", target="en")
                 english_query = translator.translate(query)
                 alternative_results = self.vector_store.search(english_query, top_k=3)
-                print(f"succesfully translated from dutch to english")
             elif language == "english": 
                 translator = GoogleTranslator(source="en", target="nl")
                 dutch_query = translator.translate(query)
                 alternative_results = self.vector_store.search(dutch_query, top_k=3)
-                print(f"succesfully translated from english to dutch")
             else: 
                 raise ValueError(f"Invalid language: {language}")
             
-            results = self.vector_store.search(query, top_k=3)
-            original_docs = results["documents"][0]
-            alternative_docs = alternative_results["documents"][0]
-            combined_docs = original_docs + alternative_docs
-            return "\n\n".join(combined_docs)
+            results = self.vector_store.search(query, top_k=5)["documents"][0]
+            return "\n\n".join(results)
         except Exception as e:
             logger.error(f"Retrieval error: {e}")
             return ""

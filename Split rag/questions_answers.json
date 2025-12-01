@@ -25,7 +25,8 @@
       "en": "The purpose of the trials at Dow Terneuzen within the AquaSPICE project, is to research the potential of new technologies for reuse of cooling tower blowdown, to reduce freshwater intake at the I-Parc Dow Terneuzen site. ",
       "nl": "He doel van de beproevingen bij Dow Terneuzen binnen het AquaSPICE project, is om onderzoek te doen naar de potentie voor nieuwe technologieen voor hergebruik van koeltoren-afblaas, om zoetwater inname bij het I-Park in Terneuzen te verminderen."
     },
-    "specificity": 6
+    "specificity": 6,
+    "author": "Erik"
   },
   {
     "project": "Aquatuur",
@@ -39,7 +40,8 @@
       "en": "",
       "nl": ""
     },
-    "specificity": 0
+    "specificity": 0,
+    "author": "Erik"
   },
   {
     "project": "Condensate quality",
@@ -53,7 +55,8 @@
       "en": "",
       "nl": ""
     },
-    "specificity": 0
+    "specificity": 0,
+    "author": "Erik"
   },
   {
     "project": "DeltaDrip",
@@ -67,21 +70,8 @@
       "en": "Yearly, above ground drip irrigation costs between €1.061 and €1.404 per hectare.",
       "nl": "Jaarlijke, bovengrondse druppelirrigatie kost tussen de €1.061 en €1.404 per hectare."
     },
-    "specificity": 6
-  },
-  {
-    "project": "E4Water",
-    "filename": "Rapport E4Water.docx",
-    "original_language": "english",
-    "question": {
-      "en": "What pre-treatment steps were applied before NF/EDR to limit fouling?",
-      "nl": "Welke voorbehandelings stappen zijn toegepast voor NF/EDR om fouling te beperken"
-    },
-    "ground_truth": {
-      "en": "Coagulation, flocculation, lamella seperation, followed by ultrafiltration with periodic chemical enhanced backwash (CEB)",
-      "nl": "Coagulatie, flocculatie, lamellenscheiding, gevolgd door ultrafiltratie met periodieke chemisch verbeterde terugspoeling (CEB)"
-    },
-    "specificity": 8
+    "specificity": 6,
+    "author": "Erik"
   },
   {
     "project": "EffluentFit4Food",
@@ -95,7 +85,8 @@
       "en": "Overall, no real pattern between water quality and crop performance was found. Potatoes and onions show small initial vitality difference but no large difference at harvest. Potato yields were highest with tap water, onions heaviest with raw effluent, and pears showed no yield difference",
       "nl": "Over het algemeen is er niet een patroon tussen de waterkwaliteit en de prestatie van gewassen. Aardappelen en uien laten kleine verschillen in viraliteit zien, maar geen groot verschil tijdens de oogst. De oogst van aardappelen waren het grootst met kraan water, uien het zwaarst met onbehandeld afvalwater, en peren lieten geen verschil zien in opbrengst."
     },
-    "specificity": 4
+    "specificity": 4,
+    "author": "Erik"
   },
   {
     "project": "FRESH4Cs",
@@ -109,7 +100,8 @@
       "en": "While the water of the Leopoldkanaal showed to be fresh enough for infiltration, some metals and pesticides exceed the thresholds. This includes copper, manganese, BAM, glyphosate, AMPA, phenanthrene, and fluoranthene, with total pesticides surpassing 0.5 µg/L.",
       "nl": "Hoewel het water van het Leopoldkanaal vers genoeg bleek voor infiltratie, waren er een paar metalen en bestrijdingsmiddelen over de grenswaarden. Hier valt onder koper, mangaan, BAM, glyfosaar, AMPA, fenathreen en fluorantheen, en de totale bestrijdingsmiddelen boven de 0.5 µg/L komem."
     },
-    "specificity": 9
+    "specificity": 9,
+    "author": "Erik"
   },
   {
     "project": "FRESHEM",
@@ -123,7 +115,8 @@
       "en": "HEM mapping shows 20–30% of Zeeland has a freshwater lens >15 m thick, while 35–50% has little or no fresh lens. The HEM 'middle' agrees with 78% of well chloride measurements (88% within p25–p75). Uncertainty is generally <2 m or <20% in well-sampled areas; results are less reliable in brackish zones and for very local features.",
       "nl": "HEM-kaartering laat zien dat 20–30% van Zeeland een zoetwaterlens heeft van meer dan 15 m dik, terwijl 35–50% weinig tot geen zoetwaterlens heeft. De 'HEM-middle' komt overeen met 78% van de chloridemetingen in putten (88% binnen p25–p75). De onzekerheid is over het algemeen <2 m of <20% in goed bemonsterde gebieden; de resultaten zijn minder betrouwbaar in brakke zones en voor zeer lokale kenmerken."
     },
-    "specificity": 7
+    "specificity": 7,
+    "author": "Erik"
   },
   {
     "project": "GO-Fresh",
@@ -137,7 +130,8 @@
       "en": "Three techniques: (1) Kreekrug Infiltratie Systeem: peilgestuurde drainage combined with targeted surface-water infiltration; (2) Freshmaker: winter injection of freshwater and capture of upwelling saline water via horizontal drilled wells; (3) Drains2Buffer: deeper and denser drainage to enlarge shallow rainwater lenses and prevent root-zone salinisation.",
       "nl": "Drie technieken: (1) Kreekbrug infiltratie systeem: peilgestuurde afwatering gecombineerd met gericht oppervlakte-water infiltatie; (2) Freshmaker: winterinjectie van zoetwater en opvang van opwellend zout water via horizontale boorputten; (3) Drans2Buffer: diepere en dichtere afwatering om ondiepe regenwaterlenzen te vergroten en verzilting van de wortelzone te voorkomen"
     },
-    "specificity": 8
+    "specificity": 8,
+    "author": "Erik"
   },
   {
     "project": "Hergebruik Foodport",
@@ -151,7 +145,8 @@
       "en": "The companies involved were Kloosterboer B.V., CSM Bakery Supplies Europe, Coroos Conserven B.V., and Lamb Weston Meijer.",
       "nl": "De bedrijven die betrokken zijn waren Kloosterboer B.v., CMS Bakery Supplies Europe, Coroos Conservan B.V., en Lamb Weston Meijer."
     },
-    "specificity": 5
+    "specificity": 5,
+    "author": "Erik"
   },
   {
     "project": "IMPROVED",
@@ -165,7 +160,8 @@
       "en": "MD gives higher product quality with no additional post-treatment, but is very energy intensive and produces a small product flow. RO is more water-efficient and economically favorable but may require additional treatment to meet specifications.",
       "nl": "MD geeft hogere product kwaliteit zonder extra nabehalndelings kosten, maar het is erg energie intensiev en produceert een kleine productieflow"
     },
-    "specificity": 5
+    "specificity": 5,
+    "author": "Erik"
   },
   {
     "project": "NEREUS",
@@ -179,7 +175,8 @@
       "en": "The NEREUS project has focused for the last four years on the recovery and reuse of several resources from urban wastewater. Aside from the actual recovery of the resource, there is also the question of reuse of the product once recovered. Each pilot case aims to recover various resources. ",
       "nl": "Het NEREUS project is voor de afgelopen vier jaar gefocust op het herstel en hergebruik van verschillende gronstoffen uit stedelijk afvalwater. Naast de daadwerkelijke erugwinning van de grondstof, is er ook de vraag naar hergebruik van het gewonnen product. Elke pilot is gericht op de terugwinning van verschillende grondstoffen."
     },
-    "specificity": 7
+    "specificity": 7,
+    "author": "Erik"
   },
   {
     "project": "OPZuid",
@@ -193,7 +190,8 @@
       "en": "",
       "nl": ""
     },
-    "specificity": 0
+    "specificity": 0,
+    "author": "Erik"
   },
   {
     "project": "Proeftuin Zoetwater E4",
@@ -207,7 +205,8 @@
       "en": "There are 2 kinds of potatoes harvested: consumptionpotaties and seed potatoes. The seedpotatoes are mainly grown for export and having a higher yield per hectare",
       "nl": "Er zijn twee soorten aardappelen die worden geoogst: consumptieaardappelen en pootaardappelen. De pootaardappelen worden voornamelijk geteeld voor de export en hebben een hogere opbrengst per hectare "
     },
-    "specificity": 9
+    "specificity": 9,
+    "author": "Erik"
   },
   {
     "project": "TKI Wetlands",
@@ -221,21 +220,8 @@
       "en": "An Aerated Horizontal Subsurface Flow (HSSF) constructed wetland, is one where water is fed from horizontal pipe with openings at regular intervals to distribute the water equally over the inlet zone.",
       "nl": "Een beluchte horizontale ondergroundse stroming (HSSF) is een wetland waarbij water wordt aangevoerd vanuit een horizontale buis met openingen op regelmatige afstanden om het water gelijkmatig over de inlaatzone te verdelen"
     },
-    "specificity": 3
-  },
-  {
-    "project": "Water NEXUS",
-    "filename": "water_nexus_saline_water_when_possible_fresh_wate-wageningen_university_and_research_553702.pdf",
-    "original_language": "english",
-    "question": {
-      "en": "For which types of wastewaters is anaerobic treatment most convenient?",
-      "nl": "Voor welke types afvalwater is anaerobe zuivering het meest geschikt?"
-    },
-    "ground_truth": {
-      "en": "anaerobic treatment is most convenient for somewhta warmer soil (between 25-30°C), and high-strength wastewater because it combines treatment with the production of energy-rich biogas.",
-      "nl": "Anaerobe behandelijk is het meest geschikt voor wat warmere gronden (tussen 25-30°C) en afvalwater met en hoge concentratie, omdat het de behandeling combineert met de productie van energierijk biogas."
-    },
-    "specificity": 4
+    "specificity": 3,
+    "author": "Erik"
   },
   {
     "project": "Waterdunen",
@@ -249,7 +235,8 @@
       "en": "The freshwater canal will have nature-friendly banks. In the future situation, the banks will have a slope of 1:1, with some locations having a gentler slope where nature-friendly banks currently exist.",
       "nl": "Het zoetwaterkanaal krijgt natuurvriendelijke oevers. In de toekomstige situatie hebben de oevers een helling van 1:1 met op sommige locaties een flauwere helling waar nu natuurvriendelijke oevers aanwezig zijn."
     },
-    "specificity": 7
+    "specificity": 7,
+    "author": "Erik"
   },
   {
     "project": "Waterhouderij",
@@ -263,7 +250,8 @@
       "en": "Farmers have not observed any negative effects from raising the groundwater level to -50 cm below the surface, and experts do not expect any.",
       "nl": "Boeren ebben geen negatieve effecten waargenomen van het verhogen van de grondwaterstand tot -50 cm onder het oppervlak, en deskundigen verwachten ook geen negatieve effecten."
     },
-    "specificity": 8
+    "specificity": 8,
+    "author": "Erik"
   },
   {
     "project": "ZDZV Desalination for agriculture",
@@ -277,6 +265,112 @@
       "en": "The construction of a water basin for storing desalinated water costs around €5,000 per 1,000 m³",
       "nl": "De constructie van een water basin om ontzilt water op te slaan, kost ongeveer €5,000 per 1,000 m³"
     },
-    "specificity": 8
+    "specificity": 8,
+    "author": "Erik"
+  }, 
+  {
+    "project": "AquaSPICE",
+    "filename": "Report AquaSPICE_DowTnzCT_Draft 2_10082022.docx",
+    "original_language": "english",
+    "question": {
+      "en": "What are the importances of fresh water in chemical industry",
+      "nl": ""
+    },
+    "ground_truth": {
+      "en": "It is used in many chemical processes as an ingredient and for cooling and steam production",
+      "nl": ""
+    },
+    "specificity": 5,
+    "author": "Pristen"
+  },
+  {
+    "project": "AquaSPICE",
+    "filename": "Report AquaSPICE_DowTnzCT_Draft 2_10082022.docx",
+    "original_language": "english",
+    "question": {
+      "en": "what is ultrafiltration and how is it used in the aquaspice project",
+      "nl": ""
+    },
+    "ground_truth": {
+      "en": "The ultrafiltration is a process where suspended solids are filtered over a membrane with small pores. This process is commonly used as a pretreatment process for reverse osmosis.",
+      "nl": ""
+    },
+    "specificity": 8,
+    "author": "Pristen"
+  },
+  {
+    "project": "Water NEXUS",
+    "filename": "water_nexus_saline_water_when_possible_fresh_wate-wageningen_university_and_research_553702.pdf",
+    "original_language": "english",
+    "question": {
+      "en": "Who are the end-users that contributed to the Water NEXUS project",
+      "nl": ""
+    },
+    "ground_truth": {
+      "en": "The end-users that contributed to the Water NEXUS project are TNO, Plant-e, Nijhuis Industries, Pentair X-Flow, Dow Benelux B.V, Evides Industriewater, Witteveen+Bos, Royal HaskoningDHV, Shell Global Solutions International B.V,Deltares, KWR Water Research Institute and Paques.",
+      "nl": ""
+    },
+    "specificity": 9,
+    "author": "Pristen"
+  },
+  {
+    "project": "DeltaDrip",
+    "filename": "20210603_eindrapportage_2020_deltadrip.pdf",
+    "original_language": "dutch",
+    "question": {
+      "en": "In which categories was drip irrigation compared to reel irrigation investigated in the DeltaDrip project?",
+      "nl": "In welke categorieën werd druppelirrigatie vergeleken met haspelberegening onderzocht in project DeltaDrip"
+    },
+    "ground_truth": {
+      "en": "In the DeltaDrip project, drip irrigation was compared to reel irrigation in the following categories: efficiency of water use, nutrient efficiency, soil benefits, crop benefits, and costs.",
+      "nl": "In project DeltaDrip werd druppelirrigatie vergeleken met haspelberegening in de volgende categorieën: efficientie van watergebruik, Nutriëntenefficiëntie, bodembaten, gewasbaten en kosten."
+    },
+    "specificity": 8,
+    "author": "Lewie"
+  },
+  {
+    "project": "GO-Fresh",
+    "filename": "KennisVoorKlimaat_2014_Eindrapportage_HSZD3_2_GO-FRESH_KvK151_2014-1.pdf",
+    "original_language": "dutch",
+    "question": {
+      "en": "Which measures were initiated in the GO-Fresh project?",
+      "nl": "Welke maatregelen werden gestart in project GO-Fresh"
+    },
+    "ground_truth": {
+      "en": "The following three measures were initiated in the GO-Fresh project: Creek ridge infiltration trial, Freshmaker, and Drains2Buffer.",
+      "nl": "In project GO-Fresh werd de volgende drie maatregelen gestart: Kreekrug infiltratie proef, Freshmaker en Drains2Buffer"
+    },
+    "specificity": 9,
+    "author": "Lewie"
+  },
+  {
+    "project": "Proeftuin Zoet Water E4",
+    "filename": "Wp4-Gebruikers Atlas van Landbouw_Landschap_Natuur_Recreatie.pdf",
+    "original_language": "dutch",
+    "question": {
+      "en": "What were the water quality parameters used in the 'Proeftuin Zoet Water' project?",
+      "nl": "Wat waren de gebruikte waterkwaliteit parameters in project Proeftuin Zoet Water"
+    },
+    "ground_truth": {
+      "en": "The following water quality parameters were used in the 'Proeftuin Zoet Water' project: salt tolerance (chloride), conductivity (EC), pH, iron, manganese, and ammonium.",
+      "nl": "In project Proeftuin Zoet Water waren de volgende waterkwaliteit parameters gebruikt: Zouttoleraantie (chloride), geleidbaarheid(EC), zuurgraad, ijzer,mangaan en ammonium"
+    },
+    "specificity": 9,
+    "author": "Lewie"
+  },
+  {
+    "project": "Waterhouderij",
+    "filename": "Projectplan_POP3_Waterhouderij_2018.pdf",
+    "original_language": "dutch",
+    "question": {
+      "en": "In the project plan for the 'Waterhouderij' project, which societal goals are linked for the POP3 subsidy application?",
+      "nl": "In het projectplan van project Waterhouderij, welke maatschappelijke doelen worden verbonden voor subsidieaanvraag POP3"
+    },
+    "ground_truth": {
+      "en": "The following societal goals are discussed in the 'Waterhouderij' project: water, cooperation, agriculture, nature, and biodiversity.",
+      "nl": "In project Waterhouderij worden de volgende maatschappelijke doelen besproken: water,samenwerking, landbouw, natuur en biodiversiteit."
+    },
+    "specificity": 6,
+    "author": "Lewie"
   }
 ]
