@@ -40,7 +40,7 @@ try:
     else:
         logger.info("Running on CPU")
 
-    
+    last_retrieved_sources = ""
     reranker_model = CrossEncoder('cross-encoder/ms-marco-MiniLM-L-6-v2')
     
     # Initialize components
@@ -127,8 +127,8 @@ class RAGChatbot:
             else: 
                 raise ValueError(f"Invalid language: {language}")
             
-            results = self.vector_store.search(query, top_k=5)["documents"][0]
-            return "\n\n".join(results)
+            results = self.vector_store.search(query, top_k=5)
+            return results
         except Exception as e:
             logger.error(f"Retrieval error: {e}")
             return ""
@@ -186,7 +186,8 @@ class RAGChatbot:
         
         # Search using original query (documents stored in original language)
         start_time_chunk_retrieval = time.time()
-        context = self.get_relevant_context(query, query_language)
+        results = self.get_relevant_context(query, query_language)  
+        context = "\n\n".join(results["documents"][0]) if results else ""
         chunk_retrieval_time = time.time() - start_time_chunk_retrieval
         
         # Build conversation history
@@ -204,7 +205,6 @@ class RAGChatbot:
         #     lang_instruction = f"Always respond in the same language as the user's question."
 
         # Create prompt
-
         prompt = f"""
         You are a helpful assistant answering based ONLY on the uploaded document context.
         If unsure, say so.
@@ -292,7 +292,7 @@ class RAGChatbot:
                 "answer": answer  
             })
             generation_time = time.time() - start_time_generation
-            return answer, chunk_retrieval_time, generation_time
+            return answer, chunk_retrieval_time, generation_time, results
 
         except Exception as e:
             error_msg = f" Error from Ollama: {e}"
@@ -590,27 +590,57 @@ def delete_document(document_id: str, remove_file: bool):
 
 def chat_response(message, history, query_language):
     # Handle chat messages from the UI.
+    global last_retrieved_sources
+
     if not chatbot:
         return history, ""
         
     if not message.strip():
         return history, ""
-        
-    response, _, _ = chatbot.generate_response(message, query_language)
     
-    results = vector_store.search(message, top_k=1)
-    filename = results['metadatas'][0][0]['relative_path'].split('\\')[-1]
-    chunk = results['documents'][0][0].replace('\n', ' ')
+    if not query_language:
+        query_language = "english"
+        
+    response, _, _ , results = chatbot.generate_response(message, query_language)
 
-    combined_response = (
-        f"{response}\n\n"
-        f"**File used**:\n {filename}\n"
-        f"**Information:**\n: {chunk}"
-    )
+    seen_texts = set()
+    source_id = 1
+    modal_html = "<div style='display: flex; flex-direction: column; gap: 15px;'>"
+    for i in range(len(results['documents'][0])):
+            chunk_text = results['documents'][0][i].replace('\n', ' ').strip()
+            
+            # If the text is exactly the same as a previous chunk, skip it
+            if chunk_text in seen_texts:
+                continue
+            seen_texts.add(chunk_text)
 
-    history.append([message, combined_response])
+            # Extract metadata
+            metadata = results['metadatas'][0][i]
+            filename = metadata.get('relative_path', 'Unknown').split('\\')[-1]
+            page_num = metadata.get('page_number', 'N/A')
+
+            modal_html += f"""
+            <div style='border: 1px solid #e0e0e0; padding: 15px; border-radius: 8px; background-color: #f9f9f9; font-family: sans-serif; line-height: 1.6;'>
+                <div style='margin-bottom: 5px;'><b>Source</b> <span style='color: #2196F3;'>{source_id}</span></div>
+                <div style='margin-bottom: 5px;'><b>Filename:</b> {filename}</div>
+                <div style='margin-bottom: 5px;'><b>Page number:</b> {page_num}</div>
+                <div style='margin-top: 10px; border-top: 1px solid #ddd; padding-top: 10px;'>
+                    <b>Text:</b> <br>
+                    <i style='color: #444;'>"{chunk_text}"</i>
+                </div>
+            </div>
+            """
+            source_id += 1 
+
+    modal_html += "</div>"
+    last_retrieved_sources = modal_html
+    
+    history.append([message, response])
     return history, ""
 
+def get_latest_sources():
+    #Returns the most recent sources found by the search for the UI modal.
+    return last_retrieved_sources or "No sources found for the last query."
 
 def clear_all_data():
     # Delete everything: database and chat history.

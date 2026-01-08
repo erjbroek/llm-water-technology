@@ -46,19 +46,26 @@ class DocumentProcessor:
             # chunk_overlap=200,
         )
 
-    def extract_text_from_pdf(self, file_path: Path) -> str:
+    def extract_text_from_pdf(self, file_path: Path) -> List[Dict[str, Any]]:
         # Extract text from a PDF file path.
-        text = ""
+        chunks_with_metadata = []
         try:
             with open(file_path, "rb") as f:
                 reader = PyPDF2.PdfReader(f)
-                for page in reader.pages:
+                # Iterate through pages individually to capture the page number
+                for page_idx, page in enumerate(reader.pages):
                     page_text = page.extract_text() or ""
-                    text += page_text + "\n"
-            logger.info(f"Extracted {len(text)} chars from PDF: {file_path}")
+                    if page_text.strip():
+                        page_chunks = self.text_splitter.split_text(page_text)
+                        for chunk_text in page_chunks:
+                            chunks_with_metadata.append({
+                                "text": chunk_text,
+                                "metadata": {"page_number": page_idx + 1} #
+                            })
+            logger.info(f"Processed PDF with page number: {file_path}")
         except Exception as e:
             logger.error(f"Error reading PDF: {e}")
-        return text
+        return chunks_with_metadata
 
     def extract_text_from_txt(self, file_path: Path) -> str:
         # Read and return the contents of a plain text file encoded as UTF-8.
@@ -87,8 +94,9 @@ class DocumentProcessor:
         # Dispatch to the correct extractor and split the resulting text.
         suffix = file_path.suffix.lower()
         if suffix == ".pdf":
-            text = self.extract_text_from_pdf(file_path)
-        elif suffix == ".txt":
+            return self.extract_text_from_pdf(file_path)
+        
+        if suffix == ".txt":
             text = self.extract_text_from_txt(file_path)
         elif suffix == ".docx":
             text = self.extract_text_from_docx(file_path)
@@ -100,7 +108,7 @@ class DocumentProcessor:
 
         chunks = self.text_splitter.split_text(text)
         logger.info(f"Split into {len(chunks)} chunks")
-        return chunks
+        return [{"text": c, "metadata": {"page_number": "N/A"}} for c in chunks]
 
 
 class VectorStore:
@@ -155,7 +163,7 @@ class VectorStore:
     def upsert_document(
         self,
         document_id: str,
-        chunks: List[str],
+        chunks: List[Dict[str, Any]],
         base_metadata: Dict[str, Any],
         fingerprint: Dict[str, Any],
         force: bool = False,
@@ -186,29 +194,36 @@ class VectorStore:
             self.collection.delete(where=where_filter)
 
         # Turn text chunks into embeddings (vectors) using the embedding model
-        embeddings = self._encode_chunks(chunks)
+        texts = [c["text"] for c in chunks]
+        embeddings = self._encode_chunks(texts)
         
-        # Create unique ID for each chunk within the document
         ids = []
-        for i in range(len(chunks)):
+        metadatas = []
+        metadata_template = {**base_metadata, **fingerprint, "document_id": document_id}
+
+        for i, chunk_item in enumerate(chunks): 
+            # Create unique ID
             chunk_id = f"{document_id}::chunk::{i}-{uuid.uuid4().hex[:8]}"
             ids.append(chunk_id)
-        
-        # Attach metadata to each chunk (document info + chunk index)
-        metadata_template = {**base_metadata, **fingerprint, "document_id": document_id}
-        metadatas = []
-        for i in range(len(chunks)):
-            chunk_meta = {**metadata_template, "chunk_index": i}
+            
+            # Attach metadata (Extracting the specific page_number for this chunk)
+            page_val = chunk_item["metadata"].get("page_number", chunk_item["metadata"].get("page_label", "N/A"))
+            
+            chunk_meta = {
+                **metadata_template, 
+                "chunk_index": i,
+                "page_number": page_val
+            }
             metadatas.append(chunk_meta)
 
         # Save everything to the vector database
         self.collection.add(
-            documents=chunks,
+            documents=texts,
             embeddings=embeddings,
             metadatas=metadatas,
             ids=ids,
         )
-        return True, f"Indexed {len(chunks)} chunks from {document_id}"
+        return True, f"Indexed {len(texts)} chunks from {document_id}"
 
     def delete_document(self, document_id: str) -> bool:
         # Remove all chunks for this document

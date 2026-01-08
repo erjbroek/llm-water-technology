@@ -2,6 +2,7 @@
 
 import logging
 import gradio as gr
+from gradio_modal import Modal
 from backend import (
     evaluate_model,
     get_current_evaluation_progress,
@@ -11,6 +12,7 @@ from backend import (
     refresh_documents,
     delete_document,
     chat_response,
+    get_latest_sources,
     clear_all_data,
     clear_chat_only,
     list_documents,
@@ -30,7 +32,7 @@ def dropdown_update(selected=None):
     # Try to keep the same selection if it still exists
     value = selected if selected in documents else None
     
-    return gr.Dropdown.update(choices=documents, value=value)
+    return gr.Dropdown(choices=documents, value=value)
 
 def toggle_send_enabled(lang):
      return gr.update(interactive=(lang in ("dutch", "english")))
@@ -41,6 +43,10 @@ def create_gradio_interface():
     
     with gr.Blocks(title="Document Q&A Assistant") as demo:
         gr.Markdown("# Document-Based AI Q&A")
+
+        with Modal(visible=False) as source_modal:
+            gr.Markdown("###  Detailed Sources")
+            source_display = gr.HTML()
 
         with gr.Row():
             with gr.Column(scale=1):
@@ -91,6 +97,7 @@ def create_gradio_interface():
                     value=None  # default None so nothing is selected
                 )
                 send_btn = gr.Button("Send")
+                show_sources_btn = gr.Button("Show Sources", interactive=False)
                 clear_chat_btn = gr.Button("Clear Chat")
 
         # Wire up event handlers for UI interactions
@@ -107,12 +114,26 @@ def create_gradio_interface():
             chat_response, 
             [msg_box, chatbot_ui, lang_selector], 
             [chatbot_ui, msg_box]
+        ).then(
+            fn=lambda: gr.update(interactive=True), 
+            outputs=show_sources_btn
         )
+
+        show_sources_btn.click(
+            fn=get_latest_sources, 
+            outputs=source_display
+        ).then(
+            fn=lambda: gr.update(visible=True), 
+            outputs=source_modal
+    )
         
         msg_box.submit(
             chat_response, 
-            [msg_box, chatbot_ui], 
+            [msg_box, chatbot_ui, lang_selector], 
             [chatbot_ui, msg_box]
+        ).then(
+            fn=lambda: gr.update(interactive=True), 
+            outputs=show_sources_btn
         )
         
         refresh_btn.click(
