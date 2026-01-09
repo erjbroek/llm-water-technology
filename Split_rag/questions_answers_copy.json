@@ -1,0 +1,150 @@
+[
+  {
+    "project": "IMPROVED",
+    "filename": "Report_Pilot_Yara_final.pdf",
+    "original_language": "english",
+    "question": {
+      "en": "What is the tradeoff when using MD compared to RO?",
+      "nl": "Wat is afweging bij het gebruik van MD en RO"
+    },
+    "ground_truth": {
+      "en": "MD gives higher product quality with no additional post-treatment, but is very energy intensive and produces a small product flow. RO is more water-efficient and economically favorable but may require additional treatment to meet specifications.",
+      "nl": "MD geeft hogere product kwaliteit zonder extra nabehalndelings kosten, maar het is erg energie intensiev en produceert een kleine productieflow"
+    },
+    "specificity": 5,
+    "author": "Erik"
+  },
+  {
+    "project": "AquaSPICE",
+    "filename": "Report AquaSPICE_DowTnzCT_Draft 2_10082022.docx",
+    "original_language": "english",
+    "question": {
+      "en": "What was the purpose of the trials conducted at Dow Terneuzen for the AquaSPICE project",
+      "nl": "Wat was het doel van de beproevingen gedaan bij Dow Terneuzen voor het AquaSPICE project"
+    },
+    "ground_truth": {
+      "en": "The purpose of the trials at Dow Terneuzen within the AquaSPICE project, is to research the potential of new technologies for reuse of cooling tower blowdown, to reduce freshwater intake at the I-Parc Dow Terneuzen site. ",
+      "nl": "He doel van de beproevingen bij Dow Terneuzen binnen het AquaSPICE project, is om onderzoek te doen naar de potentie voor nieuwe technologieen voor hergebruik van koeltoren-afblaas, om zoetwater inname bij het I-Park in Terneuzen te verminderen."
+    },
+    "specificity": 6,
+    "author": "Erik"
+  },
+  {
+    "project": "GO-Fresh",
+    "filename": "Eindrapportage_GO-FRESH;_Valorisatie_kansrijke_oplossingen_voor_robuuste_zoetwatervoorziening.pdf",
+    "original_language": "dutch",
+    "question": {
+      "en": "Which techniques were used in the GO-Fresh field trials to increase freshwater availability",
+      "nl": "Welke technieken zijn er gebruikt in het GO-Fresh veldonderzoek om de zoetwater beschikbaarheid te verbeteren"
+    },
+    "ground_truth": {
+      "en": "Three techniques: (1) Kreekrug Infiltratie Systeem: peilgestuurde drainage combined with targeted surface-water infiltration; (2) Freshmaker: winter injection of freshwater and capture of upwelling saline water via horizontal drilled wells; (3) Drains2Buffer: deeper and denser drainage to enlarge shallow rainwater lenses and prevent root-zone salinisation.",
+      "nl": "Drie technieken: (1) Kreekbrug infiltratie systeem: peilgestuurde afwatering gecombineerd met gericht oppervlakte-water infiltatie; (2) Freshmaker: winterinjectie van zoetwater en opvang van opwellend zout water via horizontale boorputten; (3) Drans2Buffer: diepere en dichtere afwatering om ondiepe regenwaterlenzen te vergroten en verzilting van de wortelzone te voorkomen"
+    },
+    "specificity": 8,
+    "author": "Erik"
+  },
+  {
+    "project": "Waterdunen",
+    "filename": "Bijlagen_Provinciaal_inpassingsplan_Waterdunen.pdf",
+    "original_language": "dutch",
+    "question": {
+      "en": "How will the freshwater canal be designed in the Waterdunen project to support nature",
+      "nl": "Hoe kan het zoetwaterkanaal in het project Waterdunen ontworpen ter ondersteuning van de natuur"
+    },
+    "ground_truth": {
+      "en": "The freshwater canal will have nature-friendly banks. In the future situation, the banks will have a slope of 1:1, with some locations having a gentler slope where nature-friendly banks currently exist.",
+      "nl": "Het zoetwaterkanaal krijgt natuurvriendelijke oevers. In de toekomstige situatie hebben de oevers een helling van 1:1 met op sommige locaties een flauwere helling waar nu natuurvriendelijke oevers aanwezig zijn."
+    },
+    "specificity": 7,
+    "author": "Erik"
+  },
+  {
+    "project": "Water NEXUS",
+    "filename": "water_nexus_saline_water_when_possible_fresh_wate-wageningen_university_and_research_553702.pdf",
+    "original_language": "english",
+    "question": {
+      "en": "For which types of wastewaters is anaerobic treatment most convenient?",
+      "nl": ""
+    },
+    "ground_truth": {
+      "en": "anaerobic treatment is most convenient for somewhta warmer soil (between 25-30°C), and high-strength wastewater because it combines treatment with the production of energy-rich biogas.",
+      "nl": ""
+    },
+    "specificity": 4
+  },
+  {
+    "project": "GO-Fresh",
+    "filename": "Eindrapportage_GO-FRESH;_Valorisatie_kansrijke_oplossingen_voor_robuuste_zoetwatervoorziening.pdf",
+    "original_language": "dutch",
+    "question": {
+      "en": "Which techniques were used in the GO-Fresh field trials to increase freshwater availability",
+      "nl": "Welke technieken zijn er gebruikt in het GO-Fresh veldonderzoek om de zoetwater beschikbaarheid te verbeteren"
+    },
+    "ground_truth": {
+      "en": "Three techniques: (1) Kreekrug Infiltratie Systeem: peilgestuurde drainage combined with targeted surface-water infiltration; (2) Freshmaker: winter injection of freshwater and capture of upwelling saline water via horizontal drilled wells; (3) Drains2Buffer: deeper and denser drainage to enlarge shallow rainwater lenses and prevent root-zone salinisation.",
+      "nl": "Drie technieken: (1) Kreekbrug infiltratie systeem: peilgestuurde afwatering gecombineerd met gericht oppervlakte-water infiltatie; (2) Freshmaker: winterinjectie van zoetwater en opvang van opwellend zout water via horizontale boorputten; (3) Drans2Buffer: diepere en dichtere afwatering om ondiepe regenwaterlenzen te vergroten en verzilting van de wortelzone te voorkomen"
+    },
+    "specificity": 8,
+    "author": "Erik"
+  },
+  {
+    "project": "Hergebruik Foodport",
+    "filename": "Final Report Emma.docx",
+    "original_language": "english",
+    "question": {
+      "en": "Which companies were involved in the Hergebruik Foodport project",
+      "nl": "Welke bedrijven zijn betrokken in het Hergebruik Foodport project"
+    },
+    "ground_truth": {
+      "en": "The companies involved were Kloosterboer B.V., CSM Bakery Supplies Europe, Coroos Conserven B.V., and Lamb Weston Meijer.",
+      "nl": "De bedrijven die betrokken zijn waren Kloosterboer B.v., CMS Bakery Supplies Europe, Coroos Conservan B.V., en Lamb Weston Meijer."
+    },
+    "specificity": 5,
+    "author": "Erik"
+  },
+  {
+    "project": "NEREUS",
+    "filename": "NEREUS_D2.5.3 Report on Social Acceptance.docx",
+    "original_language": "english",
+    "question": {
+      "en": "What is the main goal for the NEREUS project",
+      "nl": "Wat is het hoofd doel van het NEREUS project"
+    },
+    "ground_truth": {
+      "en": "The NEREUS project has focused for the last four years on the recovery and reuse of several resources from urban wastewater. Aside from the actual recovery of the resource, there is also the question of reuse of the product once recovered. Each pilot case aims to recover various resources. ",
+      "nl": "Het NEREUS project is voor de afgelopen vier jaar gefocust op het herstel en hergebruik van verschillende gronstoffen uit stedelijk afvalwater. Naast de daadwerkelijke erugwinning van de grondstof, is er ook de vraag naar hergebruik van het gewonnen product. Elke pilot is gericht op de terugwinning van verschillende grondstoffen."
+    },
+    "specificity": 7,
+    "author": "Erik"
+  },
+  {
+    "project": "Water NEXUS",
+    "filename": "water_nexus_saline_water_when_possible_fresh_wate-wageningen_university_and_research_553702.pdf",
+    "original_language": "english",
+    "question": {
+      "en": "For which types of wastewaters is anaerobic treatment most convenient?",
+      "nl": ""
+    },
+    "ground_truth": {
+      "en": "anaerobic treatment is most convenient for somewhta warmer soil (between 25-30°C), and high-strength wastewater because it combines treatment with the production of energy-rich biogas.",
+      "nl": ""
+    },
+    "specificity": 4
+  },
+  {
+    "project": "Waterdunen",
+    "filename": "Bijlagen_Provinciaal_inpassingsplan_Waterdunen.pdf",
+    "original_language": "dutch",
+    "question": {
+      "en": "How will the freshwater canal be designed in the Waterdunen project to support nature",
+      "nl": "Hoe kan het zoetwaterkanaal in het project Waterdunen ontworpen ter ondersteuning van de natuur"
+    },
+    "ground_truth": {
+      "en": "The freshwater canal will have nature-friendly banks. In the future situation, the banks will have a slope of 1:1, with some locations having a gentler slope where nature-friendly banks currently exist.",
+      "nl": "Het zoetwaterkanaal krijgt natuurvriendelijke oevers. In de toekomstige situatie hebben de oevers een helling van 1:1 met op sommige locaties een flauwere helling waar nu natuurvriendelijke oevers aanwezig zijn."
+    },
+    "specificity": 7,
+    "author": "Erik"
+  }
+]
