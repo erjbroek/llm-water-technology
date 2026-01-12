@@ -35,14 +35,14 @@ try:
     logger.info("Ollama client initialized!")
     
     # GPU diagnostics
-    logger.info(f"CUDA available: {torch.cuda.is_available()}")
+    print(f"CUDA available: {torch.cuda.is_available()}")
     if torch.cuda.is_available():
         logger.info(f"GPU device: {torch.cuda.get_device_name(0)} ({torch.cuda.get_device_properties(0).total_memory/1024**3:.1f} GB)")
     else:
         logger.info("Running on CPU")
-
+    last_retrieved_sources = ""
     
-    reranker_model = CrossEncoder('cross-encoder/ms-marco-MiniLM-L-6-v2')
+    # reranker_model = CrossEncoder('cross-encoder/ms-marco-MiniLM-L-6-v2')
     
     # Initialize components
     vector_store = VectorStore()
@@ -65,10 +65,9 @@ except Exception as e:
 class RAGChatbot:
     # RAG Chatbot that combines document retrieval with LLM generation.
     
-    def __init__(self, vector_store, ollama_client, reranker_model):
+    def __init__(self, vector_store, ollama_client):
         self.vector_store = vector_store
         self.ollama_client = ollama_client
-        self.reranker_model = reranker_model
         self.conversation_history = []
         # self.user_language = None  
         # self.translator_cache = {}  
@@ -181,27 +180,24 @@ class RAGChatbot:
 
     def get_relevant_context(self, query, language="english"):
         # Retrieve relevant document chunks for the query.
-        rephrased_question, time_taken = self.rewrite_query(query)
+        # rephrased_question, time_taken = self.rewrite_query(query)
         try:
             if language == "dutch": 
                 translator = GoogleTranslator(source="nl", target="en")
                 english_query = translator.translate(query)
-                alternative_results = self.vector_store.search(english_query, top_k=9)
+                alternative_results = self.vector_store.search(english_query, top_k=5)
             elif language == "english":
                 translator = GoogleTranslator(source="en", target="nl")
                 dutch_query = translator.translate(query)
-                alternative_results = self.vector_store.search(dutch_query, top_k=9)
+                alternative_results = self.vector_store.search(dutch_query, top_k=5)
             else: 
                 raise ValueError(f"Invalid language: {language}")
             
-            original_results = self.vector_store.search(query, top_k=9)
-
-            all_contents = alternative_results['documents'][0] + original_results['documents'][0]
-            all_distances = alternative_results['distances'][0] + original_results['distances'][0]
-            top_indices = np.argsort(all_distances)[:9]
-            top_contents = [all_contents[i] for i in top_indices]
+            original_results = self.vector_store.search(query, top_k=5)
+            combined_results = merge_vector_results(original_results, alternative_results)
+            lowest_entries = {key: (value[:5] if value is not None else []) for key, value in combined_results.items()}
             
-            return "\n\n".join(top_contents)
+            return lowest_entries
         except Exception as e:
             logger.error(f"Retrieval error: {e}")
             return ""
@@ -259,7 +255,8 @@ class RAGChatbot:
         
         # Search using original query (documents stored in original language)
         start_time_chunk_retrieval = time.time()
-        context = self.get_relevant_context(query, query_language)
+        results = self.get_relevant_context(query, query_language)
+        context = "\n\n".join(results["documents"][0]) if results else ""
         chunk_retrieval_time = time.time() - start_time_chunk_retrieval
         
         # Build conversation history
@@ -397,7 +394,7 @@ class RAGChatbot:
                 "answer": answer  
             })
             generation_time = time.time() - start_time_generation
-            return answer, chunk_retrieval_time, generation_time
+            return answer, chunk_retrieval_time, generation_time, results
 
         except Exception as e:
             error_msg = f" Error from Ollama: {e}"
@@ -451,8 +448,9 @@ class RAGEvaluator:
             precisions = []
             for qa_pair in evaluation_data:
                 context = self.chatbot.get_relevant_context(qa_pair["question"], language)
+                chunks = context["documents"][0]
                 gt_words = [word.lower() for word in qa_pair["ground_truth"].split()[:5]]
-                if any(word in context.lower() for word in gt_words):
+                if any(word in chunks.lower() for word in gt_words):
                     hits += 1
 
                 words_in_context = context.lower().split()
@@ -516,7 +514,7 @@ class RAGEvaluator:
         eval_results.to_csv(f"./evaluation_results/eval_results_{timestamp}.csv", index=False)
 
 # Initialize chatbot
-chatbot = RAGChatbot(vector_store, ollama_client, reranker_model) if vector_store and ollama_client else None
+chatbot = RAGChatbot(vector_store, ollama_client) if vector_store and ollama_client else None
 evaluator = RAGEvaluator(chatbot)
 
 def resolve_target_folder(subfolder: str) -> Path:
@@ -538,6 +536,16 @@ def resolve_target_folder(subfolder: str) -> Path:
 def get_current_evaluation_progress():
     return evaluator.current_evaluation_progress
 
+def merge_vector_results(a, b):
+    merged = {}
+
+    for key in a.keys():
+        if a[key] is None:
+            merged[key] = None
+        else:
+            merged[key] = [a[key][0] + b[key][0]]
+
+    return merged
 
 def resolve_document_path(relative_path: str) -> Path:
     # Turn document name into full path.
@@ -690,27 +698,55 @@ def delete_document(document_id: str, remove_file: bool):
 
 def chat_response(message, history, query_language):
     # Handle chat messages from the UI.
+    global last_retrieved_sources
     if not chatbot:
         return history, ""
         
     if not message.strip():
         return history, ""
         
-    response, _, _ = chatbot.generate_response(message, query_language)
+    if not query_language:
+        query_language = "english"
+        
+    response, _, _, results = chatbot.generate_response(message, query_language)
+    seen_texts = set()
+    source_id = 1
+    modal_html = "<div style='display: flex; flex-direction: column; gap: 15px;'>"
+    for i in range(len(results)):
+            chunk_text = results['documents'][0][i].replace('\n', ' ').strip()
+            
+            # If the text is exactly the same as a previous chunk, skip it
+            if chunk_text in seen_texts:
+                continue
+            seen_texts.add(chunk_text)
+
+            # Extract metadata
+            metadata = results['metadatas'][0][i]
+            filename = metadata.get('relative_path', 'Unknown').split('\\')[-1]
+            page_num = metadata.get('page_number', 'N/A')
+
+            modal_html += f"""
+            <div style='border: 1px solid #e0e0e0; padding: 15px; border-radius: 8px; font-family: sans-serif; line-height: 1.6;'>
+                <div style='margin-bottom: 5px;'><b>Source</b> <span style='color: #2196F3;'>{source_id}</span></div>
+                <div style='margin-bottom: 5px;'><b>Filename:</b> {filename}</div>
+                <div style='margin-bottom: 5px;'><b>Page number:</b> {page_num}</div>
+                <div style='margin-top: 10px; border-top: 1px solid #ddd; padding-top: 10px;'>
+                    <b>Text:</b> <br>
+                    <i>"{chunk_text}"</i>
+                </div>
+            </div>
+            """
+            source_id += 1 
+
+    modal_html += "</div>"
+    last_retrieved_sources = modal_html
     
-    results = vector_store.search(message, top_k=1)
-    filename = results['metadatas'][0][0]['relative_path'].split('\\')[-1]
-    chunk = results['documents'][0][0].replace('\n', ' ')
-
-    combined_response = (
-        f"{response}\n\n"
-        f"**File used**:\n {filename}\n"
-        f"**Information:**\n: {chunk}"
-    )
-
-    history.append([message, combined_response])
+    history.append([message, response])
     return history, ""
 
+def get_latest_sources():
+    #Returns the most recent sources found by the search for the UI modal.
+    return last_retrieved_sources or "No sources found for the last query."
 
 def clear_all_data():
     # Delete everything: database and chat history.

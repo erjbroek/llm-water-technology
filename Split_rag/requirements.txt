@@ -1,5 +1,6 @@
 chromadb
 gradio
+gradio_modal
 sentence-transformers
 PyPDF2
 python-docx
