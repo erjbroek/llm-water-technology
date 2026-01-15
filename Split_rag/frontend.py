@@ -110,6 +110,7 @@ def create_gradio_interface():
             outputs=show_sources_btn
         )
 
+
         show_sources_btn.click(
             fn=get_latest_sources, 
             outputs=source_display
