@@ -1,0 +1,82 @@
+question,datetime,model_name,ground_truth,model_output,chunk_retrieval_time,generation_time,bleu,rouge,precision,recall,F1,recall@k,precision@k
+What is the tradeoff when using MD compared to RO?,2025-12-31 05:11:54.014321,qwen3:4b,"MD gives higher product quality with no additional post-treatment, but is very energy intensive and produces a small product flow. RO is more water-efficient and economically favorable but may require additional treatment to meet specifications.","According to the provided context, there are two main modes of operation for the module: MS (Membrane Switch) and DCMD. The key point about the tradeoff between these two modes in relation to Reverse Osmosis (RO) is that:
+
+""In Figure 5, a more detailed view on the working mechanism of both MD and MS is shown. For better or worse effect on the operation of the RO...""
+
+This suggests that there are differences in how the module operates when using the MD mode compared to the traditional RO system. The context does not provide specific details about what those tradeoffs might be, but it indicates a difference between the two modes.
+
+The answer is supported by:
+- Figure 5 showing operational differences between MD and MS
+- Statement ""For better or worse effect on the operation of the RO""",7.233252048492432,34.12754988670349,0.020705706652424008,0.08045977011494253,tensor([0.7945]),tensor([0.8270]),tensor([0.8104]),1.0,0.4
+What was the purpose of the trials conducted at Dow Terneuzen for the AquaSPICE project,2025-12-31 05:13:07.227450,qwen3:4b,"The purpose of the trials at Dow Terneuzen within the AquaSPICE project, is to research the potential of new technologies for reuse of cooling tower blowdown, to reduce freshwater intake at the I-Parc Dow Terneuzen site. ","According to the provided context, the purpose of the trials conducted at Dow Terneuzen for the AquaSPICE project (not explicitly mentioned in the given text) was:
+
+""To practice with the three steps of Water Availability"" 
+
+The key evidence from the document is:
+- ""In eerste instantie ten behoeve van de planvorming en de haalbaarheid van het project in het algemeen. In een later stadium hebb en meer gedetailleerde onderzoeken plaatsgevonden, onder andere ten behoeve van de opname in het Natuurpakket Westerschelde""",14.674499750137329,41.61582398414612,0.07126025665760459,0.2564102564102564,tensor([0.7850]),tensor([0.8697]),tensor([0.8252]),1.0,0.2
+Which techniques were used in the GO-Fresh field trials to increase freshwater availability,2025-12-31 05:14:29.424082,qwen3:4b,Three techniques: (1) Kreekrug Infiltratie Systeem: peilgestuurde drainage combined with targeted surface-water infiltration; (2) Freshmaker: winter injection of freshwater and capture of upwelling saline water via horizontal drilled wells; (3) Drains2Buffer: deeper and denser drainage to enlarge shallow rainwater lenses and prevent root-zone salinisation.,"According to the provided context, the three techniques used in the GO-FRESH field trials to increase freshwater availability for agriculture are:
+
+1. Kreekrug Infiltratie Systeem (Serooskerke, Walcheren)
+2. Freshmaker
+
+These were part of a series of pilot experiments conducted at Dow Terneuzen as part of the AquaSPICE project and GO-FRESH research program to improve local freshwater availability for farming by making it less dependent on variable weather conditions.",19.614038228988647,40.090965270996094,0.005948361193232793,0.20689655172413796,tensor([0.8354]),tensor([0.8446]),tensor([0.8400]),1.0,0.6
+How will the freshwater canal be designed in the Waterdunen project to support nature,2025-12-31 05:16:25.333104,qwen3:4b,"The freshwater canal will have nature-friendly banks. In the future situation, the banks will have a slope of 1:1, with some locations having a gentler slope where nature-friendly banks currently exist.","According to the provided context, the design of the freshwater canals for the Waterdunen project is intended to:
+
+""Versterken de veiligheid en verbeteren van landschappelijke kwaliteit en (verblijfs)recreatieve gebruiksmogelijkheden. De natuuraanleg in Waterdunen dient ook om natuur, landschap, cultuurhistorie en leef- en recreatieomgeving te versterken.""
+
+The key evidence from the document is:
+- ""Versterken de veiligheid en verbeteren van landschappelijke kwaliteit en (verblijfs)recreatieve gebruiksmogelijkheden""
+- ""De natuuraanleg in Waterdunen dient om natuur, landschap, cultuurhistorie en leef- en recreatieomgeving te versterken""
+
+So the freshwater canals will be designed to enhance safety and improve landscape quality as well as recreational use. The specific details of how this is achieved are not provided beyond these general design goals in the context.
+
+The answer is supported by:
+- ""Versterken de veiligheid en verbeteren van landschappelijke kwaliteit en (verblijfs)recreatieve gebruiksmogelijkheden""
+- ""De natuuraanleg in Waterdunen dient om natuur, landschap, cultuurhistorie en leef- en recreatieomgeving te versterken""",23.160744428634644,64.37880158424377,0.027794738724637273,0.08695652173913045,tensor([0.7239]),tensor([0.8455]),tensor([0.7799]),0.0,0.0
+For which types of wastewaters is anaerobic treatment most convenient?,2025-12-31 05:18:10.605246,qwen3:4b,"anaerobic treatment is most convenient for somewhta warmer soil (between 25-30°C), and high-strength wastewater because it combines treatment with the production of energy-rich biogas.","According to the provided context:
+
+""Anaerobic treatment is most convenient for relatively warm (> 25-30 oC) and high-strength wastewaters because it combines treatment with the production of energy-rich biogas.""
+
+The key evidence from the document is:
+- ""Anaerobic treatment is most convenient for relatively warm (> 25-30 oC) and high-strength wastewaters""
+
+So anaerobic treatment is particularly well-suited to treating high-strength, warm wastewater.",28.83860182762146,44.70812273025513,0.19784567814681964,0.4893617021276596,tensor([0.8563]),tensor([0.8979]),tensor([0.8766]),1.0,1.0
+Which techniques were used in the GO-Fresh field trials to increase freshwater availability,2025-12-31 05:19:53.974137,qwen3:4b,Three techniques: (1) Kreekrug Infiltratie Systeem: peilgestuurde drainage combined with targeted surface-water infiltration; (2) Freshmaker: winter injection of freshwater and capture of upwelling saline water via horizontal drilled wells; (3) Drains2Buffer: deeper and denser drainage to enlarge shallow rainwater lenses and prevent root-zone salinisation.,"According to the provided context, the three techniques used in the GO-FRESH field trials to increase freshwater availability for agriculture are:
+
+1. Kreekrug Infiltratie Systeem (Serooskerke, Walcheren)
+2. Freshmaker
+
+These were part of a series of pilot experiments conducted at Dow Terneuzen as part of the AquaSPICE project and GO-FRESH research program to improve local freshwater availability for farming by making it less dependent on variable weather conditions.",27.147247552871704,47.77538299560547,0.005948361193232793,0.20689655172413796,tensor([0.8354]),tensor([0.8446]),tensor([0.8400]),1.0,0.6
+Which companies were involved in the Hergebruik Foodport project,2025-12-31 05:21:51.784004,qwen3:4b,"The companies involved were Kloosterboer B.V., CSM Bakery Supplies Europe, Coroos Conserven B.V., and Lamb Weston Meijer.","According to the provided context:
+
+""In 2013 is er een incidentele omzet van gerealiseerd als gevolg van de oplevering van een transportleiding. Met deze opdracht is een opbrengst van € 3,2 miljoen""
+
+The only company mentioned in this sentence as being involved with the Hergebruik Foodport project (which appears to be a Dutch term for ""Food Port"" reuse) is:
+
+""Aan bedrijven in Duitsland en België zijn actief in afvalwaterzuivering en hergebruik van water in China en Vietnam. Via ons DBFO business model verzorgen we de realisatie van installaties en leggen wij ons toe op een hechte en langjarige samenwerking met onze internationale klanten.""
+
+The context does not provide any additional information about specific companies involved beyond the general statement that ""aan bedrijven in Duitsland en België zijn actief"" (active with) this project.",26.736304759979248,60.856497287750244,0.0,0.039735099337748346,tensor([0.7486]),tensor([0.7910]),tensor([0.7692]),0.0,0.0
+What is the main goal for the NEREUS project,2025-12-31 05:23:28.352011,qwen3:4b,"The NEREUS project has focused for the last four years on the recovery and reuse of several resources from urban wastewater. Aside from the actual recovery of the resource, there is also the question of reuse of the product once recovered. Each pilot case aims to recover various resources. ","According to the provided context, the main goals of the NEREUS (Netherlands-European Research on Urban Sustainability) project are:
+
+1. To improve urban sustainability in Europe through research and innovation
+
+The key evidence from the document is:
+- ""Het project en de daarin betrokken partijen hebben een vo orgeschiedenis. Vanaf de eerste ideeën in 2009 tot en met heden is het project gegroeid tot het huidige voorstel.""
+This indicates that NEREUS has a long history of development and growth, with all parties involved deeply engaged from the beginning.
+
+The answer focuses solely on information provided in the given context about what the main goal(s) for the NEREUS project are.",22.22483253479004,48.86895489692688,0.04796651641274811,0.13836477987421383,tensor([0.7914]),tensor([0.8561]),tensor([0.8225]),1.0,0.2
+For which types of wastewaters is anaerobic treatment most convenient?,2025-12-31 05:24:57.809546,qwen3:4b,"anaerobic treatment is most convenient for somewhta warmer soil (between 25-30°C), and high-strength wastewater because it combines treatment with the production of energy-rich biogas.","According to the provided context:
+
+""Anaerobic treatment is most convenient for relatively warm (> 25-30 oC) and high-strength wastewaters because it combines treatment with the production of energy-rich biogas.""
+
+The key evidence from the document is:
+- ""Anaerobic treatment is most convenient for relatively warm (> 25-30 oC) and high-strength wastewaters""",24.830617904663086,39.45445513725281,0.22229849552064018,0.5679012345679013,tensor([0.8600]),tensor([0.8951]),tensor([0.8772]),1.0,1.0
+How will the freshwater canal be designed in the Waterdunen project to support nature,2025-12-31 05:26:46.821664,qwen3:4b,"The freshwater canal will have nature-friendly banks. In the future situation, the banks will have a slope of 1:1, with some locations having a gentler slope where nature-friendly banks currently exist.","According to the provided context, the key aspects of how the freshwater canal (Waterdunen) is being designed to support nature are:
+
+1. The water dunes (waterduinen) element combines planning for nature with a spatial vision that enhances safety, recreation, tourism and ecology in an integrated manner.
+
+2. Waterdunen aims to strengthen security while also improving landscape quality and recreational use opportunities through the design of the water dune system. 
+
+3. Nature elements are being incorporated into the canal's design as part of its overall objective to enhance environmental qualities like natural areas, landscapes, cultural history and living/recreational environments.
+
+The context does not provide specific technical details about how nature will be specifically supported within the freshwater canal itself beyond these broader aims for integration through the water dune system.",25.77356481552124,56.74209499359131,0.047913324234624195,0.10909090909090909,tensor([0.8206]),tensor([0.8608]),tensor([0.8403]),0.0,0.0

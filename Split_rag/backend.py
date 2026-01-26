@@ -1,15 +1,12 @@
 # Backend module for RAG Chatbot.
 # Contains the main RAG chatbot logic, file processing utilities, and integration with Ollama.
 
-import os
 import logging
 import shutil
 from pathlib import Path
 from typing import List, Dict, Any, Tuple
 import torch
 from ollama import Client
-from deep_translator import GoogleTranslator
-from langdetect import detect
 from vectorize import VectorStore, DocumentProcessor, ingest_file, ingest_directory
 import config
 import asyncio
@@ -19,10 +16,10 @@ from ragas.dataset_schema import SingleTurnSample
 from bert_score import score
 from sentence_transformers import CrossEncoder
 import time
-import random
-import pandas as pd
+# import pandas as pd
 from datetime import datetime
 import numpy as np
+from deep_translator import GoogleTranslator
 
 # Configure logging
 logging.basicConfig(level=getattr(logging, config.LOG_LEVEL, 'INFO'))
@@ -469,7 +466,7 @@ class RAGEvaluator:
         if evaluation_data:
             for qa_pair in evaluation_data:
                 ground_truth = qa_pair["ground_truth"]
-                response, chunk_retrieval_time, generation_time = self.chatbot.generate_response(query=qa_pair["question"], query_language=language)
+                response, chunk_retrieval_time, generation_time, _ = self.chatbot.generate_response(query=qa_pair["question"], query_language=language)
 
                 sample = SingleTurnSample(
                     response=response,
@@ -484,34 +481,34 @@ class RAGEvaluator:
         else:
             print("No evaluation data found")
 
-    def complete_evaluation(self, language, evaluation_data, num_of_requests=2, model_name="qwen3:4b"):
-        eval_results = pd.DataFrame(columns=["question", "datetime", "model_name", "ground_truth", "model_output", "chunk_retrieval_time", "generation_time", "bleu", "rouge", "precision", "recall", "F1", "recall@k", "precision@k"])
-        self.current_evaluation_progress = 0
-        for i in range(num_of_requests):
-            used_eval_data = evaluation_data[i]
-            recall_at_k, mean_precision_at_k, time_taken = self.evaluate_retrieval(language, [used_eval_data])
-            response, chunk_retrieval_time, generation_time, bleu, rouge, precision, recall, F1 = asyncio.run(evaluator.evaluate_generation(language, [used_eval_data]))
-            row = pd.DataFrame([{
-                "question": used_eval_data["question"],
-                "datetime": datetime.now(),
-                "model_name": model_name,
-                "ground_truth": used_eval_data["ground_truth"],
-                "model_output": response,
-                "chunk_retrieval_time": chunk_retrieval_time,
-                "generation_time": generation_time,
-                "bleu": bleu,
-                "rouge": rouge,
-                "precision": precision,
-                "recall": recall,
-                "F1": F1,
-                "recall@k": recall_at_k,
-                "precision@k": mean_precision_at_k,
-            }])
-            eval_results = pd.concat([eval_results, row], ignore_index=True)
-            self.current_evaluation_progress += 1 
+    # def complete_evaluation(self, language, evaluation_data, num_of_requests=2, model_name="qwen3:4b"):
+    #     eval_results = pd.DataFrame(columns=["question", "datetime", "model_name", "ground_truth", "model_output", "chunk_retrieval_time", "generation_time", "bleu", "rouge", "precision", "recall", "F1", "recall@k", "precision@k"])
+    #     self.current_evaluation_progress = 0
+    #     for i in range(num_of_requests):
+    #         used_eval_data = evaluation_data[i]
+    #         recall_at_k, mean_precision_at_k, time_taken = self.evaluate_retrieval(language, [used_eval_data])
+    #         response, chunk_retrieval_time, generation_time, bleu, rouge, precision, recall, F1 = asyncio.run(evaluator.evaluate_generation(language, [used_eval_data]))
+    #         row = pd.DataFrame([{
+    #             "question": used_eval_data["question"],
+    #             "datetime": datetime.now(),
+    #             "model_name": model_name,
+    #             "ground_truth": used_eval_data["ground_truth"],
+    #             "model_output": response,
+    #             "chunk_retrieval_time": chunk_retrieval_time,
+    #             "generation_time": generation_time,
+    #             "bleu": bleu,
+    #             "rouge": rouge,
+    #             "precision": precision,
+    #             "recall": recall,
+    #             "F1": F1,
+    #             "recall@k": recall_at_k,
+    #             "precision@k": mean_precision_at_k,
+    #         }])
+    #         eval_results = pd.concat([eval_results, row], ignore_index=True)
+    #         self.current_evaluation_progress += 1 
 
-        timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-        eval_results.to_csv(f"./evaluation_results/eval_results_{timestamp}.csv", index=False)
+    #     timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+    #     eval_results.to_csv(f"./evaluation_results/eval_results_{timestamp}.csv", index=False)
 
 # Initialize chatbot
 chatbot = RAGChatbot(vector_store, ollama_client) if vector_store and ollama_client else None
@@ -572,7 +569,7 @@ def evaluate_model(evaluation='full', num_of_evaluations=5):
     # parts that need to be changed are evaluator.prepared_qa_en, and the string "english" passed in the functions
     if evaluation == 'full':
         print(f'complete evaluation of {num_of_evaluations} evaluations')
-        evaluator.complete_evaluation("english", evaluator.prepared_qa_en, num_of_requests=num_of_evaluations)
+        # evaluator.complete_evaluation("english", evaluator.prepared_qa_en, num_of_requests=num_of_evaluations)
     elif evaluation == 'generation':
         print('evaluation of model output')
         response, chunk_retrieval_time, generation_time, bleu, rouge, precision, recall, F1 = asyncio.run(evaluator.evaluate_generation("english", evaluator.prepared_qa_en))

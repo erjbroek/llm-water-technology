@@ -1,0 +1,58 @@
+question,datetime,model_name,ground_truth,model_output,chunk_retrieval_time,generation_time,bleu,rouge,precision,recall,F1,recall@k,precision@k
+What is the tradeoff when using MD compared to RO?,2025-12-19 02:34:39.874896,qwen3:4b,"MD gives higher product quality with no additional post-treatment, but is very energy intensive and produces a small product flow. RO is more water-efficient and economically favorable but may require additional treatment to meet specifications.","The main tradeoff between Using Membrane Distillation (MD) and Reverse Osmosis (RO) in this context appears to be cost. 
+
+For both technologies:
+
+- Initial investment costs are too high for large-scale applications.
+- The price per unit of membrane or EDR stack is much higher compared to a single RO module.
+
+However, the study notes that if market conditions do not favor investing in these techniques to reduce initial costs, then neither MD nor RO will be used on any scale for production of boiler feed water.",0.834986686706543,61.950562715530396,0.023287349035853482,0.09756097560975609,tensor([0.8169]),tensor([0.8476]),tensor([0.8319]),1.0,0.8
+What was the purpose of the trials conducted at Dow Terneuzen for the AquaSPICE project,2025-12-19 02:35:38.255958,qwen3:4b,"The purpose of the trials at Dow Terneuzen within the AquaSPICE project, is to research the potential of new technologies for reuse of cooling tower blowdown, to reduce freshwater intake at the I-Parc Dow Terneuzen site. ","The purpose of the trials conducted at Dow Terneuzen for the AquaSPICE project was to test measures aimed at increasing freshwater availability. The results from these three tests were promising in the field (Oude Essink et al., 2014).",1.0279502868652344,49.6407732963562,0.1389435484948504,0.37333333333333335,tensor([0.8861]),tensor([0.8942]),tensor([0.8901]),1.0,0.6
+Which techniques were used in the GO-Fresh field trials to increase freshwater availability,2025-12-19 02:36:47.974861,qwen3:4b,Three techniques: (1) Kreekrug Infiltratie Systeem: peilgestuurde drainage combined with targeted surface-water infiltration; (2) Freshmaker: winter injection of freshwater and capture of upwelling saline water via horizontal drilled wells; (3) Drains2Buffer: deeper and denser drainage to enlarge shallow rainwater lenses and prevent root-zone salinisation.,"The two main techniques used in the GO-FRESH field trials for increasing freshwater availability were:
+
+1. Membrane Distillation (MD)
+2. Reverse Osmosis (RO)
+
+These technologies aim at improving local freshwater supply by utilizing existing groundwater resources under varying hydrological conditions. The trial results showed promising performance of these measures, which could be further developed and implemented in other farmers' business plans.
+
+Reference(s):
+- ""GO-FRESH: Valorization of promising solutions for a robust freshwater",0.8618810176849365,64.09917426109314,0.003075413988792507,0.1,tensor([0.8255]),tensor([0.8154]),tensor([0.8204]),1.0,0.2
+How will the freshwater canal be designed in the Waterdunen project to support nature,2025-12-19 02:37:51.505152,qwen3:4b,"The freshwater canal will have nature-friendly banks. In the future situation, the banks will have a slope of 1:1, with some locations having a gentler slope where nature-friendly banks currently exist.","The design of the freshwater canal in the Waterdunen project aims to create an attractive, 'exciting' area for both recreationalists and vulnerable wildlife such as shorebirds. The dune area behind the existing dike will be expanded naturally while providing a buffer against coastal flooding over a longer period",1.0093519687652588,57.69680714607239,0.035254126701118216,0.21951219512195125,tensor([0.8576]),tensor([0.8783]),tensor([0.8678]),1.0,0.6
+For which types of wastewaters is anaerobic treatment most convenient?,2025-12-19 02:38:57.643053,qwen3:4b,"anaerobic treatment is most convenient for somewhta warmer soil (between 25-30°C), and high-strength wastewater because it combines treatment with the production of energy-rich biogas.","Based on the research findings discussed in the provided context, the following types of wastewater are considered to be most suitable for aerobic and/or biogas generation:
+
+1. Wastewater from textile industries with high biochemical oxygen demand (BOD) due to dyeing processes - these can be treated using activated sludge.
+
+2",0.2031238079071045,64.33356499671936,0.020170550850601286,0.12820512820512822,tensor([0.8386]),tensor([0.8465]),tensor([0.8425]),1.0,0.8
+Which techniques were used in the GO-Fresh field trials to increase freshwater availability,2025-12-19 02:39:58.840377,qwen3:4b,Three techniques: (1) Kreekrug Infiltratie Systeem: peilgestuurde drainage combined with targeted surface-water infiltration; (2) Freshmaker: winter injection of freshwater and capture of upwelling saline water via horizontal drilled wells; (3) Drains2Buffer: deeper and denser drainage to enlarge shallow rainwater lenses and prevent root-zone salinisation.,"The two main techniques used in the GO-FRESH (GO-Fresh) field trials for increasing freshwater availability are:
+
+1. Membrane Distillation (MD)
+2. Reverse Osmosis (RO)
+
+These technologies aim at improving local freshwater supply by utilizing existing groundwater resources under varying hydrological conditions.",0.8795285224914551,57.91524147987366,0.004711636438140698,0.08988764044943821,tensor([0.8367]),tensor([0.8190]),tensor([0.8278]),1.0,0.2
+Which companies were involved in the Hergebruik Foodport project,2025-12-19 02:41:12.306740,qwen3:4b,"The companies involved were Kloosterboer B.V., CSM Bakery Supplies Europe, Coroos Conserven B.V., and Lamb Weston Meijer.","The four companies involved in the Hergebruik Food Port project are:
+
+1. Kloosterboer B.V., based in Nieuwport, Zeeland.
+2. CSM Bakery Supplies Europe, based in Goes, Zeeland.
+3. Coroos Conserven B.V., located in Kapelle, Zeeland.
+4. Lamb Weston Meijer, situated in Kruiningen",0.7050397396087646,67.47862386703491,0.023290389217566525,0.5396825396825397,tensor([0.8621]),tensor([0.9450]),tensor([0.9016]),1.0,0.8
+What is the main goal for the NEREUS project,2025-12-19 02:42:13.331400,qwen3:4b,"The NEREUS project has focused for the last four years on the recovery and reuse of several resources from urban wastewater. Aside from the actual recovery of the resource, there is also the question of reuse of the product once recovered. Each pilot case aims to recover various resources. ","Based on the provided context, there does not appear to be any information about a specific ""NEREUS"" project. The document contains details related to several other projects and initiatives, but none that match or correspond to ""NEE-REUSS"".",0.9971575736999512,51.62661933898926,0.05908002399935303,0.13793103448275865,tensor([0.8416]),tensor([0.8535]),tensor([0.8475]),1.0,0.8
+For which types of wastewaters is anaerobic treatment most convenient?,2025-12-19 02:43:54.052252,qwen3:4b,"anaerobic treatment is most convenient for somewhta warmer soil (between 25-30°C), and high-strength wastewater because it combines treatment with the production of energy-rich biogas.","Based on the provided document context, anaerobic treatment appears to be particularly well-suited for wastewater streams amenable to granular sludge biological processes. This includes:
+
+1. Wastewater with high COD (Chemical Oxygen Demand) concentrations - as mentioned in multiple references like Cui et al., 2011 and Dainis, 2020.
+
+2. Water stressed delta areas like Hong Kong where saline wastewater is already being treated by toilet flushing methods - this indicates that the technology could be applicable to other saltier wastewaters
+
+3. The specific mention of using anaerobic bioprocesses for treating increasing salinity in water cycles 
+
+So while I do not have a concise list from the context, it appears that saline or high COD wastewater streams would generally provide favorable conditions for applying anaerobic granular sludge treatment technology.
+
+There are some caveats though - as mentioned earlier, an important consideration is ensuring proper inoculum characteristics to handle potential salinity fluctuations. The research also found advantages in using variegate (halophilic) microorganisms rather than generalist bacteria that prefer neutral conditions",0.22790002822875977,97.93235754966736,0.03196971631767803,0.08290155440414508,tensor([0.7986]),tensor([0.8305]),tensor([0.8142]),1.0,0.8
+How will the freshwater canal be designed in the Waterdunen project to support nature,2025-12-19 02:45:21.635023,qwen3:4b,"The freshwater canal will have nature-friendly banks. In the future situation, the banks will have a slope of 1:1, with some locations having a gentler slope where nature-friendly banks currently exist.","Based on the provided context, it appears that a primary goal of the Waterdunen project is to create an attractive ""exciting"" area for recreationalists while also maintaining peace and quiet. To achieve this naturalistic design, several objectives have been set:
+
+1. Realize 250 hectares of freely accessible nature under controlled tide influence
+2. Create intertidal areas along the Western Scheldt serving as food and breeding grounds for shorebirds
+3. Guarantee smart zoning to ensure peaceful conditions in certain parts necessary for vulnerable bird species
+
+The design will capitalize on opportunities provided by tidal zones, converting them into an attractive recreational area while preserving nature's dynamics. A wide dune area will be created behind the existing dike to allow natural processes and provide coastal safety.
+
+However, I do not have detailed information about how this specific freshwater canal would",1.0114994049072266,83.38983678817749,0.016794256847485502,0.09248554913294797,tensor([0.8261]),tensor([0.8650]),tensor([0.8451]),1.0,0.6

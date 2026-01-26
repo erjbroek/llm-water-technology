@@ -1,0 +1,102 @@
+question,datetime,model_name,ground_truth,model_output,chunk_retrieval_time,generation_time,bleu,rouge,precision,recall,F1,recall@k,precision@k
+Which techniques were used in the GO-Fresh field trials to increase freshwater availability,2025-12-03 16:26:32.950981,qwen3:4b,Three techniques: (1) Kreekrug Infiltratie Systeem: peilgestuurde drainage combined with targeted surface-water infiltration; (2) Freshmaker: winter injection of freshwater and capture of upwelling saline water via horizontal drilled wells; (3) Drains2Buffer: deeper and denser drainage to enlarge shallow rainwater lenses and prevent root-zone salinisation.,"Based solely on the provided document context, I cannot determine which specific techniques were used in the GO-Fresh field trials to increase freshwater availability.
+
+The document describes the general approach of the GO-Fresh project as ""storing (excess) freshwater (in periods with heavy rainfall) in the soil, so that it can be used when needed, in dry periods."" It mentions that in the research project GO-FRESH I, ""three pilot experiments were carried out in different locations to increase the local freshwater availability"" and that these experiments would be continued in GO-Fresh II.
+
+However, the document does not explicitly list the specific techniques or methods implemented in the field trials. It mentions that the project considered ""fresh-making"" techniques that farmers wished to use, but doesn't provide a detailed list of what these specific techniques were.
+
+The document states that the research types included in the project were ""interviews and computer research,"" but this refers to the research methodology rather than the specific techniques used in the field trials.
+
+Therefore, based on the provided context, the answer is that the document does not specify which exact techniques were used in the GO-Fresh field trials to increase freshwater availability.",0.21619892120361328,585.2986688613892,0.005256360927892188,0.056451612903225805,tensor([0.8013]),tensor([0.8006]),tensor([0.8009]),1.0,0.2
+What are the importances of fresh water in chemical industry,2025-12-03 16:31:13.985770,qwen3:4b,It is used in many chemical processes as an ingredient and for cooling and steam production,"Based solely on the provided document context, fresh water is of major importance for the chemical industry because ""it is used in all kinds of chemical processes."" 
+
+This is explicitly stated in the document: ""Fresh water is of major importance for the chemical industry, as it is used in all kinds of chemical processes.""
+
+The document also notes that the chemical industry is a ""keystone of the European economy"" that ""converts raw materials into thousands of different products and is both a major water user and a solution provider for the key strategic European process industry sectors."" 
+
+The context indicates that the chemical industry's reliance on fresh water is significant enough that the project investigated whether alternative water sources (such as groundwater, surface water, brackish water or waste water) could be used instead of drinking water for industrial processes.",0.1819009780883789,277.6879277229309,0.012248423192268177,0.11538461538461538,tensor([0.8068]),tensor([0.8563]),tensor([0.8308]),1.0,1.0
+Who are the end-users that contributed to the Water NEXUS project,2025-12-03 16:37:28.001106,qwen3:4b,"The end-users that contributed to the Water NEXUS project are TNO, Plant-e, Nijhuis Industries, Pentair X-Flow, Dow Benelux B.V, Evides Industriewater, Witteveen+Bos, Royal HaskoningDHV, Shell Global Solutions International B.V,Deltares, KWR Water Research Institute and Paques.","Based solely on the provided document context, the end-users that contributed to the Water NEXUS project are:
+
+- Deltares (listed as ""Knowledge institute, end user"")
+- Dow Benelux (listed as ""End user"")
+- Evides (listed as ""End user"")
+- Hoogheemraadschap Rijnland (listed as ""End user"")
+- Oasen (listed as ""End user"")
+- Ministery of Infrastructure and Water Management (listed as ""End user"")
+- Shell (listed as ""End user"")
+
+The document explicitly states that ""Key to Water Nexus is that it covered the entire innovation chain: partners involved were universities, institutes for applied research, technology providers, consultants and end users (including Dutch water managers)."" The table clearly identifies these organizations as end-users within the Water NEXUS consortium.",0.1809980869293213,370.9111382961273,0.06276341892068105,0.23529411764705885,tensor([0.8123]),tensor([0.8298]),tensor([0.8209]),1.0,0.8
+What are the yearly costs for above ground drip irrigation per hectare?,2025-12-03 16:45:06.458388,qwen3:4b,"Yearly, above ground drip irrigation costs between €1.061 and €1.404 per hectare.","Based solely on the provided document context, I cannot determine what the yearly costs for above ground drip irrigation per hectare are.
+
+The document context discusses various water management systems and their costs (KIS, D2B, Freshmaker), but it does not specifically mention ""above ground drip irrigation"" costs. The document contains information about:
+
+- KIS system costs (200 € ha-1 more expensive than peilgestuurde drainage for 30 hectares)
+- D2B system cost comparisons with peilgestuurde drainage (comparable/lower for small applications)
+- Freshmaker system costs (where cost per hectare isn't considered relevant for investment decisions)
+
+However, the document does not provide specific yearly costs for above ground drip irrigation per hectare. The context mentions ""peilgestuurde drainage"" (level-controlled drainage) and various water management systems, but doesn't explicitly state what the yearly costs would be for above ground drip irrigation specifically.
+
+The question asks about ""above ground drip irrigation"" while the document focuses on different water management systems (KIS, D2B, Freshmaker) that may or may not be related to drip irrigation. The document doesn't contain the specific cost information requested.",0.2259979248046875,454.83589220046997,0.0548867366706717,0.09375,tensor([0.7932]),tensor([0.8622]),tensor([0.8262]),1.0,0.2
+What was the purpose of the trials conducted at Dow Terneuzen for the AquaSPICE project,2025-12-03 16:52:47.387940,qwen3:4b,"The purpose of the trials at Dow Terneuzen within the AquaSPICE project, is to research the potential of new technologies for reuse of cooling tower blowdown, to reduce freshwater intake at the I-Parc Dow Terneuzen site. ","Based solely on the provided document context, the purpose of the trials conducted at Dow Terneuzen for the AquaSPICE project was to test and implement water treatment solutions for cooling tower blowdown (CTBD) that could be reused as make-up water.
+
+The document specifically states: ""During the first part of the Dow Terneuzen trials of AquaSPICE, the IMPROVED containers were deployed and the cooling tower blowdown produced by the largest cooling tower on site was treated in view of reuse as make-up water.""
+
+The trials evaluated two treatment combinations: GAC-UF-RO and UF-RO. The document notes that ""The GAC-UF-RO worked very stable at 70 % overall system recovery and produced water with extremely good quality in terms of organics (< 50 ppb TOC) and acceptable quality in terms of conductivity (<120 µS/cm). The UF-RO on the other hand was not stable at all, proving the necessity of having the GAC as pretreatment in order to protect the RO.""
+
+This work was part of a broader effort to address the I-Parc Dow Terneuzen's severe water stress (as it is located in a coastal area with very limited availability of fresh water) by ""enhancing the internal recycle of various process water streams"" and ""creating a next level of site water management."" The overall goal was to ""reduce its fresh water intake intensity"" through water recycling and reuse.",0.18478775024414062,456.81547689437866,0.06035179298846402,0.1858736059479554,tensor([0.8262]),tensor([0.9148]),tensor([0.8683]),1.0,0.8
+What are the importances of fresh water in chemical industry,2025-12-03 16:59:48.997505,qwen3:4b,It is used in many chemical processes as an ingredient and for cooling and steam production,"Based solely on the provided document context, the importances of fresh water in the chemical industry are:
+
+""Fresh water is of major importance for the chemical industry, as it is used in all kinds of chemical processes.""
+
+The document explicitly states this as a key point in the context. Additionally, the document describes the chemical industry as ""a keystone of the European economy"" that ""converts raw materials into thousands of different products and is both a major water user and a solution provider for the key strategic European process industry sectors.""
+
+The document also indicates that the chemical industry faces significant challenges with water availability, noting that ""Europe is confronted with urgent challenges related to water: adapting to climate change, including mitigation of floods and droughts risks, reaching good status of surface water, ensuring availability of water to deliver multiple benefits to nature and to the economy.""
+
+The context shows that fresh water is critical for the industry's operations, which is why the project specifically investigates whether it's possible to use alternative water sources (such as groundwater, surface water, brackish water or wastewater) instead of drinking water for industrial processes.",0.20264339447021484,418.283029794693,0.033654133187186075,0.09615384615384616,tensor([0.7971]),tensor([0.8620]),tensor([0.8283]),1.0,1.0
+What did FRESHEM Zeeland conclude about the distribution and reliability of fresh groundwater in Zeeland?,2025-12-03 17:11:09.222435,qwen3:4b,"HEM mapping shows 20–30% of Zeeland has a freshwater lens >15 m thick, while 35–50% has little or no fresh lens. The HEM 'middle' agrees with 78% of well chloride measurements (88% within p25–p75). Uncertainty is generally <2 m or <20% in well-sampled areas; results are less reliable in brackish zones and for very local features.","Based solely on the provided document context, FRESHEM Zeeland concluded the following about the distribution and reliability of fresh groundwater in Zeeland:
+
+1. Zeeland has limited fresh groundwater reserves, with the groundwater system predominantly saline due to recent marine transgressions.
+
+2. Fresh groundwater exists in localized ""fresh groundwater lenses"" (thin layers) throughout the province, but with high spatial variation in thickness.
+
+3. The FRESHEM results specifically show that fresh groundwater is present below saline groundwater at various locations in Zeeland, creating an unstable density distribution where the saline groundwater (heavier) is positioned above the fresh groundwater.
+
+4. Without low permeable (clay) layers to prevent movement, this unstable density distribution results in the downward movement of saline groundwater, thereby salinizing the fresh groundwater through a process known as free convection.
+
+5. Surface water on the islands is often salinized by this saline groundwater seepage.
+
+6. The document mentions Figure 11.14, which shows ""Areas in Zeeland with more than 15 metre fresh (<1500 mg Cl/l) groundwater for 'low', 'middle' and 'high' combined with the map 'fresh groundwater bodies' from Waterboard Scheldestromen.""
+
+7. Knowledge about the availability of this scarce fresh groundwater is essential for agriculture, water managers, drinking water companies, industry, and environmental stakeholders.
+
+The program was conducted in October 2014 on behalf of the Province of Zeeland, Rijkswaterstaat, National government (Deltafonds), Evides, Waterboard Scheldestromen, Southern Agriculture and Horticulture Organization (ZLTO), the Flemish Dutch Scheldt Committee (VNSC) and the municipalities of Zeeland, with the goal of mapping this scarce resource.",0.2620418071746826,675.4272847175598,0.02357313684245234,0.07741935483870968,tensor([0.7998]),tensor([0.8176]),tensor([0.8086]),1.0,0.2
+what is ultrafiltration and how is it used in the aquaspice project,2025-12-03 17:20:17.103775,qwen3:4b,The ultrafiltration is a process where suspended solids are filtered over a membrane with small pores. This process is commonly used as a pretreatment process for reverse osmosis.,"Based solely on the provided document context, here's the answer about ultrafiltration and its use in the AquaSPICE project:
+
+Ultrafiltration (UF) is defined in the document as ""a process where suspended solids are filtered over a membrane with small pores."" It is commonly used as a pretreatment process for reverse osmosis (RO). The membranes used in UF can be backwashed periodically and are resistant to low levels of free chlorine, allowing cleaning in place with bleach.
+
+In the AquaSPICE project, ultrafiltration was used as part of water treatment solutions for cooling tower blowdown (CTBD) that could be reused as make-up water. The document specifically states that the project evaluated two treatment combinations: GAC-UF-RO and UF-RO. 
+
+The results showed that ""The GAC-UF-RO worked very stable at 70% overall system recovery and produced water with extremely good quality in terms of organics (<50 ppb TOC) and acceptable quality in terms of conductivity (<120 µS/cm). The UF-RO on the other hand was not stable at all, proving the necessity of having the GAC as pretreatment in order to protect the RO.""
+
+This work was conducted at Dow Terneuzen to address the site's severe water stress (as it is located in a coastal area with very limited availability of fresh water) by testing water treatment solutions for cooling tower blowdown that could be reused as make-up water. The overall goal was to ""enhance the internal recycle of various process water streams"" and ""reduce its fresh water intake intensity"" through water recycling and reuse.",0.2575857639312744,543.4559075832367,0.33765096249731313,0.18055555555555555,tensor([0.8022]),tensor([0.9464]),tensor([0.8684]),1.0,1.0
+What is an HSSF in the context of constructed wetlands,2025-12-03 17:27:16.741738,qwen3:4b,"An Aerated Horizontal Subsurface Flow (HSSF) constructed wetland, is one where water is fed from horizontal pipe with openings at regular intervals to distribute the water equally over the inlet zone.","Based solely on the provided document context, HSSF stands for ""Horizontal Subsurface Flow"" in the context of constructed wetlands.
+
+The document explains that in an HSSF (Horizontal Subsurface Flow) constructed wetland:
+- Water is fed from a horizontal pipe with openings at regular intervals to distribute the water equally over the inlet zone
+- The water flows horizontally through the filling material to the outlet zone where the treated water is collected
+- The water level is kept below the surface of the filling material to reduce odor issues and evaporation of volatile constituents
+- Additional aeration improves the efficiency of the wetland
+
+The document also notes that aerated wetlands (like HSSF) can treat the same load but with a 4 times lower footprint than non-aerated wetlands. The AquaSPICE project specifically implemented two HSSF-CW (horizontal subsurface flow constructed wetlands) of 350 m² each as part of their pilot system.",0.24000000953674316,416.33273458480835,0.1493173394265977,0.29213483146067415,tensor([0.8439]),tensor([0.9228]),tensor([0.8816]),1.0,1.0
+Which companies were involved in the Hergebruik Foodport project,2025-12-03 17:43:01.746630,qwen3:4b,"The companies involved were Kloosterboer B.V., CSM Bakery Supplies Europe, Coroos Conserven B.V., and Lamb Weston Meijer.","Based solely on the provided document context, I cannot identify specific companies that were involved in the Hergebruik Foodport project. 
+
+The document describes a project called ""Re-use and valorization of wastewater within Food Port Beveland-Walcheren"" initiated by ""the Centre of Expertise, Delta Technology."" The report indicates that the project focuses on ""wastewater use from different businesses in the Food Port group"" to investigate whether this wastewater could be better utilized for agricultural irrigation.
+
+The document mentions that the research was conducted with:
+- 8 farmers who attended a workshop
+- 7 farmers who were interviewed
+- 4 farmers (Van Cruijningen, Dieleman, Waverijn and Hereijgers) who participated in technical assessments with Deltares
+
+However, the specific companies within the Food Port group that were involved in the project are not listed in the provided document context. The document refers to ""the Food Port group"" as the entity that has businesses producing wastewater, but does not identify specific company names.
+
+The project appears to be part of a broader initiative by the Centre of Expertise, Delta Technology, with research conducted at Delta Academy, HZ University of applied sciences, but the specific companies involved in the Hergebruik Foodport project are not named in the provided document.",0.215928316116333,941.3431334495544,0.019300431450765244,0.045454545454545456,tensor([0.7773]),tensor([0.7999]),tensor([0.7884]),1.0,0.4

@@ -2,7 +2,6 @@
 # Configuration for the RAG chatbot project.
 # Override values here to change settings in the codebase.
 
-
 from pathlib import Path
 
 # Model configuration

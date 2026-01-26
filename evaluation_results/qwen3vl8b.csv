@@ -1,0 +1,60 @@
+question,datetime,model_name,ground_truth,model_output,chunk_retrieval_time,generation_time,bleu,rouge,precision,recall,F1,recall@k,precision@k
+What pre-treatment steps were applied before NF/EDR to limit fouling?,2025-12-03 23:12:33.550896,deepseek-r1:7b,"Coagulation, flocculation, lamella seperation, followed by ultrafiltration with periodic chemical enhanced backwash (CEB)","The document mentions that several pre-treatment steps were applied before NF/EDR operations. These included:
+
+1. **Biofouling Guards**: The use of biofouling guards was noted as part of the process to limit fouling.
+
+2. **Membrane Testing with MFS Units**: Membrane Fouling Simulators (MFS units) were used to test and predict fouling issues in the spacer, confirming stable operation until mid April when ΔP increased at the end of the run.
+
+3. **Adjusting Flux Levels**: The flux was changed from 21LMH to 18.6LMH on July 17th, which resulted in lower NPD (Noise Purity Degree) for RO-Groot and further reduction by the end of June.
+
+4. **Monitoring Membrane Fouling**: Post-run analysis using Figure 48 showed fouling buildup on both UF and IX membranes.
+
+These steps were taken to monitor and manage fouling effectively before NF/EDR operations.",32.56797432899475,5.318514823913574,0.0,0.013157894736842106,tensor([0.7965]),tensor([0.8112]),tensor([0.8038]),0.0,0.0
+How will the freshwater canal be designed in the Waterdunen project to support nature,2025-12-03 23:20:42.543909,deepseek-r1:7b,"The freshwater canal will have nature-friendly banks. In the future situation, the banks will have a slope of 1:1, with some locations having a gentler slope where nature-friendly banks currently exist.","The freshwater canal in the Waterdunen project is designed with a strong emphasis on supporting nature by integrating various ecological features:
+
+1. **Eco-friendly Design**: The canal incorporates natural tidal influences, which help create diverse habitats suitable for migratory birds and other wildlife.
+
+2. **Bird Nesting and Resting Spots**: By altering the landscape, the project creates areas ideal for bird nesting and resting, enhancing biodiversity and supporting migratory species.
+
+3. **Diverse Ecosystems**: The design includes features like sloping beds and man-made reefs to provide varied habitats, benefiting different species and balancing ecological health with practical navigation.
+
+4. **Sustainable Energy Solutions**: Solar technology is used for navigation aids, promoting eco-friendly solutions that reduce environmental impact while ensuring safety.
+
+This integrated approach ensures the canal supports nature while maintaining functionality for human needs.",34.05497455596924,7.969847917556763,0.06678072767590865,0.11976047904191617,tensor([0.8208]),tensor([0.8711]),tensor([0.8452]),1.0,0.0
+How will the freshwater canal be designed in the Waterdunen project to support nature,2025-12-03 23:28:17.555311,deepseek-r1:7b,"The freshwater canal will have nature-friendly banks. In the future situation, the banks will have a slope of 1:1, with some locations having a gentler slope where nature-friendly banks currently exist.","The freshwater canal in the Waterdunen project is thoughtfully designed to support nature through several key elements:
+
+1. **Natural Tidal Influences**: The canal incorporates tidal influences to create habitats suitable for migratory birds and wildlife.
+
+2. **Bird Nesting and Resting Spots**: By altering the landscape, the project creates areas ideal for bird nesting and resting, which supports biodiversity and balances ecological health.
+
+3. **Diverse Ecosystems**: Features like sloping beds and man-made reefs provide varied habitats, benefiting different species and enhancing overall biodiversity.
+
+4. **Sustainable Energy Solutions**: Solar technology is used for navigation aids, promoting eco-friendly solutions that reduce environmental impact while ensuring safety.
+
+These integrated design elements ensure the canal supports nature while maintaining functionality for human needs.",35.413795948028564,6.181080102920532,0.058591663947177984,0.1038961038961039,tensor([0.8219]),tensor([0.8711]),tensor([0.8458]),1.0,0.0
+Which substances in the Leopoldkanaal water exceed the Nota Grondwater tresholds for infiltration?,2025-12-03 23:33:50.184613,deepseek-r1:7b,"While the water of the Leopoldkanaal showed to be fresh enough for infiltration, some metals and pesticides exceed the thresholds. This includes copper, manganese, BAM, glyphosate, AMPA, phenanthrene, and fluoranthene, with total pesticides surpassing 0.5 µg/L.","The substances in the Leopoldkanaal water that exceed the Nota Grondwater thresholds for infiltration are:
+
+1. **Copper**: 19 µg/l (threshold: 2.4 µg/l)
+2. **Manganese**: 60 µg/l (threshold: 31 µg/l)
+3. **BAM**: 7.2 µg/l
+4. **Glyphosate**: 4.5 µg/l
+5. **AMPA**: 2.9 µg/l
+6. **Phenanthrene**: 0.635 µg/l
+7. **Fluoranthene**: 0.128 µg/l
+
+Each of these exceeds their respective Nota Grondwater thresholds, indicating that biological agriculture should not be performed in the Leopoldkanaal area.",29.717401027679443,6.35124659538269,0.0672816025334196,0.26016260162601623,tensor([0.8461]),tensor([0.8929]),tensor([0.8688]),1.0,0.8
+For which types of wastewaters is anaerobic treatment most convenient?,2025-12-03 23:41:12.065451,deepseek-r1:7b,"anaerobic treatment is most convenient for somewhta warmer soil (between 25-30°C), and high-strength wastewater because it combines treatment with the production of energy-rich biogas.","Anaerobic treatment is most convenient for **warm (>25-30°C) and high-strength saline wastewater**. This type of treatment efficiently processes the water due to its ability to produce energy-rich biogas, making it particularly suitable for concentrated or heavily contaminated wastewaters without requiring additional steps like nitrogen removal.
+
+Answer:  
+Anaerobic treatment is most convenient for **warm (>25-30°C) and high-strength saline wastewater**.",4.829206466674805,3.004716396331787,0.21029846075220493,0.38709677419354843,tensor([0.8615]),tensor([0.8962]),tensor([0.8785]),1.0,1.0
+What was the purpose of the trials conducted at Dow Terneuzen for the AquaSPICE project,2025-12-03 23:47:47.538615,deepseek-r1:7b,"The purpose of the trials at Dow Terneuzen within the AquaSPICE project, is to research the potential of new technologies for reuse of cooling tower blowdown, to reduce freshwater intake at the I-Parc Dow Terneuzen site. ","Based on the provided context, there is no information regarding trials conducted at Dow Terneuzen for the AquaSPICE project. Therefore, I cannot provide an accurate answer based on the given document context.
+
+Answer:  
+There is no information available in the provided document context about the purpose of the trials conducted at Dow Terneuzen for the AquaSPICE project.",16.38482642173767,4.829308748245239,0.0567050685295199,0.2978723404255319,tensor([0.8552]),tensor([0.8719]),tensor([0.8635]),1.0,0.2
+What is an HSSF in the context of constructed wetlands,2025-12-03 23:53:09.769647,deepseek-r1:7b,"An Aerated Horizontal Subsurface Flow (HSSF) constructed wetland, is one where water is fed from horizontal pipe with openings at regular intervals to distribute the water equally over the inlet zone.","An HSSF (Horizontal Subsurface Flow) wetland is a constructed wetland system designed for water treatment. Water is distributed through horizontal pipes into an inlet zone, allowing it to flow horizontally through filtering material towards an outlet zone. Aerator devices enhance its efficiency by improving water mixing.
+
+Answer:  
+An HSSF wetland uses horizontal distribution of water over filter media to facilitate biological treatment and removal of pollutants from wastewater. The system involves horizontal flow through the filter medium into a downstream outlet, with aerators enhancing the treatment process.",19.320300102233887,4.505002021789551,0.04522022513709479,0.25423728813559326,tensor([0.8690]),tensor([0.8976]),tensor([0.8831]),1.0,1.0
+What pre-treatment steps were applied before NF/EDR to limit fouling?,2025-12-03 23:58:24.957096,deepseek-r1:7b,"Coagulation, flocculation, lamella seperation, followed by ultrafiltration with periodic chemical enhanced backwash (CEB)",There is no information available in the provided document context regarding pre-treatment steps applied before NF/EDR to limit fouling.,17.437522411346436,3.888375759124756,0.0,0.0,tensor([0.8352]),tensor([0.8150]),tensor([0.8250]),0.0,0.0
+What is an HSSF in the context of constructed wetlands,2025-12-04 00:04:05.421001,deepseek-r1:7b,"An Aerated Horizontal Subsurface Flow (HSSF) constructed wetland, is one where water is fed from horizontal pipe with openings at regular intervals to distribute the water equally over the inlet zone.","HSSF stands for Horizontal Subsurface Flow (HSSF) in the context of constructed wetlands. It refers to a designed system where water is distributed through horizontal pipes into an inlet zone, allowing it to flow horizontally through filter media towards an outlet zone. The water level remains below the surface of the filling material to prevent odor issues and evaporation. Aerator devices enhance treatment efficiency by improving water mixing. HSSF wetlands are used for biological treatment, benefiting from a larger surface area per unit volume, which enhances treatment effectiveness. This design is efficient and space-saving compared to other wetland types.",9.084504127502441,3.6586456298828125,0.09170964806920727,0.22900763358778625,tensor([0.8586]),tensor([0.8954]),tensor([0.8766]),1.0,1.0
+What are the costs for storing desalinated water in a bassin,2025-12-04 00:09:22.939401,deepseek-r1:7b,"The construction of a water basin for storing desalinated water costs around €5,000 per 1,000 m³","Based on the provided context, there is no information available regarding the costs for storing desalinated water in a bassin. The relevant document does not mention storage costs related to desalinated water within a bassin.",4.016793251037598,4.086662530899048,0.1258220555845937,0.22641509433962265,tensor([0.8787]),tensor([0.8599]),tensor([0.8692]),1.0,0.4

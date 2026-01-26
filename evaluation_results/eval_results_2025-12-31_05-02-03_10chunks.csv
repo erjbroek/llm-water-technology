@@ -1,0 +1,76 @@
+question,datetime,model_name,ground_truth,model_output,chunk_retrieval_time,generation_time,bleu,rouge,precision,recall,F1,recall@k,precision@k
+What is the tradeoff when using MD compared to RO?,2025-12-31 04:42:55.214927,qwen3:4b,"MD gives higher product quality with no additional post-treatment, but is very energy intensive and produces a small product flow. RO is more water-efficient and economically favorable but may require additional treatment to meet specifications.","According to the provided context, there are two main points regarding the tradeoffs between using a Multi-Dose (MD) module and an Oscillating Spray (RO):
+
+1. The presence of a biocide in the recirculating system affects both systems differently:
+   - In MD mode: A lower dosing rate is required for CTs due to better or worse effect on RO operation, with residual levels being significantly reduced.
+   - In RO mode: There are differences attributed to management (e.g., more rest periods vs. intensive cultivation), which may be related to the biocide presence.
+
+2. The tradeoff between MD and RO is in terms of cost:
+   - Non-productive measures such as adjusting pH levels in the greenhouse are mentioned, but their effectiveness at preventing/controlling risks is deemed insufficient.
+   - Cost-wise, non-productive measures appear more expensive than productively beneficial ones like changing pH.
+
+In summary, using an MD module compared to RO involves a tradeoff between operational efficiency (lower dosing rates and reduced residuals) versus cost considerations (non-productive management adjustments being less effective).",7.858773231506348,70.35183072090149,0.01877081263233555,0.08653846153846154,tensor([0.7957]),tensor([0.8419]),tensor([0.8181]),1.0,0.4
+What was the purpose of the trials conducted at Dow Terneuzen for the AquaSPICE project,2025-12-31 04:44:48.450036,qwen3:4b,"The purpose of the trials at Dow Terneuzen within the AquaSPICE project, is to research the potential of new technologies for reuse of cooling tower blowdown, to reduce freshwater intake at the I-Parc Dow Terneuzen site. ","According to the provided context, the purpose of the trials conducted at Dow Terneuzen for the AquaSPICE project was to test and evaluate different measures related to water availability. The specific objectives mentioned include:
+
+1. Practicing the three steps of Water Availability (Waterdunen):
+   - Monitoring water availability
+   - Optimizing chloride levels 
+   - Implementing responsible management decisions
+
+2. Identifying various options for addressing challenges in managing water resources, such as:
+   - Adjusting pH levels in greenhouses
+   - Introducing new elements to the system",16.807578563690186,74.42339444160461,0.12373637241205854,0.2982456140350877,tensor([0.8222]),tensor([0.8803]),tensor([0.8502]),1.0,0.6
+Which techniques were used in the GO-Fresh field trials to increase freshwater availability,2025-12-31 04:46:54.512370,qwen3:4b,Three techniques: (1) Kreekrug Infiltratie Systeem: peilgestuurde drainage combined with targeted surface-water infiltration; (2) Freshmaker: winter injection of freshwater and capture of upwelling saline water via horizontal drilled wells; (3) Drains2Buffer: deeper and denser drainage to enlarge shallow rainwater lenses and prevent root-zone salinisation.,"According to the provided context, the three techniques used in the GO-FRESH field trials to increase freshwater availability for agriculture are:
+
+1. Kreekrug Infiltratie Systeem (Serooskerke, Walcheren) - This involved increasing groundwater levels through pumped drainage combined with infiltration of surface water into a well, primarily aimed at addressing peak demand.
+
+2. Freshmaker - This technique increased the freshwater reserve in an aquifer by injecting fresh water and withdrawing salt groundwater via horizontal wells.
+
+3. Drain 2Buffer field trial - The purpose was to determine if this method plays a significant role in the overall functioning of drainage systems, as well as local occurrences of anaerobic layers that need to be assessed on a per-field basis for Drains2Buffer implementation.",20.882076025009155,78.83509302139282,0.005948361193232793,0.25609756097560976,tensor([0.8477]),tensor([0.8696]),tensor([0.8585]),1.0,0.6
+How will the freshwater canal be designed in the Waterdunen project to support nature,2025-12-31 04:49:35.983639,qwen3:4b,"The freshwater canal will have nature-friendly banks. In the future situation, the banks will have a slope of 1:1, with some locations having a gentler slope where nature-friendly banks currently exist.","According to the provided context, the design of the freshwater canals for the Waterdunen project aims to:
+
+1. Preserve and enhance estuarine natural development while maintaining landscape and recreational value (Natuurontwikkeling). This involves preserving open spaces in a historical setting that is based on an estuarine nature development.
+
+2. Ensure water availability by implementing techniques such as:
+   - Kreekrug Infiltratie Systeem (Serooskerke, Walcheren) which increases groundwater levels through pumped drainage and infiltration of surface water into a well.
+   - Freshmaker technique that injects fresh water from an aquifer while withdrawing salt groundwater via horizontal wells.
+
+3. Maintain the open character in Waterdunen by preserving historical foundations such as estuarine nature development, but adapting it to new spatial structures (openness).
+
+4. Support nature conservation and recreation through:
+   - 250 ha of accessible natural areas with controlled tidal influence.
+   - A balance between wetland maintenance and access for public use.
+
+The freshwater canals will be designed in a way that supports these objectives by providing necessary water resources while maintaining the estuarine ecosystem, recreational value, and historical character.",30.549427032470703,99.77304220199585,0.03971465000169439,0.08737864077669905,tensor([0.7952]),tensor([0.8497]),tensor([0.8216]),0.0,0.0
+For which types of wastewaters is anaerobic treatment most convenient?,2025-12-31 04:51:44.496453,qwen3:4b,"anaerobic treatment is most convenient for somewhta warmer soil (between 25-30°C), and high-strength wastewater because it combines treatment with the production of energy-rich biogas.","According to the provided context, anaerobic treatment is most convenient for relatively warm (> 25-30 oC) and high-strength wastewater. This type of wastewater combines treatment with the production of energy-rich biogas.",27.799668550491333,70.64627027511597,0.2257351773615718,0.6885245901639345,tensor([0.9188]),tensor([0.9215]),tensor([0.9201]),1.0,1.0
+Which techniques were used in the GO-Fresh field trials to increase freshwater availability,2025-12-31 04:53:59.507928,qwen3:4b,Three techniques: (1) Kreekrug Infiltratie Systeem: peilgestuurde drainage combined with targeted surface-water infiltration; (2) Freshmaker: winter injection of freshwater and capture of upwelling saline water via horizontal drilled wells; (3) Drains2Buffer: deeper and denser drainage to enlarge shallow rainwater lenses and prevent root-zone salinisation.,"According to the provided context, the three techniques used in the GO-FRESH field trials to increase freshwater availability for agriculture are:
+
+1. Kreekrug Infiltratie Systeem (Serooskerke, Walcheren) - This involved increasing groundwater levels through pumped drainage combined with infiltration of surface water into a well, primarily aimed at addressing peak demand.
+
+2. Freshmaker - This technique increased the freshwater reserve in an aquifer by injecting fresh water and withdrawing salt groundwater via horizontal wells.
+
+3. Drain 2Buffer field trial - The purpose was to determine if this method plays a significant role in the overall functioning of drainage systems",25.00285005569458,83.06700730323792,0.005948361193232793,0.27972027972027974,tensor([0.8577]),tensor([0.8686]),tensor([0.8631]),1.0,0.6
+Which companies were involved in the Hergebruik Foodport project,2025-12-31 04:56:17.743442,qwen3:4b,"The companies involved were Kloosterboer B.V., CSM Bakery Supplies Europe, Coroos Conserven B.V., and Lamb Weston Meijer.","According to the provided context, the following companies were involved in the Hergebruik (Reuse) FoodPort project:
+
+1. Productschap Tuinbouw - This company was mentioned as part of the consortium working on the project.
+
+2. STOWA - Another organization that participated in the Hergebruik FoodPort initiative is listed here.
+
+The context does not provide a complete list, but these two companies are specifically identified as being involved in the Reuse FoodPort project based on the information given.",23.52481508255005,88.41162776947021,0.019300431450765244,0.06451612903225806,tensor([0.8087]),tensor([0.8201]),tensor([0.8144]),1.0,0.2
+What is the main goal for the NEREUS project,2025-12-31 04:58:21.446923,qwen3:4b,"The NEREUS project has focused for the last four years on the recovery and reuse of several resources from urban wastewater. Aside from the actual recovery of the resource, there is also the question of reuse of the product once recovered. Each pilot case aims to recover various resources. ","According to the provided context, the main goal of the Hergebruik (Reuse) FoodPort project is to ""increase freshwater availability for agriculture"" through various techniques such as:
+
+1. Kreekrug Infiltratie Systeem 
+2. Freshmaker 
+3. Drain 2Buffer field trial 
+
+The document states that these three methods were used in the GO-Fresh field trials to increase water resources for agricultural purposes, which aligns with the main goal of increasing freshwater availability mentioned by the user.",20.35138249397278,82.0761969089508,0.03358851369497101,0.1639344262295082,tensor([0.8191]),tensor([0.8647]),tensor([0.8413]),1.0,0.2
+For which types of wastewaters is anaerobic treatment most convenient?,2025-12-31 05:00:06.100247,qwen3:4b,"anaerobic treatment is most convenient for somewhta warmer soil (between 25-30°C), and high-strength wastewater because it combines treatment with the production of energy-rich biogas.","According to the provided context, anaerobic treatment is most convenient for relatively warm (> 25-30 °C) and high-strength wastewater. This type of waste stream combines treatment with the production of energy-rich biogas.",20.516092777252197,61.89986753463745,0.2257351773615718,0.7096774193548386,tensor([0.9189]),tensor([0.9231]),tensor([0.9210]),1.0,1.0
+How will the freshwater canal be designed in the Waterdunen project to support nature,2025-12-31 05:02:03.983475,qwen3:4b,"The freshwater canal will have nature-friendly banks. In the future situation, the banks will have a slope of 1:1, with some locations having a gentler slope where nature-friendly banks currently exist.","According to the provided context, the main goal of the Hergebruik (Reuse) FoodPort project is ""to increase freshwater availability for agriculture"" through various techniques such as:
+
+1. Kreekrug Infiltratie Systeem 
+2. Freshmaker 
+3. Drain 2Buffer field trial
+
+The document states that these three methods were used in the GO-Fresh field trials to increase water resources for agricultural purposes, which aligns with the main goal of increasing freshwater availability mentioned by the user.
+
+However, there is no specific information provided about how the freshwater canal will be designed within the Waterdunen project specifically. The context focuses on the overall goals and methods used in the FoodPort project rather than detailing design aspects for a particular water management system like a freshwater canal.",18.06744408607483,79.71742916107178,0.036536151167279006,0.10256410256410256,tensor([0.8127]),tensor([0.8459]),tensor([0.8290]),0.0,0.0

@@ -1,0 +1,72 @@
+question,datetime,model_name,ground_truth,model_output,chunk_retrieval_time,generation_time,bleu,rouge,precision,recall,F1,recall@k,precision@k
+what is ultrafiltration and how is it used in the aquaspice project,2025-12-03 15:55:32.793438,qwen3:1.7b,The ultrafiltration is a process where suspended solids are filtered over a membrane with small pores. This process is commonly used as a pretreatment process for reverse osmosis.,"Ultrafiltration (UF) is a process that filters suspended solids using membranes with small pores, typically used as a pre-treatment step for reverse osmosis (RO) in the aquaspice project. In this context, UF membranes (e.g., 800Da polymeric membranes) are employed to remove turbidity, suspended solids, and organic matter from wastewater. The UF step acts as a safeguard for the RO system by ensuring the water entering RO is free from contaminants, while also enabling periodic backwashing with bleach to maintain membrane integrity. This approach aligns with the project's goal of improving the efficiency of the RO process by pre-treating effluent.",7.584916591644287,108.80607151985168,0.12656494026948834,0.24427480916030533,tensor([0.8516]),tensor([0.9300]),tensor([0.8891]),1.0,1.0
+How will the freshwater canal be designed in the Waterdunen project to support nature,2025-12-03 16:04:04.432861,qwen3:1.7b,"The freshwater canal will have nature-friendly banks. In the future situation, the banks will have a slope of 1:1, with some locations having a gentler slope where nature-friendly banks currently exist.","The freshwater canal in the Waterdunen project is designed to support nature by **monitoring and managing salinity levels** to prevent saline water from infiltrating the groundwater system. This involves maintaining a **sustainable water level** in the canal to avoid contamination from saltwater basins (e.g., Volkerak Zoommeer), which could otherwise disrupt the freshwater groundwater supply. Additionally, the design likely incorporates **ecological safeguards** to prevent invasive species from spreading, as seen in similar projects like the Rhine-Main-Danube Canal, where ecological risks were managed through controlled water levels and barriers. The project emphasizes **environmental resilience** by ensuring the canal's role in preserving groundwater quality and supporting natural ecosystems.",341.2434411048889,94.118656873703,0.05072624986933127,0.1258741258741259,tensor([0.8181]),tensor([0.8668]),tensor([0.8417]),1.0,0.8
+What is the effect of irrigation water quality on growing crops regarding plant vitality and crop yields,2025-12-03 16:12:08.948325,qwen3:1.7b,"Overall, no real pattern between water quality and crop performance was found. Potatoes and onions show small initial vitality difference but no large difference at harvest. Potato yields were highest with tap water, onions heaviest with raw effluent, and pears showed no yield difference","The effect of irrigation water quality on growing crops, as detailed in the document, is as follows:  
+
+### **Plant Vitality**  
+- **Potatoes**:  
+  - Initial vitality was highest with **tap water**, but no significant differences were observed among water types by harvest time.  
+  - **Onions**:  
+    - Initial vitality was lower with **tap water**, but by harvest time, there were no notable differences among water types.  
+
+### **Crop Yields**  
+- **Potatoes**:  
+  - Highest yield achieved with **tap water** (2.4 kg per pot).  
+  - Lower yields were observed with treated effluent containing **ozone and UV** (1.2 kg per pot), though the exact reason for this variation is not specified.  
+- **Onions**:  
+  - Heaviest onions were grown with **pure effluent** (79 grams).  
+  - Yields were lower with treated effluents (62 grams and 71 grams) compared to pure effluent.  
+
+### **Key Takeaways**  
+1. **Tap water** generally supports the best plant vitality and crop yields for potatoes and onions.  
+2. **Treated effluent** (with ozone or ozone + UV) shows mixed results, with **pure effluent** (without treatment) yielding the best results for onions.  
+3. **Ozone and UV treatments** reduced vitality in potatoes but did not significantly impact onion yields.  
+4. The document notes that **no clear general trend** links water quality to crop yield, highlighting the complexity of the relationship.  
+
+### **Conclusion**  
+Water quality significantly impacts plant vitality and crop yields, with **tap water** being optimal for potatoes and **pure effluent** for onions. Treated effluents (with ozone or UV) show mixed results, but further research (e.g., using MicroForce++ as irrigation water) could improve outcomes.",9.103508234024048,404.9090738296509,0.0273422492104585,0.15916955017301038,tensor([0.7843]),tensor([0.8862]),tensor([0.8321]),1.0,0.2
+Who are the end-users that contributed to the Water NEXUS project,2025-12-03 16:20:00.763323,qwen3:1.7b,"The end-users that contributed to the Water NEXUS project are TNO, Plant-e, Nijhuis Industries, Pentair X-Flow, Dow Benelux B.V, Evides Industriewater, Witteveen+Bos, Royal HaskoningDHV, Shell Global Solutions International B.V,Deltares, KWR Water Research Institute and Paques.","The end-users contributing to the WaterNEXUS project are:  
+- **Deltares** (Knowledge institute, end user 1, 3)  
+- **Dow Benelux** (End user 2, 3)  
+- **Evides** (End user 2, 3)  
+- **Hoogheemraadschap Rijnland** (End user 1)  
+- **KWR** (Knowledge institute, end user 1, 3)  
+- **Oasen** (End user 2)  
+- **Paques** (Technology supplier 2)  
+- **Ministery of Infrastructure and Water Management** (End user 3)  
+- **Shell** (End user 3)  
+
+These entities are highlighted as key end-users in the WaterNEXUS consortium, with roles ranging from research collaboration to application knowledge.",4.504617929458618,394.0758647918701,0.012318147852663703,0.2276422764227642,tensor([0.7914]),tensor([0.8377]),tensor([0.8139]),1.0,0.8
+What is the main goal for the NEREUS project,2025-12-03 16:25:11.439619,qwen3:1.7b,"The NEREUS project has focused for the last four years on the recovery and reuse of several resources from urban wastewater. Aside from the actual recovery of the resource, there is also the question of reuse of the product once recovered. Each pilot case aims to recover various resources. ","The main goal of the **NEREUS (New Energy and Resources from Urban Sanitation)** project is to **recover valuable resources from domestic wastewater** to promote a **circular economy** in the **2 Seas region** (United Kingdom, Netherlands, Belgium, and France). This involves developing technologies to extract resources (e.g., energy, nutrients, materials) from wastewater, addressing global challenges like freshwater scarcity and the need for wastewater reuse. The project aims to create a sustainable cycle where wastewater is treated and repurposed, reducing dependency on freshwater and fostering resource efficiency.",10.527699947357178,239.73037314414978,0.022991999346048266,0.22222222222222224,tensor([0.8394]),tensor([0.8861]),tensor([0.8621]),1.0,0.8
+What are the costs for storing desalinated water in a bassin,2025-12-03 16:29:03.065020,qwen3:1.7b,"The construction of a water basin for storing desalinated water costs around €5,000 per 1,000 m³","The document does not provide specific information about the costs associated with storing desalinated water in a basin. The relevant sections discuss desalination processes, economic analysis, and case studies (e.g., E4W), but none explicitly address storage costs for desalinated water in a basin. 
+
+Thus, the answer is:  
+**The document does not specify the costs for storing desalinated water in a basin.** Further details would require additional context or sources.",7.769347906112671,160.74776935577393,0.09880782578056978,0.1818181818181818,tensor([0.8386]),tensor([0.8494]),tensor([0.8440]),1.0,0.8
+What is the effect of irrigation water quality on growing crops regarding plant vitality and crop yields,2025-12-03 16:40:56.912210,qwen3:1.7b,"Overall, no real pattern between water quality and crop performance was found. Potatoes and onions show small initial vitality difference but no large difference at harvest. Potato yields were highest with tap water, onions heaviest with raw effluent, and pears showed no yield difference","The document concludes that the **effect of irrigation water quality on growing crops** is as follows:  
+
+### **Plant Vitality**  
+- **Potatoes**: Initial vitality was highest with **tap water**, but there were no significant differences among water types at harvest.  
+- **Onions**: Lower vitality was observed with **tap water**, but by harvest time, vitality did not differ significantly among water types.  
+- **Pears**: Not evaluated due to the plants already being established before the experiments.  
+
+### **Crop Yields**  
+- **Potatoes**:  
+  - Highest yield with **tap water** (2.4 kg per pot).  
+  - Followed by **treated effluent with ozone** (1.8 kg per pot) and **raw effluent** (1.8 kg per pot).  
+  - Lowest yield with **treated effluent with ozone + UV** (1.2 kg per pot).  
+- **Onions**:  
+  - Heaviest with **pure effluent** (79 grams).  
+  - Followed by **treated effluents** (62 grams and 71 grams).  
+  - Lightest with **tap water**.  
+
+### Key Takeaways:  
+1. **Tap water** supports better vitality and yields for both **potatoes** and **onions**.  
+2. **Treated effluents** (e.g., with ozone or ozone + UV) improve yields but are less effective than tap water for potatoes.  
+3. **Onions** show higher yields with **pure effluent** (raw WWTP effluent) compared to treated effluents or tap water.  
+
+The document does not specify the exact reasons for yield differences, but it highlights that **tap water** is the optimal for crop growth in these scenarios.",8.834774255752563,630.5028834342957,0.027809807468501653,0.18532818532818532,tensor([0.7799]),tensor([0.8960]),tensor([0.8339]),1.0,0.2
+What are the costs for storing desalinated water in a bassin,2025-12-03 16:49:43.159941,qwen3:1.7b,"The construction of a water basin for storing desalinated water costs around €5,000 per 1,000 m³","The document does not specify the costs for storing desalinated water in a basin. The relevant sections discuss desalination processes, economic analysis, and case studies (e.g., E4W), but none explicitly address storage costs for desalinated water in a basin. Further details would require additional context or sources.",7.740950345993042,471.74268221855164,0.18327655405515755,0.18181818181818182,tensor([0.8529]),tensor([0.8569]),tensor([0.8549]),1.0,0.8
+Which companies were involved in the Hergebruik Foodport project,2025-12-03 17:00:02.104531,qwen3:1.7b,"The companies involved were Kloosterboer B.V., CSM Bakery Supplies Europe, Coroos Conserven B.V., and Lamb Weston Meijer.","The document does not specify the exact companies involved in the Hergebruik Foodport project. It mentions ""the businesses in the Food Port group"" but does not list specific companies. The focus of the project is on wastewater from these businesses, but the exact entities are not detailed in the provided context.",0.41407132148742676,616.1197831630707,0.0248355075377827,0.08571428571428572,tensor([0.8241]),tensor([0.8007]),tensor([0.8122]),1.0,0.4
+what is ultrafiltration and how is it used in the aquaspice project,2025-12-03 17:01:51.081789,qwen3:1.7b,The ultrafiltration is a process where suspended solids are filtered over a membrane with small pores. This process is commonly used as a pretreatment process for reverse osmosis.,"The document outlines that **ultrafiltration (UF)** is used as a **pre-treatment step** for desalination processes in the **TKI EffluentFit4Food project**. Specifically, UF membranes (e.g., 800Da polymeric membranes) are employed to remove **suspended solids** and **particulate matter** from wastewater. While the document does not provide detailed information about the **aquaspice project** itself, it clarifies that UF is used to **filter turbidity and suspended solids** before moving to the desalination stage. The project’s focus is on **removing cations, polyvalent ions, and organic matter** using UF, with the membrane’s **selectivity** and **resistance to fouling** being key considerations. 
+
+The document does not specify the exact operational details or outcomes of the aquaspice project’s UF implementation, only its general role in the broader context of the TKI EffluentFit4Food consortium.",0.41736841201782227,105.52761483192444,0.05007816165264322,0.12738853503184713,tensor([0.7960]),tensor([0.8725]),tensor([0.8325]),1.0,1.0

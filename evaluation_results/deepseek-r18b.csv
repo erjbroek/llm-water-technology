@@ -1,0 +1,66 @@
+question,datetime,model_name,ground_truth,model_output,chunk_retrieval_time,generation_time,bleu,rouge,precision,recall,F1,recall@k,precision@k
+Which companies were involved in the Hergebruik Foodport project,2025-12-03 12:54:52.964938,deepseek-r1:8b,"The companies involved were Kloosterboer B.V., CSM Bakery Supplies Europe, Coroos Conserven B.V., and Lamb Weston Meijer.","Based on the provided document context, there is no specific information about the ""Hergebruik Foodport project"" or the companies involved in it.
+
+Therefore, I cannot list the companies involved in the Hergebruik Foodport project based on this document.",23.003432273864746,3.444455862045288,0.0219041672086165,0.10526315789473684,tensor([0.8211]),tensor([0.8017]),tensor([0.8113]),1.0,0.2
+Which techniques were used in the GO-Fresh field trials to increase freshwater availability,2025-12-03 13:00:03.825537,deepseek-r1:8b,Three techniques: (1) Kreekrug Infiltratie Systeem: peilgestuurde drainage combined with targeted surface-water infiltration; (2) Freshmaker: winter injection of freshwater and capture of upwelling saline water via horizontal drilled wells; (3) Drains2Buffer: deeper and denser drainage to enlarge shallow rainwater lenses and prevent root-zone salinisation.,"Based on the provided document context, the specific techniques used in the GO-FRESH field trials to increase freshwater availability are not explicitly detailed.
+
+However, the context does mention the **Freshmaker system** and describes its operational principle related to increasing freshwater availability:
+
+1.  **Underground Water Storage:** The Freshmaker system injects (""infiltreerd"") as much freshwater as possible into an aquifer during periods of water surplus.
+2.  **Recovery:** It recovers (""teruggewonnen"") only the needed amount of water from the stored freshwater during periods of water scarcity (""droge"").
+
+Therefore, while the specific trial methodologies or names of other techniques aren't listed in the provided text, the core technique described involves **aquifer recharge (injection) and recovery** as part of the Freshmaker system to increase available freshwater by storing it underground.",19.10398769378662,5.820486068725586,0.010661050016781552,0.12716763005780346,tensor([0.8079]),tensor([0.8148]),tensor([0.8113]),0.0,0.0
+What are the yearly costs for above ground drip irrigation per hectare?,2025-12-03 13:05:38.842095,deepseek-r1:8b,"Yearly, above ground drip irrigation costs between €1.061 and €1.404 per hectare.","Based on the provided document context, the total annual costs per hectare for **above-ground drip irrigation** are not explicitly stated as an absolute figure (e.g., €X to €Y per hectare).
+
+However, the context does provide information about the **cost savings** achieved by using drip irrigation compared to surface irrigation (haspelberegening):
+
+*   The total annual costs per hectare for drip irrigation are **lower** than those for surface irrigation.
+*   The estimated annual savings by switching from surface irrigation to drip irrigation range from **€156 to €919 per hectare**.
+
+Therefore, while the document doesn't directly quote the yearly costs for above-ground drip irrigation, it confirms that its total annual costs are lower than those of surface irrigation, resulting in savings of €156 to €919 per hectare when using drip irrigation instead.",21.33857250213623,10.05075740814209,0.007121924949087393,0.11034482758620688,tensor([0.8137]),tensor([0.8909]),tensor([0.8505]),1.0,0.0
+What is an HSSF in the context of constructed wetlands,2025-12-03 13:07:46.980764,deepseek-r1:8b,"An Aerated Horizontal Subsurface Flow (HSSF) constructed wetland, is one where water is fed from horizontal pipe with openings at regular intervals to distribute the water equally over the inlet zone.","Based on the provided document context:
+
+An **HSSF** stands for **Aerated Horizontal Subsurface Flow**.
+
+In the context of constructed wetlands, it refers to a specific design type chosen for the Dow6 site. An aerated Horizontal Subsurface Flow (HSSF) constructed wetland involves:
+
+1.  **Water Distribution:** Water is fed from horizontal pipes with openings at regular intervals to distribute the water evenly over the inlet zone.
+2.  **Flow:** The water flows horizontally through the filling material to the outlet zone where the treated water is collected.
+3.  **Water Level:** The water level is kept below the surface of the filling material to help reduce odor issues and evaporation.
+4.  **Aeration:** Air is pumped into the system (aeration) to improve its efficiency, allowing it to treat the same amount of load but with a significantly smaller footprint (4 times lower footprint than non-aerated wetlands).",12.73519253730774,6.223810911178589,0.07021707359312078,0.3121387283236994,tensor([0.8333]),tensor([0.9268]),tensor([0.8776]),1.0,1.0
+What kinds of potatoes are harvested in the Lovenpolder,2025-12-03 14:57:12.992011,deepseek-r1:8b,There are 2 kinds of potatoes harvested: consumptionpotaties and seed potatoes. The seedpotatoes are mainly grown for export and having a higher yield per hectare,"Based on the provided document context:
+
+Two out of three types of potatoes are cultivated in the Lovenpolder:
+
+1.  **Consumptieaardappel** (consumption potatoes)
+2.  **Pootaardappel** (tuber potatoes)
+
+The pootaardappel is specifically grown as planting material (pootgoed) for the consumptieaardappelras.",0.10209226608276367,6549.115544319153,0.04319402267866687,0.19047619047619047,tensor([0.8082]),tensor([0.8602]),tensor([0.8334]),1.0,0.2
+How will the freshwater canal be designed in the Waterdunen project to support nature,2025-12-03 14:57:21.159252,deepseek-r1:8b,"The freshwater canal will have nature-friendly banks. In the future situation, the banks will have a slope of 1:1, with some locations having a gentler slope where nature-friendly banks currently exist.","Based on the provided document context, the specific design details of the **freshwater canal** and its direct role in supporting **nature** are not explicitly detailed.
+
+However, the context does describe the **overall Waterdunen project** and its **nature-related goals**:
+
+1.  **Natural Development:** The project aims for ""natuurlijke manier gezoneerd"" (zoned in a natural way) and allows natural development (""niet op slot"") where possible.
+2.  **Nature Habitat:** The project creates a 250 ha area of freely accessible nature influenced by a controlled tide. This area is intended to serve as food and breeding grounds for water birds and create an interesting and exciting area for recreation. It also aims to provide quiet zones for sensitive nature.
+3.  **Wildlife Habitat:** The varied terrain (slopes, marshes, groynes) created by the project is expected to serve as food and breeding grounds for water birds.
+4.  **Tidal Influence:** The project involves the creation of inter-tidal zones (""intergetijdengebieden"") where land meets sea, which is crucial habitat for birds and other wildlife.
+5.  **Freshwater Supply:** While not explicitly stated in the provided context, the table (Tabel 5.1) mentions supplying freshwater (""waters aanbieden"") for the nature area, suggesting the canal might be part of delivering this freshwater.
+
+Therefore, while the document doesn't provide the specific design blueprint for the freshwater canal itself, it confirms that the Waterdunen project is designed to incorporate freshwater supply (likely via canals) as part of its broader **nature restoration and enhancement objectives**, creating habitats beneficial for wildlife, particularly water birds.",0.14406752586364746,6.411844968795776,0.024205947942773864,0.08450704225352114,tensor([0.7842]),tensor([0.8479]),tensor([0.8148]),1.0,0.0
+What is an HSSF in the context of constructed wetlands,2025-12-03 14:57:27.526465,deepseek-r1:8b,"An Aerated Horizontal Subsurface Flow (HSSF) constructed wetland, is one where water is fed from horizontal pipe with openings at regular intervals to distribute the water equally over the inlet zone.","Based on the provided document context:
+
+An **HSSF** stands for **Aerated Horizontal Subsurface Flow**.
+
+In the context of constructed wetlands, it refers to a specific design type chosen for the Dow6 site. An aerated Horizontal Subsurface Flow (HSSF) constructed wetland involves:
+
+1.  **Water Distribution:** Water is fed from horizontal pipes with openings at regular intervals to distribute the water evenly over the inlet zone.
+2.  **Flow:** The water flows horizontally through the filling material to the outlet zone where the treated water is collected.
+3.  **Water Level:** The water level is kept below the surface of the filling material to help reduce odor issues and evaporation.
+4.  **Aeration:** Air is pumped into the system (aeration) to improve its efficiency, allowing it to treat the same amount of load but with a significantly smaller footprint (4 times lower footprint than non-aerated wetlands).",0.12717056274414062,4.8253865242004395,0.07021707359312078,0.3121387283236994,tensor([0.8333]),tensor([0.9268]),tensor([0.8776]),1.0,1.0
+What is the main goal for the NEREUS project,2025-12-03 14:57:31.851874,deepseek-r1:8b,"The NEREUS project has focused for the last four years on the recovery and reuse of several resources from urban wastewater. Aside from the actual recovery of the resource, there is also the question of reuse of the product once recovered. Each pilot case aims to recover various resources. ","Based on the provided document context, the main goal of the NEREUS project is to:
+
+**recover valuable resources from domestic wastewater** and to enable the **principal of a circular economy** in the 2 Seas region.",0.15038537979125977,2.60520601272583,0.0383823765750317,0.21428571428571427,tensor([0.8435]),tensor([0.8864]),tensor([0.8644]),1.0,0.8
+What is the main goal for the NEREUS project,2025-12-03 14:57:37.533913,deepseek-r1:8b,"The NEREUS project has focused for the last four years on the recovery and reuse of several resources from urban wastewater. Aside from the actual recovery of the resource, there is also the question of reuse of the product once recovered. Each pilot case aims to recover various resources. ","Based on the provided document context, the main goal of the NEREUS project is to **recover valuable resources from domestic wastewater** and to enable the **principal of a circular economy** in the 2 Seas region.",1.2437763214111328,3.054307699203491,0.03926530699903916,0.21428571428571427,tensor([0.8494]),tensor([0.8890]),tensor([0.8687]),1.0,0.8
+What is the tradeoff when using MD compared to RO?,2025-12-03 14:57:42.795757,deepseek-r1:8b,"MD gives higher product quality with no additional post-treatment, but is very energy intensive and produces a small product flow. RO is more water-efficient and economically favorable but may require additional treatment to meet specifications.","Based on the provided document context, there is no information about the tradeoffs between Membrane Distillation (MD) and Reverse Osmosis (RO). The document does not mention these specific membrane technologies or their comparisons.
+
+If you have additional context or a different question, please provide it so I can assist you better.",0.1499319076538086,3.71981143951416,0.022608914449138345,0.09090909090909091,tensor([0.8234]),tensor([0.8402]),tensor([0.8317]),1.0,0.0

@@ -1,0 +1,100 @@
+question,datetime,model_name,ground_truth,model_output,chunk_retrieval_time,generation_time,bleu,rouge,precision,recall,F1,recall@k,precision@k
+What is the main goal for the NEREUS project,2025-12-03 14:37:13.891718,llama3.2:1b,"The NEREUS project has focused for the last four years on the recovery and reuse of several resources from urban wastewater. Aside from the actual recovery of the resource, there is also the question of reuse of the product once recovered. Each pilot case aims to recover various resources. ","The main goal of the NEREUS (New Energy and Resources from Urban Sanitation) Project according to the document context is not explicitly stated, but based on the information provided, it appears that the primary objective of the project is to recover valuable resources from domestic wastewater through various technologies.",5.527605056762695,33.981555223464966,0.03536695072067071,0.2857142857142857,tensor([0.8716]),tensor([0.8881]),tensor([0.8798]),1.0,0.8
+In which categories was drip irrigation compared to reel irrigation investigated in the DeltaDrip project?,2025-12-03 14:38:25.202589,llama3.2:1b,"In the DeltaDrip project, drip irrigation was compared to reel irrigation in the following categories: efficiency of water use, nutrient efficiency, soil benefits, crop benefits, and costs.",The drip irrigation system was compared to the reel irrigation system in the DeltaDrip project.,2.972921133041382,24.040876865386963,0.0693598904483502,0.47619047619047616,tensor([0.9409]),tensor([0.8814]),tensor([0.9102]),1.0,0.8
+Which companies were involved in the Hergebruik Foodport project,2025-12-03 14:39:48.110189,llama3.2:1b,"The companies involved were Kloosterboer B.V., CSM Bakery Supplies Europe, Coroos Conserven B.V., and Lamb Weston Meijer.","Based on the context provided, it appears that there are two projects being discussed:
+
+1. The NEREUS Project (as mentioned earlier) with a focus on recovering valuable resources from domestic wastewater through various technologies.
+2. The DeltaDrip project (inferred from the reference to ""Deltares"" and ""Farmaceuticals"") which involves investigating the use of drip irrigation in agriculture, including comparing it to reel irrigation.
+
+However, there is no direct information about companies involved in the Hergebruik Foodport project.",6.105549573898315,26.18873381614685,0.01269961673637781,0.0631578947368421,tensor([0.8110]),tensor([0.8005]),tensor([0.8057]),1.0,0.4
+What are the importances of fresh water in chemical industry,2025-12-03 14:41:11.026023,llama3.2:1b,It is used in many chemical processes as an ingredient and for cooling and steam production,"Based on the provided document context, fresh water is crucial for the chemical industry because it is used in various chemical processes. The importance of fresh water can be inferred from several points:
+
+1. **Use in chemical processes**: Fresh water is mentioned as being used in all kinds of chemical processes.
+2. **Uncertainty in supply**: Ground and crucial process industry needs are emphasized, indicating that the continuous supply becomes uncertain nowadays.
+3. **Eco-ef ficiency and sustainability**: The importance of fresh water for sustainable industrial water management is highlighted, particularly in relation to reducing water use, wastewater production, and energy use.
+
+Therefore, it can be concluded that fresh water is a vital resource in the chemical industry due to its necessity in various chemical processes and the challenges posed by uncertain supply.",6.984935998916626,37.28778290748596,0.08066974340737668,0.13513513513513511,tensor([0.8091]),tensor([0.8613]),tensor([0.8344]),1.0,1.0
+"In the project plan for the 'Waterhouderij' project, which societal goals are linked for the POP3 subsidy application?",2025-12-03 14:43:00.100752,llama3.2:1b,"The following societal goals are discussed in the 'Waterhouderij' project: water, cooperation, agriculture, nature, and biodiversity.","According to the provided document context:
+
+The DeltaDrip project is one of the three modules in a case study divided by an INOVYN site. The goal of the project plan for the 'Waterhouderij' project (Pop3 subsidieaanvraag) is not explicitly stated, but it can be inferred that the societal goals linked to the POP3 subsidy application are related to:
+
+1. Water conservation and sustainability
+2. Industrial water management and eco-efficiency
+3. Sustainable use of chemical industry resources
+
+These goals align with the overall objectives of the DeltaDrip project, which aims to reduce drinking water intake from 20% to 60%, minimize waste generation, and transition to a 'Industrial experimental garden' for water reuse in the chemical sector.",6.4534382820129395,48.01645064353943,0.02252278368576829,0.1212121212121212,tensor([0.8309]),tensor([0.8913]),tensor([0.8600]),1.0,0.4
+What is the observed effect of raising the groundwater level to -50 cm in the Waterhouderij area,2025-12-03 14:45:02.975963,llama3.2:1b,"Farmers have not observed any negative effects from raising the groundwater level to -50 cm below the surface, and experts do not expect any.","Based on the provided document context, there are no specific details mentioned about a project called ""Hergebruik Foodport"". However, it appears that this project plan may involve investigating various aspects related to water resources and sustainability.
+
+Regarding the question of what is observed when raising the groundwater level in the Waterhouderij area by -50 cm, it can be inferred from the context that:
+
+* A case study (DeltaDrip) has been conducted on industrial water management, which involved transitioning from reel irrigation to drip irrigation. However, this case does not directly address the effect of lowering groundwater levels.
+* The Deltares organization has also studied the effects of reducing drinking water intake by 20% to 60%, and minimized waste generation in the chemical sector. This suggests that a similar study on groundwater level adjustment may be relevant.
+
+Given these points, it can be speculated that when raising the groundwater level by -50 cm, there might be a positive effect on:
+
+1. Water conservation: Lowering groundwater levels could potentially reduce water usage in agricultural areas.
+2. Industrial water management: This adjustment could help mitigate water scarcity issues for chemical industry processes.
+3. Eco-efficiency and sustainability: By minimizing waste generation, the overall efficiency of industrial activities may increase.
+
+However, it's essential to note that these speculations are based on general trends and case studies mentioned in the context. The actual observed effect would depend on specific factors such as soil type, land use, and local water management practices.",8.286937952041626,53.93416357040405,0.01702120131325744,0.07434944237918215,tensor([0.8070]),tensor([0.8779]),tensor([0.8410]),0.0,0.0
+What are the costs for storing desalinated water in a bassin,2025-12-03 14:47:14.814772,llama3.2:1b,"The construction of a water basin for storing desalinated water costs around €5,000 per 1,000 m³","The costs associated with storing desalinated water in a basin can be significant. Based on the provided document context, here is what I found:
+
+1. According to the estimate of Japan International Cooperation Agency (JICA) and Water Reuse Promotion Center in 2016, the cost of storing mild desalination by-product (MB) is estimated at approximately ¥10 million per cubic meter.
+
+2. A study by Universiteit van Michigan in 2017 proposed a technical, economic, and environmental feasibility analysis for a small-scale concentrated solar power (CSP) desalination plant in Sonora, Mexico. The estimated costs for the project are not explicitly mentioned, but it is reported that some of the key points to consider include minimum recycled water or fresh demineralized water cost to make this project profitable from an economical point of view.
+
+3. For each technology (Biesbosch case), the cost of maintenance was assumed to be 3% of the total investment per year, which is equivalent to approximately €200 per cubic meter per year for a desalination plant.",10.013200521469116,61.97691988945007,0.11282968758159707,0.08602150537634409,tensor([0.8147]),tensor([0.8888]),tensor([0.8502]),1.0,0.8
+What is the effect of irrigation water quality on growing crops regarding plant vitality and crop yields,2025-12-03 15:07:09.732561,llama3.2:1b,"Overall, no real pattern between water quality and crop performance was found. Potatoes and onions show small initial vitality difference but no large difference at harvest. Potato yields were highest with tap water, onions heaviest with raw effluent, and pears showed no yield difference","Based on the context provided, here are the answers to your questions:
+
+Q: In the project plan for the 'Waterhouderij' project, which societal goals are linked for the POP3 subsidy application?
+A: The societal goals linked to the POP3 subsidy application are related to water conservation and sustainability. Specifically, they align with the overall objectives of the DeltaDrip project.
+
+Q: What is the observed effect of raising the groundwater level to -50 cm in the Waterhouderij area
+A: There is no specific information mentioned about a project called ""Hergebruik Foodport"". However, it appears that this project may involve investigating various aspects related to water resources and sustainability. The effects of lowering groundwater levels on plant vitality and crop yields are speculated as potentially positive for:
+
+1. Water conservation: Lowering groundwater levels could reduce water usage in agricultural areas.
+2. Industrial water management: This adjustment could help mitigate water scarcity issues for chemical industry processes.
+3. Eco-efficiency and sustainability: By minimizing waste generation, the overall efficiency of industrial activities may increase.
+
+However, these speculations are based on general trends and case studies mentioned in the context.
+
+Q: What are the costs for storing desalinated water in a basin
+A: The estimated costs associated with storing mild desalination by-product (MB) are approximately ¥10 million per cubic meter. Additionally, there is an estimate of the cost of maintaining the plant to make it profitable from an economic point of view.
+
+Q: What is the required water quality for discharge to the agricultural irrigation network?
+A: The study found that the highest yield was achieved with tap water (2.4 kg per pot), followed by treated effluent with ozone and raw effluent (1.8 kg per pot). There was a statistically significant effect of irrigation water quality on onion weight.
+
+Q: What is the observed effect of irrigation water quality on growing crops regarding plant vitality and crop yields
+A: The types of irrigation water used were:
+
+* Raw WWTP effluent: no notable differences in plant vitality or yield.
+* Treated effluent with ozone + UV: highest yield was achieved with this treatment (1.2 kg per pot).
+* Treated effluent: lowest yield was recorded with this treatment (1.0 kg per pot).
+
+The study concluded that microorganisms requiring lower ozone doses can reduce energy consumption and form by-product formation.
+
+Q: What is the effect of irrigation water quality on growing crops regarding plant vitality and crop yields
+A: The types of irrigation water used were:
+
+* Raw WWTP effluent: no notable differences in plant vitality or yield.
+* Treated effluent with ozone + UV: highest yield was achieved with this treatment (1.2 kg per pot).
+* Tap water: lowest yield was recorded with this treatment (0.8 kg per pot).
+
+The study concluded that microorganisms requiring lower ozone doses can reduce energy consumption and form by-product formation.
+
+Q: Does the wastewater produced per company meet with the agricultural requirements?
+A: No, the wastewater produced per company does not meet the agricultural requirements for irrigation. The study suggests that further treatment options are available to help reach the required water quality standards.",8.08725380897522,1107.6595485210419,0.00952597016640547,0.07155635062611806,tensor([0.7868]),tensor([0.8519]),tensor([0.8181]),1.0,0.2
+What was the purpose of the trials conducted at Dow Terneuzen for the AquaSPICE project,2025-12-03 15:13:45.983358,llama3.2:1b,"The purpose of the trials at Dow Terneuzen within the AquaSPICE project, is to research the potential of new technologies for reuse of cooling tower blowdown, to reduce freshwater intake at the I-Parc Dow Terneuzen site. ","Based on the provided document context, it appears that the trials were conducted to test and evaluate the effectiveness of different treatment technologies (GAC-UF-RO and UF-RO) for treating cooling tower blowdown water at Dow Terneuzen. The purpose was likely to:
+
+1. Evaluate the performance of these treatment technologies in terms of system recovery and water quality.
+2. Assess their stability and consistency over time.
+3. Determine if any pretreatment method (GAC or RO alone, or a combination) could be effective for treating cooling tower blowdown water.
+
+The trials aimed to find suitable methods for making cooling tower blowdown water suitable for reuse as make-up water in the AquaSPICE system at Dow Terneuzen.",8.728803396224976,55.113006591796875,0.0806633676125506,0.2483660130718954,tensor([0.8509]),tensor([0.8958]),tensor([0.8728]),1.0,0.8
+"In the project plan for the 'Waterhouderij' project, which societal goals are linked for the POP3 subsidy application?",2025-12-03 15:15:49.040415,llama3.2:1b,"The following societal goals are discussed in the 'Waterhouderij' project: water, cooperation, agriculture, nature, and biodiversity.","The document does not specify which societal goals are linked to the POP3 (Popularity and Populism) subsidy application. However, it mentions that the project aims to reach gradual reduction of drinking water intake from 20% to 60% in chemical industry sectors, indicating a potential link to the ""water conservation"" or ""sustainability"" goals mentioned.
+
+Therefore, based on this information, I can conclude that one societal goal linked to the POP3 subsidy application is:
+
+1. Water conservation
+
+This goal aligns with the project's objectives of reducing drinking water intake and increasing water reuse in chemical industry sectors.",7.887789487838745,57.143123149871826,0.07668882940082428,0.16071428571428573,tensor([0.8327]),tensor([0.8629]),tensor([0.8475]),1.0,0.4
