@@ -1,0 +1,126 @@
+question,datetime,model_name,ground_truth,model_output,chunk_retrieval_time,generation_time,bleu,rouge,precision,recall,F1,recall@k,precision@k
+How will the freshwater canal be designed in the Waterdunen project to support nature,2025-12-02 13:02:36.542387,qwen3:4b,"The freshwater canal will have nature-friendly banks. In the future situation, the banks will have a slope of 1:1, with some locations having a gentler slope where nature-friendly banks currently exist.","Based on the uploaded document context, I don't see specific information about a ""freshwater canal"" design in the Waterdunen project. The document focuses more on tidal areas and intertidal zones rather than freshwater canals.
+
+The Waterdunen project is described as creating 250 ha of freely accessible nature that is influenced by controlled tides. The document mentions several key water management features that support nature:
+
+1. The project creates a ""afwisseling van slikken, schorren en geulen"" (a variation of wetlands, meadows and ditches)
+2. These areas serve as ""voedsel- en broedgelegenheid"" (food and breeding grounds) for coastal birds
+3. The design includes ""peilgestuurde drainage"" (tidal-controlled drainage)
+4. The project has ""wateropslag"" (water storage) capabilities
+5. The system provides ""voldoende stabiel water"" (sufficient stable water) for fish populations
+6. It creates ""benodigde isolatie van kwetsbare natuur"" (necessary isolation for vulnerable nature)
+7. The design includes ""voldoende groot spuivolume"" (sufficient flood volume)
+
+The document states that the project's nature design follows ""een slimme zonering"" (smart zoning) that guarantees rest areas for vulnerable bird species while maintaining the natural tidal dynamics.
+
+The Waterdunen project is specifically designed to work with tidal influences rather than freshwater canals. It's part of the alternative package of measures for the Middengebied to prevent flooding and create ecological benefits, with a focus on coastal reinforcement and improving spatial quality.
+
+The document doesn't provide specific details about how a ""freshwater canal"" would be designed in this project, as the project appears to focus on tidal areas and intertidal zones rather than freshwater canals.",0.40497541427612305,12.607848167419434,0.03339036383795432,0.0684931506849315,tensor([0.7775]),tensor([0.8466]),tensor([0.8106]),1.0,0.0
+What kinds of potatoes are harvested in the Lovenpolder,2025-12-02 13:02:43.835842,qwen3:4b,There are 2 kinds of potatoes harvested: consumptionpotaties and seed potatoes. The seedpotatoes are mainly grown for export and having a higher yield per hectare,"Based on the uploaded document context, in the Lovenpolder two out of three types of potatoes are harvested:
+
+1. Consumptieaardappel (consumption potatoes)
+2. Pootaardappel (potatoes for ""pootgoed"")
+
+The document specifically states: ""Uit figuur 4 kan men opmaken dat in de Lovenpolder twee van de drie soorten aardappelen worden geteeld, enerzijds consumptieaardappel en anderzijds pootaardappel.""
+
+The text also explains that the tubers of the pootaardappel are specially bred as ""pootgoed"" (tuber product) for the corresponding consumption potato field. The document mentions that this pootgoed is exported for 80% to foreign countries.",0.3914196491241455,5.403082609176636,0.054313608078638574,0.1391304347826087,tensor([0.7793]),tensor([0.8568]),tensor([0.8162]),1.0,0.2
+What did FRESHEM Zeeland conclude about the distribution and reliability of fresh groundwater in Zeeland?,2025-12-02 13:02:53.588708,qwen3:4b,"HEM mapping shows 20–30% of Zeeland has a freshwater lens >15 m thick, while 35–50% has little or no fresh lens. The HEM 'middle' agrees with 78% of well chloride measurements (88% within p25–p75). Uncertainty is generally <2 m or <20% in well-sampled areas; results are less reliable in brackish zones and for very local features.","Based on the uploaded document context, FRESHEM Zeeland concluded the following about the distribution and reliability of fresh groundwater in Zeeland:
+
+1. Zeeland has limited fresh groundwater resources, with ""surrounded by estuaries and the North Sea"" and ""limited fresh groundwater reserves"" making freshwater availability ""not evident"" in the province.
+
+2. The groundwater system is ""predominantly saline due to recent marine transgressions.""
+
+3. Fresh groundwater exists only in ""fresh groundwater lenses"" (thin layers), with ""high spatial variation in thickness"" of these lenses.
+
+4. The research found that ""fresh groundwater is present below saline groundwater at various locations in the province of Zeeland."" This creates unstable density distribution where ""the saline groundwater is heavier than the underlying fresh groundwater.""
+
+5. Without low permeable (clay) layers, this density instability results in ""downward movement of the saline groundwater, thereby salinising the fresh groundwater"" - a process known as free convection.
+
+6. The research identified specific areas with ""more than 15 metre fresh (<1500 mg Cl/l) groundwater"" for ""low,"" ""middle"" and ""high"" categories (as shown in Figure 11.14).
+
+7. The reliability of the measurements has uncertainty ""mainly caused by the inversion, surface conductivity, lithology and interpolation,"" indicating that more knowledge about these factors would improve the reliability of the end results.
+
+The document emphasizes that ""knowledge about the availability of the scarce fresh groundwater is essential for agriculture, water managers, drinking water companies, industry, environmental other areas.""",0.3662698268890381,7.54070520401001,0.023618480424853875,0.0955631399317406,tensor([0.8083]),tensor([0.8185]),tensor([0.8134]),1.0,0.2
+Which companies were involved in the Hergebruik Foodport project,2025-12-02 13:03:00.670620,qwen3:4b,"The companies involved were Kloosterboer B.V., CSM Bakery Supplies Europe, Coroos Conserven B.V., and Lamb Weston Meijer.","Based on the uploaded document context, I don't see specific information about which companies were involved in the Hergebruik Foodport project. 
+
+The document context provided appears to be from the HZ University of Applied Sciences project portfolio website (GO-Fresh II project), but it doesn't mention the Hergebruik Foodport project or its participating companies. 
+
+The document contains information about:
+- GO-Fresh technology and related projects
+- HZ University of Applied Sciences (Edisonweg 4, Vlissingen)
+- Various agricultural products including potatoes
+- Investment costs for different farming techniques
+
+However, there is no specific reference to the Hergebruik Foodport project or the companies involved in it in the provided context. The document focuses on water management and agricultural projects in Zeeland, but doesn't provide details about this particular project's corporate partners.",0.3780934810638428,5.182546854019165,0.019460783445033113,0.053691275167785234,tensor([0.7858]),tensor([0.8008]),tensor([0.7932]),1.0,0.2
+What is the observed effect of raising the groundwater level to -50 cm in the Waterhouderij area,2025-12-02 13:03:09.790401,qwen3:4b,"Farmers have not observed any negative effects from raising the groundwater level to -50 cm below the surface, and experts do not expect any.","Based on the uploaded document context provided, I cannot find specific information about the observed effect of raising the groundwater level to -50 cm in the Waterhouderij area.
+
+The document context mentions general concepts about groundwater management in Zeeland, including:
+- ""verhoging van grondwater-standen"" (raising groundwater levels) as part of water management strategies
+- ""peilgestuurde drainage"" (water level-controlled drainage) to reduce drought damage to crops
+- Monitoring of groundwater levels and water quality
+
+However, the document does not contain specific information about:
+1. The Waterhouderij Walcheren area's groundwater levels being raised to exactly -50 cm
+2. The observed effects of this specific groundwater level elevation
+
+The document describes general water management approaches but doesn't provide the specific measurement data or observed effects related to the -50 cm groundwater level in the Waterhouderij area that would answer this question accurately.
+
+Therefore, based solely on the provided document context, I cannot determine what effect raising the groundwater level to -50 cm has in the Waterhouderij area.",0.3768148422241211,7.08786416053772,0.06581237187558614,0.12698412698412698,tensor([0.8096]),tensor([0.8791]),tensor([0.8429]),0.0,0.0
+Which companies were involved in the Hergebruik Foodport project,2025-12-02 13:03:17.140459,qwen3:4b,"The companies involved were Kloosterboer B.V., CSM Bakery Supplies Europe, Coroos Conserven B.V., and Lamb Weston Meijer.","Based on the uploaded document context provided, I cannot identify any specific companies involved in the Hergebruik Foodport project.
+
+The document shows that the HZ University of Applied Sciences (Edisonweg 4, Vlissingen) has a project portfolio that includes the GO-Fresh II project, but it does not mention the Hergebruik Foodport project or its participating companies.
+
+The document context indicates that the project involves ""business plans of the farmers, wishes of the farmers considering the available 'fresh-making' techniques"" but does not list specific companies that were involved in the Hergebruik Foodport project.
+
+In the previous conversation, I already noted that ""the document context provided appears to be from the HZ University of Applied Sciences project portfolio website (GO-Fresh II project), but it doesn't mention the Hergebruik Foodport project or its participating companies."" This remains accurate based on the current document context.
+
+The document focuses on water management and agricultural projects in Zeeland but does not provide specific information about companies involved in the Hergebruik Foodport project.",0.3623480796813965,5.3354034423828125,0.006152977600153965,0.05319148936170213,tensor([0.7810]),tensor([0.8028]),tensor([0.7917]),1.0,0.2
+Which substances in the Leopoldkanaal water exceed the Nota Grondwater tresholds for infiltration?,2025-12-02 13:03:23.792637,qwen3:4b,"While the water of the Leopoldkanaal showed to be fresh enough for infiltration, some metals and pesticides exceed the thresholds. This includes copper, manganese, BAM, glyphosate, AMPA, phenanthrene, and fluoranthene, with total pesticides surpassing 0.5 µg/L.","Based on the uploaded document context, the substances in the Leopoldkanaal water that exceed the Nota Grondwater thresholds for infiltration are:
+
+1. Metals:
+   - Copper (2.4 µg/l)
+   - Manganese (31 µg/l)
+
+2. Pesticides:
+   - Total sum of pesticides exceeds 0.5 µg/l threshold
+   - Individual pesticides:
+     * BAM exceeds 0.1 µg/l threshold
+     * Glyphosate exceeds 0.1 µg/l threshold
+     * AMPA exceeds 0.1 µg/l threshold
+
+3. PAHs (Polycyclic Aromatic Hydrocarbons):
+   - Phenanthrene exceeds 0.003 µg/l threshold
+   - Fluoranthene exceeds 0.003 µg/l threshold
+
+The document states that ""the water quality of the Leopoldkanaal is therefore insufficient for infiltration in the groundwater"" due to these exceeding concentrations.",0.36479616165161133,4.546945571899414,0.05697329625492689,0.21768707482993196,tensor([0.8232]),tensor([0.8984]),tensor([0.8591]),1.0,0.8
+What was the purpose of the trials conducted at Dow Terneuzen for the AquaSPICE project,2025-12-02 13:03:32.476402,qwen3:4b,"The purpose of the trials at Dow Terneuzen within the AquaSPICE project, is to research the potential of new technologies for reuse of cooling tower blowdown, to reduce freshwater intake at the I-Parc Dow Terneuzen site. ","Based on the uploaded document context provided, I cannot find specific information about the purpose of trials conducted at Dow Terneuzen for the AquaSPICE project.
+
+The document context focuses on water management in Zeeland, Netherlands, with mentions of:
+- The Zeeuwse grondwater systeem (Zeeland groundwater system)
+- Projects like ""Waterdunen"" (from 2006)
+- The ""De Groote Lucht"" sweet water factory pilot
+- The ""proeftuin zoetwater E4"" (sweet water test garden)
+
+However, the document does not contain any specific information about:
+1. Dow Terneuzen as a location for trials
+2. The AquaSPICE project
+3. Any trials conducted there
+4. Their purpose
+
+The document mentions ""zoetwater"" (sweet water) projects and pilot implementations but doesn't reference the AquaSPICE project or trials at Dow Terneuzen. The context appears to be from the HZ University of Applied Sciences project portfolio related to water management in Zeeland, but it doesn't provide information about the AquaSPICE project trials at Dow Terneuzen.
+
+Therefore, based solely on the provided document context, I cannot determine what was the purpose of the trials conducted at Dow Terneuzen for the AquaSPICE project.",0.4024386405944824,6.562000751495361,0.030828080210392725,0.18604651162790695,tensor([0.8086]),tensor([0.8566]),tensor([0.8319]),1.0,0.2
+What is an HSSF in the context of constructed wetlands,2025-12-02 13:03:37.855136,qwen3:4b,"An Aerated Horizontal Subsurface Flow (HSSF) constructed wetland, is one where water is fed from horizontal pipe with openings at regular intervals to distribute the water equally over the inlet zone.","Based on the uploaded document context, an HSSF (Horizontal Subsurface Flow) in the context of constructed wetlands is defined as:
+
+An aerated Horizontal Subsurface Flow (HSSF) constructed wetland is a system where water is fed from horizontal pipes with openings at regular intervals to distribute the water equally over the inlet zone. The water then flows horizontally through the filling material to the outlet zone where the treated water is collected. The water level is kept below the surface of the filling material to reduce odor issues and evaporation of volatile constituents. By adding aeration, the efficiency of the wetland can be improved.
+
+The document specifically mentions that this type of wetland was chosen as the preferred design for Dow6 (likely referring to a specific location or project), and it notes that aerated wetlands can treat the same load but with a 4 times lower footprint than non-aerated wetlands.",0.3566267490386963,3.359590530395508,0.4223340573026048,0.33149171270718236,tensor([0.8558]),tensor([0.9436]),tensor([0.8976]),1.0,1.0
+What are the yearly costs for above ground drip irrigation per hectare?,2025-12-02 13:03:54.038181,qwen3:4b,"Yearly, above ground drip irrigation costs between €1.061 and €1.404 per hectare.","Based on the uploaded document context, the document mentions that ""De totale jaarlijkse kosten per hectare komen voor druppelirrigatie lager uit dan voor haspelberegening"" (The total yearly costs per hectare for drip irrigation are lower than for furrow irrigation). 
+
+The document also states: ""De kosten zijn berekend op basis van vaste en variabele kosten, waarbij €156 tot €919 per hectare bespaard kan worden."" (The costs are calculated based on fixed and variable costs, where €156 to €919 per hectare can be saved.)
+
+However, the document does not provide the specific exact yearly cost figure for above ground drip irrigation per hectare. The document mentions that ""het bovengrondse druppelsysteem ieder jaar vervangen moet worden"" (the above ground drip system must be replaced every year), but it doesn't give the precise monetary value for the yearly costs.
+
+The document does mention Figure 25 which shows ""Jaarlijkse kosten per hectare per irrigatiesysteem"" (Yearly costs per hectare per irrigation system), but the specific numerical values for above ground drip irrigation costs per hectare aren't provided in the text excerpt.
+
+Therefore, based solely on the provided document context, I cannot give the exact yearly cost figure for above ground drip irrigation per hectare. The document only indicates that drip irrigation costs are lower than furrow irrigation with potential savings of €156 to €919 per hectare.",1.024062156677246,12.243539810180664,0.026048591492696036,0.06779661016949153,tensor([0.7730]),tensor([0.8708]),tensor([0.8190]),1.0,0.0

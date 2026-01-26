@@ -1,20 +1,18 @@
 # Vectorization code for Water Management Research Papers
 # This code creates and manages a vector database for water management research documents.
 
-import os
 import logging
 import uuid
 import shutil
 from pathlib import Path
-from typing import List, Dict, Any, Optional, Tuple
+from typing import List, Dict, Any, Tuple
 import torch
 import chromadb
-from sentence_transformers import SentenceTransformer, CrossEncoder
+from sentence_transformers import SentenceTransformer
 import PyPDF2
 from docx import Document
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 import config
-import time
 
 # Configure logging
 logging.basicConfig(level=getattr(logging, config.LOG_LEVEL, 'INFO'))

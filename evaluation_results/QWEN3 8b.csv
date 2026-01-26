@@ -1,0 +1,74 @@
+question,datetime,model_name,ground_truth,model_output,chunk_retrieval_time,generation_time,bleu,rouge,precision,recall,F1,recall@k,precision@k
+What was the purpose of the trials conducted at Dow Terneuzen for the AquaSPICE project,2025-12-03 11:16:52.721129,qwen3:8b,"The purpose of the trials at Dow Terneuzen within the AquaSPICE project, is to research the potential of new technologies for reuse of cooling tower blowdown, to reduce freshwater intake at the I-Parc Dow Terneuzen site. ","The provided document context does not mention the AquaSPICE project, Dow Terneuzen, or any trials related to that specific project. The text focuses on water management initiatives in Zeeland, such as the ""Waterdunen"" project, the Horstermeerpolder pilot, and efforts to improve water availability and sustainability. Without additional context or information about the AquaSPICE project, it is not possible to determine the purpose of trials at Dow Terneuzen. 
+
+**Answer:**  
+The document does not provide information about the AquaSPICE project or trials at Dow Terneuzen. No details are available on this specific project or its objectives.",21.221330642700195,4.049871444702148,0.07060176713504232,0.22900763358778625,tensor([0.8459]),tensor([0.8721]),tensor([0.8588]),1.0,0.2
+Which substances in the Leopoldkanaal water exceed the Nota Grondwater tresholds for infiltration?,2025-12-03 11:20:06.778788,qwen3:8b,"While the water of the Leopoldkanaal showed to be fresh enough for infiltration, some metals and pesticides exceed the thresholds. This includes copper, manganese, BAM, glyphosate, AMPA, phenanthrene, and fluoranthene, with total pesticides surpassing 0.5 µg/L.","The substances in the Leopoldkanaal water that exceed the Nota Grondwater thresholds for infiltration are:  
+
+1. **Copper** (exceeds 2.4 µg/l)  
+2. **Manganese** (exceeds 31 µg/l)  
+3. **Total pesticides** (exceeds 0.5 µg/l)  
+   - Individual pesticides: **BAM**, **glyphosate**, and **AMPA** (each exceed 0.1 µg/l)  
+4. **Polycyclic Aromatic Carbons (PACs)**:  
+   - **Phenanthrene** (exceeds 0.003 µg/l)  
+   - **Fluoranthene** (exceeds 0.003 µg/l)  
+
+These exceedances indicate the water quality is unsuitable for infiltration into groundwater.",5.276785612106323,5.594928979873657,0.0672816025334196,0.2782608695652174,tensor([0.8156]),tensor([0.9081]),tensor([0.8594]),1.0,0.8
+What pre-treatment steps were applied before NF/EDR to limit fouling?,2025-12-03 11:25:36.229474,qwen3:8b,"Coagulation, flocculation, lamella seperation, followed by ultrafiltration with periodic chemical enhanced backwash (CEB)","The provided document context does not explicitly list specific pre-treatment steps applied before NF/EDR to limit fouling. However, it mentions **biofouling guard** and **Membrane Fouling Simulators (MFS units)** as part of the testing and mitigation efforts to study fouling. These tools were used to monitor and predict fouling issues in the system. While the document does not detail exact pre-treatment steps for NF/EDR, the use of new membranes in short runs and the integration of MFS units suggest that membrane replacement and fouling monitoring were part of the broader strategy to address fouling. 
+
+**Answer:**  
+The document does not explicitly list pre-treatment steps for NF/EDR but mentions the use of a **biofouling guard** and **Membrane Fouling Simulators (MFS units)** to study and mitigate fouling. These tools were employed to monitor fouling progression and optimize system performance. Specific pre-treatment steps for NF/EDR are not detailed in the provided context.",23.553621530532837,13.104731321334839,0.0,0.0,tensor([0.7811]),tensor([0.8057]),tensor([0.7932]),0.0,0.0
+How will the freshwater canal be designed in the Waterdunen project to support nature,2025-12-03 11:29:21.563659,qwen3:8b,"The freshwater canal will have nature-friendly banks. In the future situation, the banks will have a slope of 1:1, with some locations having a gentler slope where nature-friendly banks currently exist.","The freshwater canal in the **Waterdunen project** is designed to support nature through the following key elements:  
+
+1. **Tidal Influence and Dynamic Ecosystems**:  
+   - The canal is part of a system that incorporates **controlled tidal dynamics**, creating a mix of **slacks (calm water areas)**, **marshes**, and **channels**. These varied water bodies provide habitats for coastal birds and other wildlife, mimicking natural intertidal zones along the Westerschelde.  
+
+2. **Natural Zoning and Habitat Diversity**:  
+   - The design includes **""slimme zonering""** (smart zoning), ensuring different areas within the canal system cater to specific ecological needs. For example:  
+     - **Quiet zones** for sensitive nature (e.g., breeding grounds for birds).  
+     - **Dynamic zones** that allow for recreational use while maintaining ecological functionality.  
+
+3. **Integration with Existing Natural Features**:  
+   - The canal is designed to complement the **Westerschelde’s intertidal areas**, enhancing food and nesting opportunities for coastal birds. It avoids disrupting the **National Landscape** and aligns with the goal of **nature restoration**.  
+
+4. **Water Management for Ecological Balance**:  
+   - The canal supports **controlled water storage and drainage**, maintaining stable water levels to sustain aquatic life and prevent erosion. This also aids in managing flood risks while preserving natural hydrological processes.  
+
+5. **Recreational and Conservation Synergy**:  
+   - The design balances **recreational access** (e.g., walking paths, water-based activities) with **conservation priorities**, ensuring the area remains appealing for both humans and wildlife.  
+
+In summary, the canal’s design prioritizes **tidal connectivity**, **habitat diversity**, and **ecological resilience**, ensuring it supports both natural ecosystems and sustainable human use within the Waterdunen project.",14.124696731567383,8.554969549179077,0.06458819685774358,0.07092198581560283,tensor([0.7684]),tensor([0.8577]),tensor([0.8106]),1.0,0.0
+What was the purpose of the trials conducted at Dow Terneuzen for the AquaSPICE project,2025-12-03 11:33:03.978313,qwen3:8b,"The purpose of the trials at Dow Terneuzen within the AquaSPICE project, is to research the potential of new technologies for reuse of cooling tower blowdown, to reduce freshwater intake at the I-Parc Dow Terneuzen site. ","The provided document context does not mention the **AquaSPICE project** or **trials conducted at Dow Terneuzen**. Therefore, **no specific information is available** in the context about the purpose of these trials. 
+
+**Answer:**  
+The document does not reference the AquaSPICE project or trials at Dow Terneuzen. As such, the purpose of these trials cannot be determined from the provided context.",13.80396580696106,3.8560614585876465,0.04621804812022906,0.25,tensor([0.8402]),tensor([0.8647]),tensor([0.8522]),1.0,0.2
+What kinds of potatoes are harvested in the Lovenpolder,2025-12-03 11:36:41.978586,qwen3:8b,There are 2 kinds of potatoes harvested: consumptionpotaties and seed potatoes. The seedpotatoes are mainly grown for export and having a higher yield per hectare,"The document specifies that in the **Lovenpolder**, **two of the three types of potatoes** are harvested:  
+1. **Consumptieaardappel** (consumption potato) — grown for direct consumption.  
+2. **Pootaardappel** (seed potato) — specifically cultivated as seed material for the consumptieaardappel varieties.  
+
+The **pootgoed** (seed material derived from pootaardappel) accounts for **80% of the export product** and is primarily exported abroad. The third type of potato is not mentioned as being harvested in the Lovenpolder.  
+
+**Answer:**  
+In the Lovenpolder, **consumptieaardappel** (consumption potatoes) and **pootaardappel** (seed potatoes) are harvested. The pootgoed (seed material) from pootaardappel is mainly exported, while consumptieaardappel is used for domestic consumption. The third type of potato is not specified as being grown there.",13.158928632736206,5.433847904205322,0.043441091034192414,0.16176470588235292,tensor([0.7793]),tensor([0.8585]),tensor([0.8170]),1.0,0.2
+What was the purpose of the trials conducted at Dow Terneuzen for the AquaSPICE project,2025-12-03 11:41:27.516991,qwen3:8b,"The purpose of the trials at Dow Terneuzen within the AquaSPICE project, is to research the potential of new technologies for reuse of cooling tower blowdown, to reduce freshwater intake at the I-Parc Dow Terneuzen site. ","The document does not mention the **AquaSPICE project** or **trials conducted at Dow Terneuzen**. Therefore, **no specific information is available** in the provided context about the purpose of these trials. 
+
+**Answer:**  
+The document does not reference the AquaSPICE project or trials at Dow Terneuzen. As such, the purpose of these trials cannot be determined from the provided context.",14.18409013748169,3.800482988357544,0.043937807942978725,0.25263157894736843,tensor([0.8394]),tensor([0.8631]),tensor([0.8511]),1.0,0.2
+What did FRESHEM Zeeland conclude about the distribution and reliability of fresh groundwater in Zeeland?,2025-12-03 11:45:54.561961,qwen3:8b,"HEM mapping shows 20–30% of Zeeland has a freshwater lens >15 m thick, while 35–50% has little or no fresh lens. The HEM 'middle' agrees with 78% of well chloride measurements (88% within p25–p75). Uncertainty is generally <2 m or <20% in well-sampled areas; results are less reliable in brackish zones and for very local features.","**Answer:**  
+FRESHEM Zeeland concluded that **fresh groundwater exists in lenses beneath saline groundwater** in parts of Zeeland, but its **distribution is spatially variable** and **limited in extent**. Key findings include:  
+1. **Distribution**: Fresh groundwater is present in ""fresh groundwater lenses"" but with **high spatial variation in thickness**. These lenses are often surrounded by saline groundwater, and their exact locations and thicknesses are uncertain due to geological and hydrological complexities.  
+2. **Reliability**: The reliability of fresh groundwater availability is **uncertain** due to factors like inversion processes, surface conductivity, lithology, and interpolation uncertainties. These factors affect the accuracy of translating resistivity data into groundwater salinity estimates.  
+3. **Salinization Risk**: Fresh groundwater is vulnerable to **salinization** from underlying saline groundwater, particularly in areas without low-permeable clay layers, leading to free convection processes that mix saline and fresh water.  
+
+The study highlights the **scarcity of reliable fresh groundwater** in Zeeland, which is critical for agriculture, water management, and other sectors.",19.413314819335938,7.102263927459717,0.022996104098636838,0.11059907834101383,tensor([0.8090]),tensor([0.8164]),tensor([0.8127]),1.0,0.2
+For which types of wastewaters is anaerobic treatment most convenient?,2025-12-03 11:48:49.347503,qwen3:8b,"anaerobic treatment is most convenient for somewhta warmer soil (between 25-30°C), and high-strength wastewater because it combines treatment with the production of energy-rich biogas.","**Answer:**  
+According to the document, **anaerobic treatment is most convenient for relatively warm (>25–30°C) and high-strength wastewaters**. This is because anaerobic processes combine treatment with the production of energy-rich biogas, making them particularly suitable for such conditions. In contrast, aerobic processes are more appropriate for low-strength and lower-temperature (<25–30°C) wastewaters, especially when nitrogen and phosphorus removal is required.  
+
+The document does not specify additional factors (e.g., pH, organic load types) beyond temperature and strength for anaerobic treatment suitability.",12.134179592132568,5.353407144546509,0.190378619636338,0.4,tensor([0.8430]),tensor([0.9010]),tensor([0.8711]),1.0,1.0
+What is the observed effect of raising the groundwater level to -50 cm in the Waterhouderij area,2025-12-03 11:53:35.431701,qwen3:8b,"Farmers have not observed any negative effects from raising the groundwater level to -50 cm below the surface, and experts do not expect any.","**Answer:**  
+The provided document does not specifically mention the observed effect of raising the groundwater level to **-50 cm** in the **Waterhouderij** area. However, it does discuss broader goals and methods related to groundwater management in the **Waterhouderij Walcheren** project, such as:  
+1. **Improving irrigation** by maintaining a higher groundwater level.  
+2. **Reducing crop damage** through peilgestuurde (level-controlled) drainage systems.  
+3. **Mitigating saltwater intrusion** by managing freshwater lenses and preventing salinization.  
+
+The document emphasizes the need for monitoring and long-term studies to assess the effectiveness of such interventions, but **no specific data or observations** are provided for a groundwater level of **-50 cm**. Further details would require additional context or sources.",18.324106693267822,4.68071174621582,0.12069505116436088,0.17518248175182483,tensor([0.8050]),tensor([0.8874]),tensor([0.8442]),0.0,0.0

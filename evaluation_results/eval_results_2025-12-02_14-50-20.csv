@@ -1,0 +1,8 @@
+question,datetime,model_name,ground_truth,model_output,chunk_retrieval_time,generation_time,bleu,rouge,precision,recall,F1,recall@k,precision@k
+What are the importances of fresh water in chemical industry,2025-12-02 14:50:20.246077,qwen3:4b,It is used in many chemical processes as an ingredient and for cooling and steam production,"Based on the document context provided, the importance of fresh water in the chemical industry is clearly stated as follows:
+
+""Fresh water is of major importance for the chemical industry, as it is used in all kinds of chemical processes.""
+
+The document also indicates that the continuous supply of fresh water is becoming more uncertain nowadays, which presents challenges for the industry. The chemical industry is described as ""a keystone of the European economy"" that ""converts raw materials into thousands of different products and is both a major water user"" - specifically highlighting its significant dependence on fresh water for its operations.
+
+This context shows that fresh water serves as a fundamental input for all chemical processes within the industry, making it critically important despite growing concerns about water supply stability.",0.2353053092956543,210.14303398132324,0.02667184995620263,0.12328767123287672,tensor([0.8150]),tensor([0.8636]),tensor([0.8386]),1.0,1.0

@@ -1,0 +1,64 @@
+question,datetime,model_name,ground_truth,model_output,chunk_retrieval_time,generation_time,bleu,rouge,precision,recall,F1,recall@k,precision@k
+What is the tradeoff when using MD compared to RO?,2025-12-20 20:09:39.547526,qwen3:4b,"MD gives higher product quality with no additional post-treatment, but is very energy intensive and produces a small product flow. RO is more water-efficient and economically favorable but may require additional treatment to meet specifications.","Based on the provided document context, there does not appear to be a direct comparison made between using Molecular Diffusion (MD) and Reverse Osmosis (RO). The text discusses the use of both methods in a case study at Yara but does not mention any tradeoffs or differences between them.",1.6324303150177002,3.2128279209136963,0.01943043650185126,0.09302325581395349,tensor([0.8251]),tensor([0.8403]),tensor([0.8327]),1.0,0.6
+What was the purpose of the trials conducted at Dow Terneuzen for the AquaSPICE project,2025-12-20 20:09:48.825912,qwen3:4b,"The purpose of the trials at Dow Terneuzen within the AquaSPICE project, is to research the potential of new technologies for reuse of cooling tower blowdown, to reduce freshwater intake at the I-Parc Dow Terneuzen site. ","Based on the provided document context, there does not appear to be any information about the purpose or conduct of trials conducted at Dow Terneuzen for the AquaSPICE project. The text discusses various aspects related to water management and sustainability projects in the Western Scheldt area, but it does not mention the specific objectives or results of the AquASPIC trial mentioned",2.049872636795044,3.5628719329833984,0.07357408722852321,0.28571428571428575,tensor([0.8601]),tensor([0.8732]),tensor([0.8666]),1.0,0.8
+Which techniques were used in the GO-Fresh field trials to increase freshwater availability,2025-12-20 20:10:49.083918,qwen3:4b,Three techniques: (1) Kreekrug Infiltratie Systeem: peilgestuurde drainage combined with targeted surface-water infiltration; (2) Freshmaker: winter injection of freshwater and capture of upwelling saline water via horizontal drilled wells; (3) Drains2Buffer: deeper and denser drainage to enlarge shallow rainwater lenses and prevent root-zone salinisation.,"Based on the provided document context, the three techniques used in the GO-FRESH field trials to increase freshwater availability for agriculture are:
+
+1. Creek Ridge Infiltration System (Serooskerke, Walcheren)
+2. Freshmaker: injection of fresh water and extraction of saline groundwater via horizontal wells",16.268869400024414,39.99888515472412,0.006262173974682259,0.31111111111111117,tensor([0.8571]),tensor([0.8521]),tensor([0.8546]),1.0,0.2
+How will the freshwater canal be designed in the Waterdunen project to support nature,2025-12-20 20:11:05.861294,qwen3:4b,"The freshwater canal will have nature-friendly banks. In the future situation, the banks will have a slope of 1:1, with some locations having a gentler slope where nature-friendly banks currently exist.","According to the provided document context, the nature development aspect of the Waterdunen project emphasizes an ""estuarine nature development"" for the freshwater canal. The key points are:
+
+1. Nature development is one of three pillars of the Waterdunen plan alongside landscape and recreational development.
+
+2. In designing the water management system in Waterdunen, coherence (integrated design) is given substance to these three pillars.
+
+3. Openness within an estuarine nature development spatial structure will be preserved while creating a new layout that has historical basis as an estuary-like area.
+
+Based on this information, it appears that one of the ways the freshwater canal in Waterdunen will be designed to support nature is through incorporating elements characteristic of an estuarine ecosystem. The overall approach focuses on coherence between landscape quality (ecology), recreation and safety while maintaining historical context as a natural estuary-like development.
+
+The specific technical details about how this would manifest are not provided, but the document suggests it involves integrating aspects typical of estuaries into the canal design to support nature within that spatial framework.",2.720679759979248,8.458759307861328,0.04029014259178441,0.1042654028436019,tensor([0.8105]),tensor([0.8542]),tensor([0.8318]),1.0,0.6
+For which types of wastewaters is anaerobic treatment most convenient?,2025-12-20 20:11:23.014099,qwen3:4b,"anaerobic treatment is most convenient for somewhta warmer soil (between 25-30°C), and high-strength wastewater because it combines treatment with the production of energy-rich biogas.","According to the document context provided:
+
+Anaerobic treatment is ""most convenient for relatively warm (> 25-30 oC) and high-strength wastewaters"" because it combines treatment with the production of energy-rich biogas.
+
+The key points are:
+1. Anaerobic treatment works best when wastewater is both hot (above 25-30°C) and strong/strength.
+2. It offers advantages over aerobic processes, particularly for waste streams like sewage generated in delta regions where seawater might be used as a diluent or source of nutrients.
+
+So based on this information directly from the context above, anaerobic treatment is most convenient when dealing with hot (above 25-30°C) and high-strength wastewater.",3.2598824501037598,8.363460779190063,0.3000284317350863,0.3357664233576642,tensor([0.8463]),tensor([0.9047]),tensor([0.8745]),1.0,1.0
+Which techniques were used in the GO-Fresh field trials to increase freshwater availability,2025-12-20 20:11:38.964151,qwen3:4b,Three techniques: (1) Kreekrug Infiltratie Systeem: peilgestuurde drainage combined with targeted surface-water infiltration; (2) Freshmaker: winter injection of freshwater and capture of upwelling saline water via horizontal drilled wells; (3) Drains2Buffer: deeper and denser drainage to enlarge shallow rainwater lenses and prevent root-zone salinisation.,"Based on the provided document context, the three techniques used in the GO-FRESH field trials to increase freshwater availability for agriculture are:
+
+1. Creek Ridge Infiltration System (Serooskerke, Walcheren)
+2. Freshmaker: injection of fresh water and extraction of saline groundwater via horizontal wells",3.942549467086792,6.1512086391448975,0.006262173974682259,0.31111111111111117,tensor([0.8571]),tensor([0.8521]),tensor([0.8546]),1.0,0.2
+Which companies were involved in the Hergebruik Foodport project,2025-12-20 20:11:57.323978,qwen3:4b,"The companies involved were Kloosterboer B.V., CSM Bakery Supplies Europe, Coroos Conserven B.V., and Lamb Weston Meijer.","According to the provided document context:
+
+The following companies were involved in the HERGEBUICHT FOODPORT project:
+
+1. STOWA (a Dutch water company)
+2. Product Board for Horticulture
+
+These two companies appear to be directly associated with or participating in the FoodPort project mentioned in the text.
+
+There is no mention of any other specific companies being involved in this particular research and development initiative called ""Hergebruik""",4.001648426055908,7.156559705734253,0.018791455390305887,0.09411764705882353,tensor([0.8007]),tensor([0.8115]),tensor([0.8060]),1.0,0.6
+What is the main goal for the NEREUS project,2025-12-20 20:12:16.353353,qwen3:4b,"The NEREUS project has focused for the last four years on the recovery and reuse of several resources from urban wastewater. Aside from the actual recovery of the resource, there is also the question of reuse of the product once recovered. Each pilot case aims to recover various resources. ","According to the provided document context, the main goals of the NEREUS project are:
+
+1. To optimize a wide range of different parties involved in an area represented by Staatsbosbeheer (state nature conservation agency), the province of Fryslân, Terschelling municipality and local farmers.
+
+2. To develop an innovative freshwater system that will increase both water availability for agriculture and protect against salt intrusion from saline groundwater.
+
+3. The project aims to make transparent the effects and risks associated with level increases in freshwaters and decreased freshwater supply due to increased salinity.
+
+4. It involves multiple stakeholders including government agencies, municipalities, farmers, agricultural research institutes (like Nordwin College) and local conservation groups like Fryske Wâlden.
+
+So in summary, NEREUS' main objectives are optimizing the use of water resources through an innovative system while managing risks to both freshwater availability for agriculture and saltwater intrusion from coastal areas.",3.3667006492614746,9.162013530731201,0.06079579085527917,0.1116751269035533,tensor([0.8094]),tensor([0.8637]),tensor([0.8357]),1.0,0.6
+For which types of wastewaters is anaerobic treatment most convenient?,2025-12-20 20:12:30.600358,qwen3:4b,"anaerobic treatment is most convenient for somewhta warmer soil (between 25-30°C), and high-strength wastewater because it combines treatment with the production of energy-rich biogas.","Based on the provided document context:
+
+Anaerobic treatment is most convenient for relatively warm (> 25-30 oC) and high-strength wastewater. This type of wastewater combines treatment with the production of energy-rich biogas.
+
+The key evidence from the text supporting this answer is in the first sentence: ""Anaerobic treatment is most convenient for relatively warm (> 25-30 °C)",3.016690969467163,6.3845837116241455,0.18117509872410711,0.4827586206896552,tensor([0.8675]),tensor([0.9058]),tensor([0.8862]),1.0,1.0
+How will the freshwater canal be designed in the Waterdunen project to support nature,2025-12-20 20:12:47.984467,qwen3:4b,"The freshwater canal will have nature-friendly banks. In the future situation, the banks will have a slope of 1:1, with some locations having a gentler slope where nature-friendly banks currently exist.","According to the provided document context:
+
+The main objective of the Waterdunen project is to create an innovative freshwater system that increases water availability for agriculture while protecting against salt intrusion from saline groundwater. This involves designing a freshwaterr canal within the estuarine nature development framework.
+
+Key evidence supporting this answer comes from the following sentences in the text:
+1. ""The main objective of Waterdunen project is to develop an innovative freshwater system that will increase both water availability for agriculture and protect against salt intrusion""
+2. ""Designing Waterdunen means a major investment, which will lead to structural economic benefits... with further dual objectives given shape in appealing manner""",3.658902645111084,7.814884901046753,0.016526850525490154,0.13986013986013987,tensor([0.8230]),tensor([0.8484]),tensor([0.8355]),1.0,0.6

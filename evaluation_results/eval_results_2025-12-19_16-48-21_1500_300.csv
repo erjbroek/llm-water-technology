@@ -1,0 +1,64 @@
+question,datetime,model_name,ground_truth,model_output,chunk_retrieval_time,generation_time,bleu,rouge,precision,recall,F1,recall@k,precision@k
+What is the tradeoff when using MD compared to RO?,2025-12-19 16:34:20.239970,qwen3:4b,"MD gives higher product quality with no additional post-treatment, but is very energy intensive and produces a small product flow. RO is more water-efficient and economically favorable but may require additional treatment to meet specifications.","Based on the provided context, there is no information about a comparison or ""tradeoff"" between MD (possibly referring to Mobile Data) and RO (maybe Radio). The document discusses various aspects related to group risk in Waterdunen, such as safety measures by the province of Zeeland, initial situation assessments from TNO research, and discussions on external security risks. However, there is no mention or implication of a comparison between MD and RO within this context.
+
+Therefore, I am unable to provide an answer based on the given document content about the tradeoff when using MD compared",1.3232738971710205,9.088972091674805,0.019508315563589545,0.09090909090909091,tensor([0.8137]),tensor([0.8367]),tensor([0.8250]),1.0,0.2
+What was the purpose of the trials conducted at Dow Terneuzen for the AquaSPICE project,2025-12-19 16:35:32.870374,qwen3:4b,"The purpose of the trials at Dow Terneuzen within the AquaSPICE project, is to research the potential of new technologies for reuse of cooling tower blowdown, to reduce freshwater intake at the I-Parc Dow Terneuzen site. ","Based on the provided context, there is no information about any trials or research activities conducted at Dow Terneuzen specifically for the AquaSPICE project. The document discusses various aspects related to group risk in Waterdunen and mentions a program called Smart Water Management that integrates water management efforts across different regions in the Netherlands",1.4154198169708252,65.66734600067139,0.06666559152222162,0.2417582417582418,tensor([0.8608]),tensor([0.8694]),tensor([0.8651]),1.0,0.8
+Which techniques were used in the GO-Fresh field trials to increase freshwater availability,2025-12-19 16:36:38.494867,qwen3:4b,Three techniques: (1) Kreekrug Infiltratie Systeem: peilgestuurde drainage combined with targeted surface-water infiltration; (2) Freshmaker: winter injection of freshwater and capture of upwelling saline water via horizontal drilled wells; (3) Drains2Buffer: deeper and denser drainage to enlarge shallow rainwater lenses and prevent root-zone salinisation.,"Based on the provided context, three techniques were used in the GO-FRESH field trials to increase freshwater availability for agriculture:
+
+1. The Kreekrug Infiltration System (KIS)
+2. Drains2Buffer measure
+3. Freshmaker system",1.087348461151123,58.11311316490173,0.005614964532144171,0.17721518987341772,tensor([0.8605]),tensor([0.8318]),tensor([0.8459]),1.0,0.4
+How will the freshwater canal be designed in the Waterdunen project to support nature,2025-12-19 16:38:49.519833,qwen3:4b,"The freshwater canal will have nature-friendly banks. In the future situation, the banks will have a slope of 1:1, with some locations having a gentler slope where nature-friendly banks currently exist.","Based on the provided context, the design of the freshwater canals for the Waterdunen project aims to contribute to nature restoration and high-quality recreation. Key aspects of this approach include:
+
+1. Making water development areas accessible or naturally zoned: The plan seeks to ensure that nature development does not create isolated blocks but integrates into larger natural systems.
+
+2. Creating a wide dune area behind the existing dike: This provides opportunities for free flowing dynamics and recreational space, while also contributing to coastal safety over longer periods of time.
+
+3. Constructing mudflats and salt marshes within the project's planning area: These elements are crucial to supporting wetland habitats that provide food and breeding grounds for shorebirds.
+
+4. Introducing a variety of water management techniques like salting, drying (depoldering), and channel creation:
+   - The Kreekrug Infiltration System (KIS)
+   - Drains2Buffer measure
+   - Freshmaker system
+
+These combined methods will help maintain proper freshwater levels while also allowing the canals to support healthy ecological processes. By keeping these water bodies accessible as natural zones, the project aims to preserve and enhance biodiversity in a manner that provides dual benefits of nature restoration alongside recreational opportunities.
+
+In summary, the design for freshwater canals within the Waterdunen project is focused on creating an ecosystem-based approach to manage freshwaters sustainably while simultaneously restoring valuable habitats",1.079228162765503,121.35077619552612,0.032278061551982984,0.07905138339920949,tensor([0.8045]),tensor([0.8544]),tensor([0.8287]),1.0,0.6
+For which types of wastewaters is anaerobic treatment most convenient?,2025-12-19 16:40:43.709151,qwen3:4b,"anaerobic treatment is most convenient for somewhta warmer soil (between 25-30°C), and high-strength wastewater because it combines treatment with the production of energy-rich biogas.","Based on the provided document context, the text states:
+
+""Furthermore, we incorporated knowledge of this research in a process design of a treatment for industrial wastewater of high salinity, 
+
+which was made alongside the project Water Nexus.""
+
+This suggests that according to their experience with implementing these technologies (Pentair X-Flow and other processes), anaerobic treatment is particularly convenient or most suitable for treating:
+
+1. Industrial wastewaters
+
+The context specifically mentions designing a process for ""industrial wastewater of high salinity"", which implies the technology would be especially well-suited to handle high-salinity industrial wastewater streams that may not respond as favorably to other types",0.2464132308959961,111.99171352386475,0.030117278537320248,0.12030075187969926,tensor([0.8136]),tensor([0.8354]),tensor([0.8244]),1.0,0.6
+Which techniques were used in the GO-Fresh field trials to increase freshwater availability,2025-12-19 16:41:56.126804,qwen3:4b,Three techniques: (1) Kreekrug Infiltratie Systeem: peilgestuurde drainage combined with targeted surface-water infiltration; (2) Freshmaker: winter injection of freshwater and capture of upwelling saline water via horizontal drilled wells; (3) Drains2Buffer: deeper and denser drainage to enlarge shallow rainwater lenses and prevent root-zone salinisation.,"Based on the provided context, three techniques were used in the GO-FRESH field trials to increase freshwater availability for agriculture:
+
+1. The Kreekrug Infiltration System (KIS)
+2. Drains2Buffer measure 
+3. Freshmaker system",1.1199860572814941,68.56952953338623,0.005614964532144171,0.17721518987341772,tensor([0.8571]),tensor([0.8311]),tensor([0.8439]),1.0,0.4
+Which companies were involved in the Hergebruik Foodport project,2025-12-19 16:43:31.071037,qwen3:4b,"The companies involved were Kloosterboer B.V., CSM Bakery Supplies Europe, Coroos Conserven B.V., and Lamb Weston Meijer.","Based on the provided context, the following companies were involved in the ""Hergebruik FoodPort"" (recycling food port) project:
+
+1. Aequator Green & Space - as supervisor of the companies and contributor to integration into business operations 
+2. Deltares - contributed knowledge of the water system and water quality, developed monitoring measurement network and analyzed data
+3. Louis Bolk Institute - developing soil quality and biodiversity component, advising on measures
+
+The other mentioned organizations (e.g., Aequator Groen & Ruimte) are listed as supervisors but not directly involved in development work for this specific project",0.938636064529419,88.44592261314392,0.019663055452075508,0.07407407407407407,tensor([0.7928]),tensor([0.8104]),tensor([0.8015]),1.0,0.4
+What is the main goal for the NEREUS project,2025-12-19 16:45:15.636921,qwen3:4b,"The NEREUS project has focused for the last four years on the recovery and reuse of several resources from urban wastewater. Aside from the actual recovery of the resource, there is also the question of reuse of the product once recovered. Each pilot case aims to recover various resources. ","Based on the provided context, the main goals of the NEREUS (Neem er Eerst Verantwoordelijk - Neem Responsibility First) project appear to be:
+
+1. Developing a process design and implementation plan for treating high-salinity industrial wastewater streams using anaerobic treatment technologies.
+
+2. Increasing freshwater availability for agriculture through innovative techniques like infiltration systems, drains-buffer measures, and the Freshmaker system.
+
+3. Addressing challenges associated with brackish seepage in polders by modifying water levels, re-draining plots, and adapting drainage routes to manage salinity issues while monitoring salt levels.
+
+4. Establishing a multidisciplinary collaboration involving various stakeholders (entrepreneurs, local authorities, knowledge institutions) working together on the project through partnerships, community of practice development, toolkits for innovation sharing",1.1819446086883545,96.04284834861755,0.04625799890348224,0.09696969696969696,tensor([0.8071]),tensor([0.8630]),tensor([0.8341]),1.0,0.6
+For which types of wastewaters is anaerobic treatment most convenient?,2025-12-19 16:46:49.517111,qwen3:4b,"anaerobic treatment is most convenient for somewhta warmer soil (between 25-30°C), and high-strength wastewater because it combines treatment with the production of energy-rich biogas.","Based on the provided context, anaerobic treatment appears to be most convenient for treating high-salinity industrial wastewater streams. The specific study mentioned in the text focused on developing a process design and implementation plan for treating such wastewater using anaerobic technologies.",0.2568509578704834,92.05643320083618,0.0597328053106644,0.22857142857142854,tensor([0.8567]),tensor([0.8472]),tensor([0.8519]),1.0,0.6
+How will the freshwater canal be designed in the Waterdunen project to support nature,2025-12-19 16:48:21.520078,qwen3:4b,"The freshwater canal will have nature-friendly banks. In the future situation, the banks will have a slope of 1:1, with some locations having a gentler slope where nature-friendly banks currently exist.","The main goals of the NEREUS (Neem er Eerst Verantwoordelijk) project are:
+
+1. Developing a process design and implementation plan for treating high-salinity industrial wastewater streams using anaerobic treatment technologies.
+2. Increasing freshwater availability for agriculture through innovative techniques like infiltration systems, drains-buffer measures, and the Freshmaker system.
+3. Addressing challenges associated with brackish seepage in polders by modifying water levels, re-draining plots,",3.628615140914917,84.77705121040344,0.06150343144231885,0.08,tensor([0.8074]),tensor([0.8437]),tensor([0.8251]),1.0,0.6

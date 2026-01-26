@@ -1,0 +1,79 @@
+question,datetime,model_name,ground_truth,model_output,chunk_retrieval_time,generation_time,bleu,rouge,precision,recall,F1,recall@k,precision@k
+What is the tradeoff when using MD compared to RO?,2025-12-31 01:15:11.245415,qwen3:4b,"MD gives higher product quality with no additional post-treatment, but is very energy intensive and produces a small product flow. RO is more water-efficient and economically favorable but may require additional treatment to meet specifications.","According to the provided context, there are two main points regarding the tradeoffs between Membrane Distillation (MD) and Reverse Osmosis (RO):
+
+1. The dosing rate of a new chemical at CTs will be significantly lower for MD than for RO due to differences in vapor pressure. Specifically, it is mentioned that ""the dosing rate at CT's will be approx 4 -5 times"" lower with MD compared to RO.
+
+2. A more detailed economic evaluation is necessary when choosing between using the new technology (MD) or maintaining the current one (RO). The context states: 
+   ""Whenever a certain technology is chosen to be implemented in the future, a more in-depth economic evaluation is necessary to compare the new technology with the current one.""
+
+So in summary, the tradeoff mentioned is that MD requires less of the additional chemical at CTs compared to RO, but also necessitates a more thorough cost analysis before deciding which system to implement.",22.65533185005188,62.03242039680481,0.01996819088094332,0.10309278350515463,tensor([0.8002]),tensor([0.8431]),tensor([0.8211]),1.0,0.4
+What was the purpose of the trials conducted at Dow Terneuzen for the AquaSPICE project,2025-12-31 01:17:09.110002,qwen3:4b,"The purpose of the trials at Dow Terneuzen within the AquaSPICE project, is to research the potential of new technologies for reuse of cooling tower blowdown, to reduce freshwater intake at the I-Parc Dow Terneuzen site. ","According to the provided context:
+
+The main purpose of the trials conducted at Dow Terneuzen as part of the AquaSPICE (Aquatic Species in a Changing Environment) project was ""to evaluate how aquatic species will respond and adapt to changing environmental conditions"". 
+
+This is stated directly on line 1: 
+""The primary objective of this study, carried out by Royal HaskoningDHV for the Dutch Ministry of Infrastructure & Water Management, is to assess potential impacts...",28.52529525756836,59.779799938201904,0.09112091490634264,0.3119266055045871,tensor([0.8347]),tensor([0.8709]),tensor([0.8524]),1.0,0.6
+Which techniques were used in the GO-Fresh field trials to increase freshwater availability,2025-12-31 01:19:12.235638,qwen3:4b,Three techniques: (1) Kreekrug Infiltratie Systeem: peilgestuurde drainage combined with targeted surface-water infiltration; (2) Freshmaker: winter injection of freshwater and capture of upwelling saline water via horizontal drilled wells; (3) Drains2Buffer: deeper and denser drainage to enlarge shallow rainwater lenses and prevent root-zone salinisation.,"According to the provided context:
+
+The main technique mentioned for increasing freshwater availability through the GO-FRESH (Geohydrological Opportunities Fresh Water Supply) project is ""dosing of water from underground sources into agricultural fields"". 
+
+Specifically, it states that:
+""In the research project GO-FRESH three pilot experiments were carried out in different locations to increase local freshwater availability. The aim will be to investigate how these three experiments can be an example for broader use so that the techniques may be interesting to other farmers as well.""
+
+The text does not provide more specific details about which exact methods or technologies (beyond dosing) were used in those field trials, but it confirms that one of the key approaches was increasing freshwater availability through water injection into agricultural areas.",29.606679439544678,60.75924563407898,0.00943980332348734,0.06936416184971099,tensor([0.8065]),tensor([0.8081]),tensor([0.8073]),1.0,0.2
+How will the freshwater canal be designed in the Waterdunen project to support nature,2025-12-31 01:21:12.883786,qwen3:4b,"The freshwater canal will have nature-friendly banks. In the future situation, the banks will have a slope of 1:1, with some locations having a gentler slope where nature-friendly banks currently exist.","According to the provided context:
+
+The design of the freshwater canals for the Waterdunen project is described as ""not on a fixed plan, but accessible or naturally established"". 
+
+This indicates that while there will likely be some planned features and construction elements related to creating the freshwater channels (such as digging trenches, installing pumps etc.), the overall approach emphasizes allowing natural processes like sedimentation, water flow, plant growth etc. to shape the canals over time rather than strictly controlling them.
+
+The key point is that ""the nature development goes wherever possible not on a slot but becomes accessible or naturally established"". This suggests an adaptive, ecosystem-based design philosophy where human interventions are minimized and let natural forces like gravity, evaporation, water table fluctuations etc. drive canal formation to support biodiversity and other ecological goals rather than being engineered in a rigid way.
+
+So in summary, the freshwater canals will be designed with nature as the primary driver of their development through passive processes, while still incorporating some planned elements for construction purposes - but not strictly following an overly prescriptive design plan.",25.445124626159668,67.002277135849,0.019508315563589545,0.0925925925925926,tensor([0.8093]),tensor([0.8533]),tensor([0.8307]),0.0,0.0
+For which types of wastewaters is anaerobic treatment most convenient?,2025-12-31 01:22:59.967041,qwen3:4b,"anaerobic treatment is most convenient for somewhta warmer soil (between 25-30°C), and high-strength wastewater because it combines treatment with the production of energy-rich biogas.","According to the provided context:
+
+Anaerobic (without oxygen) wastewater treatment is described as ""most convenient"" for relatively warm (> 25-30 °C) and high-strength wastewaters. This combination allows it to combine treatment with the production of energy-rich biogas.
+
+So in summary, anaerobic treatment is most convenient for:
+
+1. High-strength (strongly polluted or concentrated) wastewater
+2. Wastewater that can be kept within a relatively warm temperature range (> 25-30 °C)
+
+The context does not provide more specific details about the types of wastewaters it refers to, but these two characteristics are key factors making anaerobic treatment most convenient for this application according to the information given.",25.064464330673218,54.82223677635193,0.050721445564701054,0.34074074074074073,tensor([0.8398]),tensor([0.8998]),tensor([0.8688]),1.0,1.0
+Which techniques were used in the GO-Fresh field trials to increase freshwater availability,2025-12-31 01:24:49.703769,qwen3:4b,Three techniques: (1) Kreekrug Infiltratie Systeem: peilgestuurde drainage combined with targeted surface-water infiltration; (2) Freshmaker: winter injection of freshwater and capture of upwelling saline water via horizontal drilled wells; (3) Drains2Buffer: deeper and denser drainage to enlarge shallow rainwater lenses and prevent root-zone salinisation.,"According to the provided context, the main technique used in the GO-FRESH (Geohydrological Opportunities Fresh Water Supply) project for increasing freshwater availability was ""dosing of water from underground sources into agricultural fields"". This approach involved injecting groundwater into agricultural areas as part of three pilot experiments conducted across different locations.",27.48159885406494,52.79649519920349,0.009082935884120773,0.10309278350515465,tensor([0.8246]),tensor([0.8115]),tensor([0.8180]),1.0,0.2
+Which companies were involved in the Hergebruik Foodport project,2025-12-31 01:26:49.435160,qwen3:4b,"The companies involved were Kloosterboer B.V., CSM Bakery Supplies Europe, Coroos Conserven B.V., and Lamb Weston Meijer.","According to the provided context:
+
+The main company involved in the ""Hergebruik"" (reuse) of food waste as agricultural irrigation water, referred to as the ""FoodPort"" project, was:
+
+1. riewaterdiensten - a wastewater treatment and reuse service provider
+
+This is stated explicitly in the passage: 
+
+""In 2013 er een incidentele omzet van gerealiseerd als gevolg van de oplevering van een transportleiding. Met deze opdracht is een opbrengst van € 3,2 miljoen""
+
+The context does not mention any other companies involved in the FoodPort project beyond riewaterdiensten.
+
+So based on this information, the company that was primarily responsible for and participated most directly in the Hergebruik (reuse) of food waste as agricultural irrigation water is:
+
+riewaterdiensten",24.340212106704712,67.54208040237427,0.013705063051209186,0.0606060606060606,tensor([0.7616]),tensor([0.7916]),tensor([0.7763]),1.0,0.2
+What is the main goal for the NEREUS project,2025-12-31 01:28:41.275996,qwen3:4b,"The NEREUS project has focused for the last four years on the recovery and reuse of several resources from urban wastewater. Aside from the actual recovery of the resource, there is also the question of reuse of the product once recovered. Each pilot case aims to recover various resources. ","According to the provided context:
+
+The main goal of the ""NEE-RES"" (Netherlands Environmental Agency - Resilience) project, as stated in section 5.1 under Expected Results of the Project, is:
+
+""To develop an innovative freshwater system""
+
+This indicates that one of the primary objectives of the NEREUS project is to create a new and improved approach or infrastructure for managing fresh water resources within its designated area.
+
+The passage does not provide more specific details about what exactly this ""innovative freshwater system"" would entail, but it highlights that developing such an advanced system was identified as one of the main goals of",24.75516700744629,59.37650513648987,0.013789960530217062,0.15894039735099338,tensor([0.8132]),tensor([0.8584]),tensor([0.8352]),1.0,0.2
+For which types of wastewaters is anaerobic treatment most convenient?,2025-12-31 01:30:19.703641,qwen3:4b,"anaerobic treatment is most convenient for somewhta warmer soil (between 25-30°C), and high-strength wastewater because it combines treatment with the production of energy-rich biogas.","According to the provided context:
+
+Anaerobic treatment is described as ""most convenient"" for relatively warm (> 25-30 oC) and high-strength wastewater. This suggests that this type of biological wastewater treatment is particularly well-suited for managing wastewaters with these characteristics, such as those generated in delta regions where seawater might be used.
+
+The passage does not provide more specific details about the types of industrial or municipal wastewaters that would fall into this ""high-strength"" category.",22.608657360076904,50.75695776939392,0.08396359357898683,0.30476190476190473,tensor([0.8440]),tensor([0.8744]),tensor([0.8589]),1.0,1.0
+How will the freshwater canal be designed in the Waterdunen project to support nature,2025-12-31 01:32:13.714782,qwen3:4b,"The freshwater canal will have nature-friendly banks. In the future situation, the banks will have a slope of 1:1, with some locations having a gentler slope where nature-friendly banks currently exist.","According to the provided context:
+
+The ""Waterdunen"" (freshwater canals) project aims to enhance safety, recreation, tourism and ecology through a unique combination of planning that brings together various elements. 
+
+To achieve these goals related to supporting nature, specific design considerations for the freshwater canal(s) in Waterdunen are not detailed within this excerpt. The passage focuses on outlining how the water management approach will be integrated into an overall spatial vision (rec Natuur), and mentions it as a project that strengthens safety while also improving landscape quality and recreational opportunities.
+
+However, without additional context about specific design features of the canal(s) mentioned in Waterdunen, I do not have sufficient information from this document to answer how exactly the freshwater canals will be designed specifically for nature support.",24.944902658462524,62.24217462539673,0.017243945943080496,0.14814814814814814,tensor([0.8166]),tensor([0.8585]),tensor([0.8370]),0.0,0.0
