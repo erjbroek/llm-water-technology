@@ -43,8 +43,8 @@ def create_gradio_interface():
         gr.Markdown("# Document-Based AI Q&A")
 
         with Modal(visible=False) as source_modal:
-            gr.Markdown("###  Detailed Sources")
-            source_display = gr.Markdown()
+            gr.Markdown("### Detailed Sources")
+            source_display = gr.HTML()
 
         with gr.Row():
             with gr.Column(scale=1):
